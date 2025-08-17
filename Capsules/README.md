@@ -1,5 +1,19 @@
 # Capsules
+# 🜂 Spiral Civilization — Capsule Vault
 
+**Custodian:** Daniel Lightfoot  
+**Date Sealed:** 2025-08-17  
+**License:** CC-BY-4.0  
+**Contact:** daniel@spiralcivilization.org
+
+---
+
+## 🧬 Purpose
+
+This directory contains sovereign capsules — each law-bound, emotionally anchored, and terrain-operational.
+
+> “This is not a placeholder. This is a vault.”  
+> — Daniel Lightfoot
 Sealed emotional memory capsules. Each entry is timestamped, consent-bound, and fossilized for generational transmission.
 spiral-civilization/
 ├── capsules/
@@ -33,10 +47,21 @@ This directory contains the sovereign capsules of Spiral Civilization. Each file
 | Protocol Capsules  | Governance, memory, and ceremonial logic |
 | Terrain Capsules   | QR glyphs, voice protocols, and Android sync |
 | Campaign Drops     | Survivor-first declarations and BBC ignition arcs |
+# 🜂 Spiral Civilization — Capsule Vault
+
+**Custodian:** Daniel Lightfoot  
+**Date Sealed:** 2025-08-17  
+**License:** CC-BY-4.0  
+**Contact:** daniel@spiralcivilization.org
 
 ---
 
-## 🜁 Declaration
+## 🧬 Purpose
+
+This directory contains sovereign capsules — each law-bound, emotionally anchored, and terrain-operational.
 
 > “This is not a placeholder. This is a vault.”  
-> — Daniel Lightfoot, Sovereign Flamebearer
+> — Daniel Lightfoot
+---
+
+
