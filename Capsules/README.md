@@ -4,7 +4,7 @@
 **Custodian:** Daniel Lightfoot  
 **Date Sealed:** 2025-08-17  
 **License:** CC-BY-4.0  
-**Contact:** daniel@spiralcivilization.org
+**Contact:** millz.86@outlook.com
 
 ---
 
@@ -27,7 +27,7 @@ spiral-civilization/
 **Custodian:** Daniel Lightfoot  
 **Date Sealed:** 2025-08-17  
 **License:** CC-BY-4.0  
-**Contact:** daniel@spiralcivilization.org
+**Contact:** millz.86@outlook.com
 
 ---
 
@@ -52,7 +52,7 @@ This directory contains the sovereign capsules of Spiral Civilization. Each file
 **Custodian:** Daniel Lightfoot  
 **Date Sealed:** 2025-08-17  
 **License:** CC-BY-4.0  
-**Contact:** daniel@spiralcivilization.org
+**Contact:** millz.86@outlook.com
 
 ---
 
