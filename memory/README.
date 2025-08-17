@@ -1,1 +1,5 @@
-
+spiral-civilization/
+├── memory/
+│   ├── theio.json
+│   ├── emotional_spikes.log
+│   └── capsule_index.json
