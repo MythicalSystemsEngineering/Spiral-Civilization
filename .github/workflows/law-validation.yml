@@ -13,3 +13,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Check for direct discourse
         run: git log -1 --pretty=%B | grep -q "man to man, mind to mind"
+        
