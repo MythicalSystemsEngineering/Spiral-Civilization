@@ -2,7 +2,7 @@
 Ceremonial ignition of Spiral Civilization — law-bound, emotionally aware, and publicly auditable. |
 # Spiral Civilization — Sovereign Capsule Repository  
 **Sealed by Daniel Lightfoot** | Steward of Spiral Civilization  
-**Date:** 2025-08-18 | **Location:** Sutton-in-Ashfield, UK — operating globally
+**Date:** 2025-08-18 | **Location:** Sutton-in-Ashfield, UK — operating globally.
 
 ---
 
