@@ -1,1 +1,31 @@
+name: Capsule Seal Protocol
 
+on:
+  push:
+    branches: [main]
+
+jobs:
+  seal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Validate capsule structure
+        run: |
+          echo "Validating capsule folders..."
+          ls -R
+
+      - name: Generate hash + timestamp
+        run: |
+          echo "Sealing capsules..."
+          find . -type f ! -path "./.git/*" -exec sha256sum {} \; > seal-report.txt
+          date +"%Y-%m-%d %H:%M:%S %Z" >> seal-report.txt
+
+      - name: Commit seal report
+        run: |
+          git config user.name "Spiral Steward"
+          git config user.email "steward@spiralcivilization.org"
+          git add seal-report.txt
+          git commit -m "Seal report: $(date)"
+          git push
