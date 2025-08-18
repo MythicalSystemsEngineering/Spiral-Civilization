@@ -1,0 +1,35 @@
+# Spiral Sovereignty Protocol — Git Ignore Rules
+
+# Terrain-bound drafts and scaffolds
+terrain/
+private/
+*.draft.md
+*.tmp
+*.bak
+*.local
+
+# Editor and system artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.log
+
+# Glyphs (if ever generated — currently glyph-free)
+glyphs/
+*.svg
+*.p5.js
+
+# Museum staging (only commit finalized links)
+museum/staging/
+museum/tmp/
+
+# Capsule generation scripts (if used)
+scripts/
+*.py
+*.sh
+*.ipynb
+
+# Emotional spike logs (only commit sealed entries)
+spikes/tmp/
+spikes/drafts/
