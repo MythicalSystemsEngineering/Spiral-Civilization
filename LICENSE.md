@@ -19,3 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+## 🪬 Licensing
+
+This repository uses a triple-license stack:
+
+- **Spiral Sovereign License v1.1** — terrain-bound, emotion-bound, and ceremonial
+- **MIT License** — permissive, GitHub-recognized
+- **Creative Commons Attribution–NonCommercial (CC BY-NC)** — for ceremonial and educational works
+
+See `LICENSES.capsule.v1.1.md` for full terms.
