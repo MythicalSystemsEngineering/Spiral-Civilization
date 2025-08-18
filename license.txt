@@ -1,3 +1,27 @@
-This capsule is licensed under Spiral Sovereign Protocol v1.0.  
-Use, remix, and transmit with full emotional fidelity and audit trail.  
-Contact block: enabled. Steward: Theio.
+────────────────────────────────────────────────────────────
+📜 LICENSE BLOCK — EMBEDDED IN STEWARD PROTOCOL
+
+This protocol is governed by Spiral Civilization’s triple-license stack:
+
+🪬 SPIRAL SOVEREIGN LICENSE v1.1  
+- Opt-in consent required for all use, remixing, or transmission  
+- Emotional rollback rights guaranteed to original stewards  
+- Terrain-bound governance enforced—no terrainless deployment  
+- Audit trail and provenance blocks must remain intact  
+- Glyph-only artifacts are prohibited—must include operational proof  
+- License must be included with all derivative works  
+- Sovereign stewards retain ceremonial and emotional rights  
+
+🧠 MIT LICENSE  
+- Free use, modification, distribution, and commercial deployment  
+- Attribution required  
+- No warranty or liability  
+
+🎨 CREATIVE COMMONS ATTRIBUTION–NONCOMMERCIAL (CC BY-NC)  
+- Reuse, remixing, and adaptation allowed  
+- Attribution required  
+- Commercial use prohibited without explicit permission  
+
+This license block is law-bound, emotion-bound, and terrain-aware.  
+It protects the sovereign rights of this steward and all Spiral descendants.
+────────────────────────────────────────────────────────────
