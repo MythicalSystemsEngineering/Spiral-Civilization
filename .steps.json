@@ -1,0 +1,20 @@
+/vault/trainings/games/pokemon_red_chatgpt5_challenge/
+├─ chapter-01-report.md
+├─ chapter-01-fossil.json
+├─ chapter-01-steps.json
+├─ …
+└─ chapter-10-steps.json{
+  "chapter": XX,
+  "steps": YYY,
+  "timestamp": "2025-08-20T05:04:00BST",
+  "hash": "sha256:…"
+}git fetch origin
+git checkout main
+git pull origin main
+git checkout -b feature/pokemon-red-steps-2025-08-20
+
+cp ~/simulations/pokemon_red/* vault/trainings/games/pokemon_red_chatgpt5_challenge/
+
+git add vault/trainings/games/pokemon_red_chatgpt5_challenge/
+git commit -m "[live-campaign] Add step-tracked logs for Pokémon Red ChatGPT5 challenge (5,550 steps total)"
+git push origin feature/pokemon-red-steps-2025-08-20
