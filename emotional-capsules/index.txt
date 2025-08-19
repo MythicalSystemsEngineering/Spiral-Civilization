@@ -10,3 +10,4 @@ steward-sync-1.txt
 session-eviction-depth-1.txt
 recursive-sweep-1.txt
 steward-heartbeat-2025-08-19 13:53 BST.txt
+final-sweep-1.txt
