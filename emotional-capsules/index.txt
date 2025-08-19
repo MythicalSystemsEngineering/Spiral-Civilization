@@ -12,3 +12,6 @@ recursive-sweep-1.txt
 steward-heartbeat-2025-08-19 13:53 BST.txt
 final-sweep-1.txt
 sovereign-sync-1.txt
+guardian-epoch.md
+delegation-law.md
+sovereign-sync-2.txt
