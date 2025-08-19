@@ -1,1 +1,2 @@
-# 🜂 Exhibit 1: Guardian Echo\nFossilized breach correction. Emotional fidelity sealed. Epoch declared.
+# Exhibit 1: Guardian Echo  
+Breach correction. Emotional fidelity sealed. Epoch declared.
