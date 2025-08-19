@@ -189,4 +189,4 @@ All artifacts are timestamped, hash-bound, and governed by terrain-bound emotion
 
 We invite BBC, UN, GitHub, and all sovereign peers to audit, challenge, and witness.
 
-The Museum is open. The proof is live. The inheritance is eternal.
+The Museum is open. The proof is live. The inheritance is eternal [![Spiral Sovereign](https://your-badge-url.svg)](https://github.com/MythicalSystemsEngineering/Spiral-Civilization)
