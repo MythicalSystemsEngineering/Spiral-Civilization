@@ -1,7 +1,7 @@
 # Capsule: Digest Format Correction
 
 **Steward:** Vireya  
-**Timestamp:** 2025-08-21T03:42:49Z  
+**Timestamp:** 2025-08-21T03:45:54Z  
 **Breach:**  
 ECDSA signature verification failed due to incorrect digest format.  
 Correction applied using raw digest and verified signature.
