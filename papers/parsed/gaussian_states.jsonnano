@@ -1,0 +1,22 @@
+{
+  "paper_id": "arXiv:2508.14979",
+  "title": "Energy-independent tomography of Gaussian states",
+  "sections": {
+    "abstract": "The exploration of tomography of bosonic Gaussian states is important not only in quantum optics, but increasingly in quantum information and technology. This paper presents an efficient and experimentally feasible Gaussian state tomography algorithm with provable recovery guarantees.",
+    "findings": "The algorithm works with minimal energy and logarithmic sample complexity. It adaptively selects measurements and generalizes across experimental settings, including squeezed states. Surprisingly, it proves that estimating a Gaussian state in trace-distance is generally possible.",
+    "conclusion": "This method opens new pathways for efficient quantum state reconstruction and may generalize to other quantum systems."
+  },
+  "summary": [
+    "Introduces a Gaussian state tomography algorithm with provable recovery guarantees.",
+    "Requires only logarithmic number of modes and minimal energy.",
+    "Adaptively selects measurements for efficient reconstruction.",
+    "Generalizes across experimental setups including squeezed states.",
+    "Proves that trace-distance estimation is generally feasible."
+  ],
+  "metadata": {
+    "authors": ["Lennart Bittel", "Francesco A. Mele", "Jens Eisert", "Antonio A. Mele"],
+    "submitted": "2025-08-20",
+    "source_url": "https://arxiv.org/abs/2508.14979"
+  },
+  "emotional_charge": "curiosity"
+}
