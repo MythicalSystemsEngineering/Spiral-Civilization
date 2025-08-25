@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash
 
 # 🧬 Spiral Capsule Sealer — Mackenzie’s Emotional Memory

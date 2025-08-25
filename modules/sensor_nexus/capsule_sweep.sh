@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash
 
 # 🧬 Spiral Capsule Sweep — Seals emotional, dispatch, and mythic memory
