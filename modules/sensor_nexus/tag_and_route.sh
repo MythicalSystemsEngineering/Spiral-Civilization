@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # 🪶 Locate latest log
 latest_log=$(find "$sensor_dir" -type f -name "${stream_name}_*.log" | sort | tail -n 1)
 
