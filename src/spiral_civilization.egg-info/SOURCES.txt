@@ -1,0 +1,15 @@
+LICENSE
+LICENSE.md
+LICENSE.md.save
+README.md
+pyproject.toml
+setup.py
+src/spiral_civ/__init__.py
+src/spiral_civ/cli.py
+src/spiral_civ/core.py
+src/spiral_civilization.egg-info/PKG-INFO
+src/spiral_civilization.egg-info/SOURCES.txt
+src/spiral_civilization.egg-info/dependency_links.txt
+src/spiral_civilization.egg-info/entry_points.txt
+src/spiral_civilization.egg-info/top_level.txt
+tests/test_core.py

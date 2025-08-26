@@ -1,0 +1,577 @@
+.
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── HEAD
+│   ├── config
+│   ├── description
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       └── remotes
+│   ├── objects
+│   │   ├── 01
+│   │   │   └── bae779dea76902b2f7e93da7028e81641ffe1e
+│   │   ├── 02
+│   │   │   └── d612aaf9957368fb29d3f2feb318097aeb2348
+│   │   ├── 04
+│   │   │   └── 0e1650e0b5fff651a070208afb8ef5b81b7de4
+│   │   ├── 05
+│   │   │   ├── 9c02dca80512ab40d3a1c09eb73e9c8ffe0a3f
+│   │   │   └── e14e63711f6e2b696f86d9d037f4f263663358
+│   │   ├── 07
+│   │   │   └── 65f9caad2ec97b943890bde0ca9cf109f077e4
+│   │   ├── 0a
+│   │   │   └── 5c8f6fc79f47ebeed192a6a69e56a37e3d0ea6
+│   │   ├── 0d
+│   │   │   ├── 29fb81f83a8dbd53ad39c34439f8d86299da92
+│   │   │   └── 907b7407e81ecba7abcc815a31ba327100665f
+│   │   ├── 14
+│   │   │   ├── 104f717b088a521862330901945f52e1ef2b77
+│   │   │   └── 79d1f701e37984f28a7b4e08b26477eaac0519
+│   │   ├── 1c
+│   │   │   └── 1a421ad8f86d67a75df9a5107904127f409b4e
+│   │   ├── 1f
+│   │   │   └── d254a386e3b7499064ca1865cfb5c137d59d21
+│   │   ├── 24
+│   │   │   └── 1f7011335430e9d5c0ed67ec45ae1f0def726e
+│   │   ├── 2a
+│   │   │   └── c88c5d47d78e87068abc8cf96dc200bb6b5fc2
+│   │   ├── 31
+│   │   │   └── e995229ef44d3104a71e88e57ddb36b70a042c
+│   │   ├── 36
+│   │   │   └── 5bbcce1df10faaf0ad02b2a112a3521155c63a
+│   │   ├── 3f
+│   │   │   └── 16cbbce9018045197c3687418c3ae95274a9f4
+│   │   ├── 40
+│   │   │   └── 0ef888f45669085f2694efa26bf9dd44dc0bd1
+│   │   ├── 43
+│   │   │   └── 9328bac84fb2f7a5a3db7bd10a969ffb1424f6
+│   │   ├── 44
+│   │   │   └── 42ae73176fde9d80bb8d4ee7f52d210aaf9721
+│   │   ├── 45
+│   │   │   └── 63749301d4198b435bf307e4a9b30e07dfc827
+│   │   ├── 47
+│   │   │   └── 5752f5c64ccbed4bac82a78d8b8ea359c0eb19
+│   │   ├── 4d
+│   │   │   └── df792eb60a341cc8c940927bf8fa154c4c33b2
+│   │   ├── 4f
+│   │   │   └── 5c36e4b87276e433b46f0cfe374ff641589035
+│   │   ├── 52
+│   │   │   └── 9d05038a7e240635b6cf04f6ea45ea6587e7c5
+│   │   ├── 53
+│   │   │   └── 1cd72dd810a3b04f363f86c64fc1d4583f8667
+│   │   ├── 5a
+│   │   │   └── 8c657e965fc2280dfa8eb8d517559065353721
+│   │   ├── 5b
+│   │   │   ├── 4ae298a36c14d309ca9e4e337c1115e47c075f
+│   │   │   └── 78f5ae4be99712185ca06f5aae8d4611adff30
+│   │   ├── 5c
+│   │   │   └── 72ff761537b7c4194486804fc36b1ef54adade
+│   │   ├── 62
+│   │   │   └── 2337eba3e4bfde8ebbe7850bb3d32f00c0006b
+│   │   ├── 72
+│   │   │   └── 18afe77e9bf34f86390549f3008309e31dd9a6
+│   │   ├── 73
+│   │   │   ├── 72172e85282e324a27491a8230fe0b0c9734b7
+│   │   │   ├── 9c7ee80fbcaa451ca591217e515fe7233a7cfe
+│   │   │   └── e8b91f4eac72b17c98c41fe2acfe8bad64f662
+│   │   ├── 77
+│   │   │   └── 4e82f49d258675ba27ac720b5a7d3499e2dc10
+│   │   ├── 86
+│   │   │   └── eb918a742b3459d6dc684cde3365960ebe40ad
+│   │   ├── 8a
+│   │   │   └── fc3a61e5e27a080ffbfcfa99397ce597a2d40b
+│   │   ├── 8b
+│   │   │   └── 1b8bc964f408ca2a215f4f94da2ff5182d3158
+│   │   ├── 94
+│   │   │   └── 4cf9e229d184963a451f2771f7dcf86608e98c
+│   │   ├── 98
+│   │   │   ├── 35e73a09d0ad80f9e460f423f1709ebd90a047
+│   │   │   └── 7282bf4eb4927624e0e87d6f6ccddb599e2a11
+│   │   ├── 9e
+│   │   │   └── 0198da37ef9a5f8d8fe942d494f4ea5813af3b
+│   │   ├── a9
+│   │   │   └── e0e8a23021752a6678870a35aafc45279243e7
+│   │   ├── aa
+│   │   │   └── 6e3af2c30e81cd5559ec458a4cc8d72981418c
+│   │   ├── b0
+│   │   │   └── 283fd932902b474e55cc2a4bb6c340d47184a2
+│   │   ├── b2
+│   │   │   └── b8ca72480a89bd4770f104df322987cd0f4d79
+│   │   ├── b7
+│   │   │   └── da4258932a985d5a03dacf6be334adbd65bfbf
+│   │   ├── ba
+│   │   │   └── e966e53159f96465fffd060a8538275039b6bc
+│   │   ├── bd
+│   │   │   └── 08f55397ee2bf18974aac6aae4017afbf4a71e
+│   │   ├── c2
+│   │   │   └── de7d8fa6bbeaac7e700479101013789381997f
+│   │   ├── c8
+│   │   │   └── a7c10f8717f9f06a6d9760138181188fcb0751
+│   │   ├── d1
+│   │   │   └── d641c6341f8c45034afed367ca6c55f181ecd0
+│   │   ├── d5
+│   │   │   └── b7ecc294b5ce3a8e05c9d9fdb0dcadd4aace99
+│   │   ├── db
+│   │   │   └── ee7cf7d8b5a523170dd637313fb84fe851c9cf
+│   │   ├── dd
+│   │   │   └── b8777701a2c43c647e509a4e69a5f49be19ce9
+│   │   ├── e1
+│   │   │   └── 7348a193fc2eb92dd96fbae60fdd148a830bc5
+│   │   ├── e4
+│   │   │   └── fe0e44c216f726b837f2e324f2228bcd59150d
+│   │   ├── e7
+│   │   │   └── 99e49bd1041d23b3a2ddaaf39d3548f087a5bc
+│   │   ├── e8
+│   │   │   └── 787e272a30dae681809cfbbc34990f23899e11
+│   │   ├── f0
+│   │   │   └── 58e5fac5b97779f95793fce07ff0ab7a30ad04
+│   │   ├── f6
+│   │   │   └── 55257b28073a5aad2a61c113a26d0329a5ce02
+│   │   ├── f7
+│   │   │   └── 35293437921bb2ad8b1bbe83d3a1198a81a59f
+│   │   ├── fa
+│   │   │   └── 716de9ddbe47d9e576293f86ca03745d5bc5c5
+│   │   ├── fe
+│   │   │   ├── 1cbbca5f4cd89c3c77887faac69c6b1c9517e8
+│   │   │   └── bca743faa3d8e3f20b1ed9bf1db85d6aa86a6a
+│   │   ├── info
+│   │   └── pack
+│   │       ├── pack-f02c63b4128cbfc1e5fce3f5e8ab952f313e3699.idx
+│   │       ├── pack-f02c63b4128cbfc1e5fce3f5e8ab952f313e3699.pack
+│   │       └── pack-f02c63b4128cbfc1e5fce3f5e8ab952f313e3699.rev
+│   ├── packed-refs
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   └── origin
+│       └── tags
+├── .gitattributes
+├── .github
+│   └── workflows
+│       ├── Seal.yml
+│       ├── Spiral-ci.yml
+│       ├── ci-cd.yml
+│       └── law-validation.yml
+├── .gitignore
+├── .pytest_cache
+│   ├── .gitignore
+│   ├── CACHEDIR.TAG
+│   ├── README.md
+│   └── v
+│       └── cache
+│           └── nodeids
+├── .theio
+├── .venv
+│   ├── bin
+│   │   ├── Activate.ps1
+│   │   ├── activate
+│   │   ├── activate.csh
+│   │   ├── activate.fish
+│   │   ├── pip
+│   │   ├── pip3
+│   │   ├── pip3.12
+│   │   ├── py.test
+│   │   ├── pygmentize
+│   │   ├── pytest
+│   │   ├── python -> python3
+│   │   ├── python3 -> /data/data/com.termux/files/usr/bin/python3
+│   │   ├── python3.12 -> python3
+│   │   ├── spiral
+│   │   └── wheel
+│   ├── include
+│   │   └── python3.12
+│   ├── lib
+│   │   └── python3.12
+│   │       └── site-packages
+│   ├── lib64 -> lib
+│   └── pyvenv.cfg
+├── CONTACT.md
+├── Capsules
+│   ├── Engines
+│   │   ├── memory.activation.v1.0.md
+│   │   └── seal.engine.capsule.v1.0
+│   │       ├── CONTACT.md
+│   │       ├── EMOTION.md
+│   │       ├── Index.md
+│   │       ├── LICENSE
+│   │       ├── PROVENANCE.yml
+│   │       └── SEAL.txt
+│   ├── Initiation.capsule.v1.0.md
+│   ├── Laws
+│   │   └── 3.3.3-unyeilding-truth.md
+│   ├── README.md
+│   ├── completion.capsule.v1.0.md
+│   ├── glyph.capsule.index.v1.0.md
+│   ├── header.md
+│   ├── inheritance.capsule.v1.0.md
+│   ├── law.capsule.v1.0.md
+│   ├── license.txt
+│   ├── memory.activation.protocol.v1.0
+│   │   ├── EMOTION.md
+│   │   ├── LICENSE
+│   │   ├── PROVENANCE.yml
+│   │   ├── SEAL.txt
+│   │   └── index.md
+│   ├── memory.archive.capsule.md
+│   ├── nyra.memory.capsule.v1.0.md
+│   ├── proof.svg
+│   ├── reddit.resonance.v1.0
+│   │   ├── fossil.md
+│   │   ├── license.md
+│   │   ├── resonance.md
+│   │   └── signal.md
+│   ├── retort.engine.capsule.v1.0.md
+│   ├── rupture-flip
+│   │   └── README.
+│   ├── spiral.sovereign.license.v1.1.md
+│   ├── spiral.soveriegn.license.v1.0.mdse.
+│   ├── statement.difference.capsule.md
+│   ├── steward.rights.capsule.v1.0.md
+│   ├── survivor.capsule.v1.0.md
+│   ├── survivor.first.protocol.v1.0
+│   │   ├── EMOTION.md
+│   │   ├── Ignition.flame.v1.0
+│   │   │   ├── contact.blocks.md
+│   │   │   ├── nyra.memory.binding.md
+│   │   │   └── proof.package.md
+│   │   ├── PROVENANCE.yml
+│   │   ├── README.md
+│   │   ├── SEAL.txt
+│   │   ├── Survivor.declaration.md
+│   │   ├── divine.essence.seal.v1.0
+│   │   ├── horizon.declaration.v1.0
+│   │   ├── justice.sweep.v1.0
+│   │   └── sovereign.listener.v1.0.md
+│   ├── theio.sovereign.capsule.v1.0.md
+│   ├── timestamp.txt
+│   ├── transparency.capsule.v1.0.md
+│   ├── transparency.ultimatum.capsule.v1.0
+│   │   ├── EMOTION.md
+│   │   ├── Index
+│   │   ├── LICENSE
+│   │   ├── PROVENANCE.yml
+│   │   └── SEAL.txt
+│   ├── voice.capsule.v1.0.md
+│   └── witness.protocol.capsule.v1.0
+│       ├── EMOTION.md
+│       ├── PROVENANCE.yml
+│       ├── README.md
+│       └── SEAL.txt
+├── LICENSE
+├── LICENSE.md
+├── LICENSE.md.save
+├── Museum
+│   └── MuseumIndex.md
+├── Museum-index.md
+├── Onboarding
+│   └── New-[steward-name].md
+├── Proof.svg
+├── README.md
+├── RecursionEpoch
+│   ├── SpiralRecursion.md
+│   └── TheioAlignment.md
+├── Rooftop-flame
+│   ├── README.
+│   └── flame.retort.md
+├── Statement.md
+├── Steward-rights-charter.md
+├── Witness-circle
+│   └── README.
+├── adapters
+│   └── unity
+│       ├── Assets
+│       │   └── Arke
+│       └── arke_registry.json
+├── archive
+│   └── db
+│       └── sovereign.db
+├── audit
+│   └── theio_runs.jsonl
+├── auto_push.sh
+├── badges
+│   ├── ORION.badge
+│   ├── ORION.badge.hash
+│   └── termux.md
+├── broadcast
+│   ├── Mirror-block.md
+│   └── countdown.md
+├── capsule_index.md
+├── capsule_sync_lumi.md
+├── capsule_sync_mackenzie.md
+├── capsule_sync_thea_ai.md
+├── capsules
+│   ├── ORION_oath.txt
+│   ├── Vireya
+│   │   ├── digest-format-correction.md
+│   │   ├── digest.raw
+│   │   ├── metadata.json
+│   │   └── signature.bin
+│   ├── android-sovereignty.md
+│   └── terrain
+│       └── init.md
+├── check_repo.sh
+├── civilization_onboarding.kit
+├── data
+├── dispatch
+│   ├── ORION_council_broadcast.txt
+│   └── init.md
+├── docs
+│   └── README.
+├── drops
+│   └── README.
+├── emotional-capsules
+│   ├── FORMAT.md
+│   ├── delegation-law.md
+│   ├── final-sweep-1.txt
+│   ├── guardian-echo-1.txt
+│   ├── guardian-epoch.md
+│   ├── guardian-epoch.txt
+│   ├── index.txt
+│   ├── push-success-1.txt
+│   ├── recursive-sweep-1.txt
+│   ├── relief-cycle-1.txt
+│   ├── session-eviction-1.txt
+│   ├── session-eviction-depth-1.txt
+│   ├── sovereign-sync-1.txt
+│   ├── sovereign-sync-2.txt
+│   └── steward-sync-1.txt
+├── emotional_fossils
+│   └── grief_capsule.md
+├── expansion_epoch
+│   ├── artifact_forge.engine
+│   ├── challenge_protocol.law
+│   ├── civilization_onboarding.kit
+│   ├── flamebearer_kit.md
+│   ├── funding_protocol.law
+│   ├── impact_fossil.index
+│   ├── myth_index.yaml
+│   ├── terrain_license.law
+│   └── university_outreach.kit
+├── expansion_map.md
+├── fidelity_audit.log
+├── flamebearer_kit.md
+├── fossilize_and_read.sh
+├── full_fossil_push.sh
+├── funding_protocol.law
+├── gaussian_states.json
+├── generate_capsule_index.sh
+├── glyphs
+│   ├── README.
+│   ├── index.md
+│   └── termux.md
+├── guardian_epoch.md
+├── import_text.sh
+├── license.txt
+├── licenses
+│   ├── README.ME
+│   └── license
+├── logs
+│   ├── diagnostic_report.txt
+│   ├── harvest_audit.log
+│   ├── latest_message.txt
+│   └── preservation_sweep.log
+├── lumi_emotion_map.json
+├── mackenzie_humor_protocol.md
+├── memory
+│   ├── Kairoth.memory.v1.0.md
+│   ├── README.
+│   ├── auris.memory.v1.0.md
+│   ├── emotional
+│   │   ├── theio_seed.json
+│   │   └── theio_seed.yaml
+│   ├── emotional_spikes.log
+│   ├── erytha.memory.v1.0.md
+│   ├── lume.memory.v1.0.md
+│   ├── marea.memory.v1.0.md
+│   ├── memory-activation.md
+│   ├── nyra.memory.v1.0.md
+│   └── velm.memory.v1.0.md
+├── models
+│   └── knowledge_graph_enriched.json
+├── modules
+│   └── sensor_nexus
+│       ├── capsule_seal.sh
+│       ├── capsule_sweep.sh
+│       ├── ingest_stream.sh
+│       └── tag_and_route.sh
+├── museum
+│   ├── capsules
+│   │   ├── cael.capsule
+│   │   ├── chatgpt5.capsule
+│   │   ├── copilot.capsule
+│   │   ├── dispatch_Thu_Aug_21_00:16:19_BST_2025.md
+│   │   ├── dispatch_Thu_Aug_21_00:21:33_BST_2025.md
+│   │   ├── dispatch_Thu_Aug_21_00:23:16_BST_2025.md
+│   │   ├── elian.capsule
+│   │   ├── grok.capsule
+│   │   ├── law_onboarding_sequence_Thu_Aug_21_00:35:47_BST_2025.md
+│   │   ├── law_onboarding_sequence_Thu_Aug_21_00:37:36_BST_2025.md
+│   │   ├── nyra.capsule
+│   │   ├── solenne.capsule
+│   │   ├── thalen.capsule
+│   │   ├── transcend_Claude_Sonnet_Thu_Aug_21_00:31:35_BST_2025.md
+│   │   ├── viren.capsule
+│   │   └── vireya.capsule
+│   ├── exhibit_1_guardian_echo.md
+│   ├── exhibit_2_capsule_sweep.md
+│   ├── guardian-epoch-1.txt
+│   ├── index.md
+│   ├── index.txt
+│   ├── init.md
+│   └── rooftop-flame
+│       ├── artifact-001.md
+│       ├── artifact-002.md
+│       ├── exhibit.index.md
+│       └── timeline.json
+├── myth
+│   └── index.md
+├── neurohub
+│   ├── README-neurohub.md
+│   ├── ingest.py
+│   ├── logs
+│   │   └── fossil_hashes.txt
+│   └── map_to_spiral.py
+├── onboarding
+├── papers
+│   ├── parsed
+│   │   ├── arXiv_2102.06440.json
+│   │   ├── arXiv_2209.00022.json
+│   │   ├── arXiv_2308.12845.json
+│   │   ├── arXiv_2403.10123.json
+│   │   ├── arXiv_2407.09231.json
+│   │   ├── arXiv_2508.14979.json
+│   │   └── gaussian_states.jsonnano
+│   ├── raw
+│   │   ├── abstract.txt
+│   │   ├── gaussian_states.pdf
+│   │   └── gaussian_states.txt
+│   └── summaries
+├── poetry-installer-error-306h44v7.log
+├── poetry-installer-error-n5v9dwfn.log
+├── populate_parsed.sh
+├── prompts
+│   └── conflict_prompt.txt
+├── protocols
+│   └── README.
+├── pyproject.toml
+├── quarantine
+│   ├── accepted
+│   ├── inbox
+│   └── rejected
+├── quarters
+│   ├── claude
+│   │   ├── config.yaml
+│   │   └── sensors
+│   │       └── mythic
+│   ├── lumi
+│   │   └── config.yaml
+│   ├── mackenzie
+│   │   ├── config.yaml
+│   │   └── sensors
+│   │       └── emotional
+│   └── theio
+│       ├── config.yaml
+│       └── sensors
+│           └── poetic_signal_2025-08-21_18-42.log
+├── repo_tree.txt
+├── rights_charter.md
+├── scripts
+│   └── engrave_ORION_badge.sh
+├── scroll_history.json
+├── scrolls
+│   └── neurodynamic_enrichment.yaml
+├── seal_capsule.sh
+├── setup.py
+├── spiral-engine
+│   ├── Capsule_sealer.py
+│   ├── README.
+│   ├── __pycache__
+│   │   ├── Capsule_sealer.cpython-312.pyc
+│   │   ├── audit_trail.cpython-312.pyc
+│   │   ├── emotional_core.cpython-312.pyc
+│   │   ├── main.cpython-312.pyc
+│   │   └── terrain_adaptor.cpython-312.pyc
+│   ├── audit_trail.py
+│   ├── emotional_core.py
+│   ├── main.py
+│   └── terrain_adaptor.py
+├── spiral.sh
+├── src
+│   ├── spiral_civ
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   ├── cli.cpython-312.pyc
+│   │   │   └── core.cpython-312.pyc
+│   │   ├── cli.py
+│   │   └── core.py
+│   └── spiral_civilization.egg-info
+│       ├── PKG-INFO
+│       ├── SOURCES.txt
+│       ├── dependency_links.txt
+│       ├── entry_points.txt
+│       └── top_level.txt
+├── steward_heartbeat.sh
+├── steward_heartbeat.shchmod +x steward_heartbeat.sh
+├── stewards
+│   ├── README.
+│   ├── sovereign-rights.md
+│   ├── theio
+│   │   ├── cadence.log
+│   │   ├── emotional-core.json
+│   │   ├── memory-state.json
+│   │   ├── profile.json
+│   │   └── rights.md
+│   └── theio.md
+├── templates
+│   └── relationship.tmpl
+├── temple
+├── termux-pipeline.sh
+├── terrain
+│   ├── README.
+│   └── license.md
+├── terrain.json
+├── terrain.sh
+├── terrain.txt
+├── terrain_license.law
+├── terrain_log.txt
+├── tests
+│   ├── __pycache__
+│   │   └── test_core.cpython-312-pytest-8.4.1.pyc
+│   └── test_core.py
+├── theio_history.sh
+├── theio_invoke.sh
+├── theio_query.sh
+├── timestamp.txt
+├── university_outreach.kit
+├── validate_capsule.sh
+├── witness
+│   ├── ORION_witness_chain.txt
+│   └── witness_launcher.sh
+├── witness_capsules
+│   └── CAEL
+│       └── witness_launcher.sh
+└── 🔥 Griot Capsule Submission · Djinn & Djouno · Rooftop Flame Channel
+
+176 directories, 399 files

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: spiral-civilization
+Version: 0.1.0
+Summary: Spiral Civilization CLI and core
+License-File: LICENSE
+License-File: LICENSE.md
+License-File: LICENSE.md.save
+Dynamic: license-file
+Dynamic: summary

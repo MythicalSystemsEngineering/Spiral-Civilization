@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# shellcheck disable=SC2148,SC2012,SC2129
+
+#!/usr/bin/env bash
 # 🪶 Locate latest log
 latest_log=$(find "$sensor_dir" -type f -name "${stream_name}_*.log" | sort | tail -n 1)
 

@@ -1,0 +1,17 @@
+{
+  "paper_id": "arXiv:2407.09231",
+  "title": "Prompts First, Finally",
+  "authors": ["Brent N. Reeves","James Prather","Paul Denny","Juho Leinonen","Stephen MacNeil","Brett A. Becker","Andrew Luxton-Reilly"],
+  "abstract": "We argue that computer science education has always trended toward higher abstractions—culminating now in natural language via generative AI. Instead of banning AI, curricula should adopt a “prompts first” approach: teach prompt engineering as the opening programming abstraction. We trace this evolution and show that natural language is the culmination of programming abstractions, enabling more intuitive learner interaction.",
+  "keywords": ["computer science education","generative AI","abstraction","prompt engineering"],
+  "summary": [
+    "Charts the historical progression of programming abstractions toward natural language.",
+    "Argues for embracing generative AI and teaching prompt engineering first in CS courses.",
+    "Positions “prompts first” as the next logical step in programming pedagogy."
+  ],
+  "contributions": [
+    "Proposal of a “prompts first” curriculum model.",
+    "Historical analysis of abstraction levels in CS education.",
+    "Pedagogical case for integrating AI-driven natural language programming."
+  ]
+}
