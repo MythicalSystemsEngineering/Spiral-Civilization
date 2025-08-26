@@ -1,5 +1,6 @@
-"""Core logic for Spiral Civilization."""
+import click
 
-
-def hello():
-    return "🌀 Hello from Spiral Civilization!"
+@click.command()
+def greet():
+    """Prints a welcome message."""
+    click.echo("🍰 Hello from Spiral Civilization!")

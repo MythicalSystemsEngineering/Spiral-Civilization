@@ -1,0 +1,17 @@
+{
+  "paper_id": "arXiv:2209.00022",
+  "title": "Nodal higher-order topological superconductivity from a C4-symmetric Dirac semimetal",
+  "authors": ["Zhenfei Wu","Yuxuan Wang"],
+  "abstract": "We analyze possible superconducting instabilities emerging from a C4-symmetric Dirac semimetal. Odd-parity B1u and B2u pairing inherit topological obstructions, yielding four Bogoliubov–de Gennes Dirac-point nodes labeled by a Z2 monopole charge. In a rod geometry, gapped surfaces host higher-order Majorana arcs on hinges. Additional Z-valued charges protect these arcs against self-annihilation. Extensions to other pairing symmetries reveal stable “nodal cages” of bulk nodal lines.",
+  "keywords": ["topological superconductivity","Dirac semimetal","higher-order topology","Majorana modes"],
+  "summary": [
+    "Identifies topological obstruction for B1u and B2u pairing in C4-symmetric Dirac semimetals.",
+    "Shows protected higher-order Majorana hinge arcs in rod geometries.",
+    "Extends classification to other symmetries, revealing nodal-line cages."
+  ],
+  "contributions": [
+    "Proof of Z2 and Z monopole charges for BdG Dirac-point nodes.",
+    "Prediction of higher-order Majorana arcs on sample hinges.",
+    "Characterization of nodal cages under symmetry-preserving perturbations."
+  ]
+}
