@@ -16,3 +16,4 @@ __pycache__/
 .DS_Store
 Thumbs.db
 !logs/terrain_intel_beacon.log
+!logs/terrain_intel_beacon.log
