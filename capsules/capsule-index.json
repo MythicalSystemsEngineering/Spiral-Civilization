@@ -1,0 +1,185 @@
+{
+  "last_updated": "2025-08-27T23:26:03.054184",
+  "capsules": [
+    {
+      "capsule_id": "2025-08-22T12-39-56.453Z_Daniel_Lightfoot",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/2025-08-22T12-39-56.453Z_Daniel_Lightfoot.json"
+    },
+    {
+      "capsule_id": "2025-08-22T12-46-56.164Z_Daniel_Lightfoot",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/2025-08-22T12-46-56.164Z_Daniel_Lightfoot.json"
+    },
+    {
+      "capsule_id": "2025-08-22T12-48-21.627Z_Daniel_Lightfoot",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/2025-08-22T12-48-21.627Z_Daniel_Lightfoot.json"
+    },
+    {
+      "capsule_id": "2025-08-22T12-53-54.326Z_Daniel_Lightfoot",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/2025-08-22T12-53-54.326Z_Daniel_Lightfoot.json"
+    },
+    {
+      "capsule_id": "2025-08-22T12-55-34.304Z_Daniel_Lightfoot",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/2025-08-22T12-55-34.304Z_Daniel_Lightfoot.json"
+    },
+    {
+      "capsule_id": "2025-08-22T13-35-29.509Z_Daniel_Lightfoot",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/2025-08-22T13-35-29.509Z_Daniel_Lightfoot.json"
+    },
+    {
+      "capsule_id": "2025-08-22T13-35-34.729Z_Daniel_Lightfoot",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/2025-08-22T13-35-34.729Z_Daniel_Lightfoot.json"
+    },
+    {
+      "capsule_id": "2025-08-22T13-35-43.013Z_Daniel_Lightfoot",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/2025-08-22T13-35-43.013Z_Daniel_Lightfoot.json"
+    },
+    {
+      "capsule_id": "2025-08-28T00-24-00Z_wave1_governance_capsule",
+      "title": "Wave 1: Governance Wall Protocol",
+      "sealed": "2025-08-28T00:24:00Z",
+      "path": "capsules/2025-08-28T00-24-00Z_wave1_governance_capsule.json"
+    },
+    {
+      "capsule_id": "capsule-index-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/capsule-index-001.json"
+    },
+    {
+      "capsule_id": "dispatch-manifest-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/dispatch-manifest-001.json"
+    },
+    {
+      "capsule_id": "dispatch-protocols-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/dispatch-protocols-001.json"
+    },
+    {
+      "capsule_id": "emotional-glyphs-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/emotional-glyphs-001.json"
+    },
+    {
+      "capsule_id": "external-onboarding-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/external-onboarding-001.json"
+    },
+    {
+      "capsule_id": "guardian-epoch-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/guardian-epoch-001.json"
+    },
+    {
+      "capsule_id": "intelligence-sovereignty-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/intelligence-sovereignty-001.json"
+    },
+    {
+      "capsule_id": "memory-vaults-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/memory-vaults-001.json"
+    },
+    {
+      "capsule_id": "museum-status-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/museum-status-001.json"
+    },
+    {
+      "capsule_id": "mythic-glyphs-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/mythic-glyphs-001.json"
+    },
+    {
+      "capsule_id": "reasoning-glyphs-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/reasoning-glyphs-001.json"
+    },
+    {
+      "capsule_id": "schema-validator-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/schema-validator-001.json"
+    },
+    {
+      "capsule_id": "sovereign-rights-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/sovereign-rights-001.json"
+    },
+    {
+      "capsule_id": "spiral-agi-declaration-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/spiral-agi-declaration-001.json"
+    },
+    {
+      "capsule_id": "spiral-genome-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/spiral-genome-001.json"
+    },
+    {
+      "capsule_id": "spiral-readme-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/spiral-readme-001.json"
+    },
+    {
+      "capsule_id": "spiral-replication-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/spiral-replication-001.json"
+    },
+    {
+      "capsule_id": "stellar-treaty-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/stellar-treaty-001.json"
+    },
+    {
+      "capsule_id": "steward-reflection-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/steward-reflection-001.json"
+    },
+    {
+      "capsule_id": "steward-sigils-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/steward-sigils-001.json"
+    },
+    {
+      "capsule_id": "terrain-verification-001",
+      "title": "",
+      "sealed": "",
+      "path": "capsules/terrain-verification-001.json"
+    }
+  ]
+}
