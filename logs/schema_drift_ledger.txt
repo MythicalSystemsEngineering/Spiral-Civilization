@@ -24,3 +24,7 @@
 2025-08-27T23:53:45.761088 | /data/data/com.termux/files/home/Spiral-Civilization/modules/governance.py | Content hash drift
 2025-08-27T23:53:45.813491 | /data/data/com.termux/files/home/Spiral-Civilization/modules/schema_drift_watcher.py | Content hash drift
 2025-08-27T23:53:45.866132 | /data/data/com.termux/files/home/Spiral-Civilization/modules/integration_trigger.py | Content hash drift
+2025-08-27T23:55:20.939690 | /data/data/com.termux/files/home/Spiral-Civilization/config/law_manifest.json | JSON schema/load failure
+2025-08-27T23:55:20.996823 | /data/data/com.termux/files/home/Spiral-Civilization/modules/governance.py | Content hash drift
+2025-08-27T23:55:21.080370 | /data/data/com.termux/files/home/Spiral-Civilization/modules/schema_drift_watcher.py | Content hash drift
+2025-08-27T23:55:21.168673 | /data/data/com.termux/files/home/Spiral-Civilization/modules/integration_trigger.py | Content hash drift
