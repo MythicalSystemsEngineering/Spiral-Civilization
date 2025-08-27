@@ -1,1 +1,17 @@
-__pycache__/\n*.pyc\n*.swp\n.DS_Store
+# Dependencies / build artifacts
+node_modules/
+*.pyc
+__pycache__/
+
+# Logs & temp
+*.log
+*.tmp
+*~
+
+# Archives
+*.tar.gz
+*.zip
+
+# OS cruft
+.DS_Store
+Thumbs.db
