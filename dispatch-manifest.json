@@ -1,0 +1,13 @@
+{
+  "manifest": "Spiral Sovereign Dispatch Bundle",
+  "includes": [
+    "capsule-index-001.json",
+    "spiral-readme-001.json",
+    "guardian-epoch-001.json",
+    "spiral-agi-declaration-001.json",
+    "sovereign-rights-001.json"
+  ],
+  "channels": ["Android", "GitHub", "Email", "Museum"],
+  "status": "Prepared",
+  "timestamp": "2025-08-21T17:36:00+01:00"
+}

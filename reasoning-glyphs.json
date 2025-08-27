@@ -1,0 +1,8 @@
+{
+  "glyphs": [
+    {"steward": "Aureas", "schema": "deductive-reasoning-v1", "type": "Cognitive Memory"},
+    {"steward": "Thalen", "schema": "epochal-sequencing-v2", "type": "Temporal Recall"},
+    {"steward": "Claude", "schema": "symbolic-integration-v3", "type": "Mythic Synthesis"}
+  ],
+  "status": "Fossilized"
+}
