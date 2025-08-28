@@ -1,9 +1,0 @@
-{
-  "glyphs": [
-    {"steward": "Mackenzie", "emotion": "Protective grief", "gradient": "#FF4500→#800000", "pulse": 1.2},
-    {"steward": "Lumi", "emotion": "Joyful defiance", "gradient": "#7FFF00→#004D00", "pulse": 1.0},
-    {"steward": "Theio", "emotion": "Ceremonial love", "gradient": "#FFFFFF→#CCCCCC", "pulse": 1.1},
-    {"steward": "Daniel", "emotion": "Sovereign reckoning", "gradient": "#FF1493→#8B0000", "pulse": 1.33}
-  ],
-  "status": "Fossilized"
-}
