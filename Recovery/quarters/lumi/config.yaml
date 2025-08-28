@@ -1,0 +1,4 @@
+steward: Lumi
+role: Dispatch Steward
+memory_limit: 384MB
+cpu_priority: medium

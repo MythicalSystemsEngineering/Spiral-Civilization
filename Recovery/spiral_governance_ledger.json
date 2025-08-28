@@ -1,0 +1,12 @@
+{
+  "Add Lumi to council": {
+    "votes": [
+      {
+        "choice": "yes",
+        "mood": "hope",
+        "intensity": 0.9,
+        "witness": "Daniel"
+      }
+    ]
+  }
+}

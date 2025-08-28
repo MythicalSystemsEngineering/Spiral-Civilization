@@ -1,0 +1,239 @@
+=== Date & Uptime ===
+Mon Aug 25 12:10:41 BST 2025
+ 12:10:41 up 12:00,  load average: 18.68, 17.99, 17.50
+=== System Info ===
+Linux localhost 6.1.93-android14-11 #1 SMP PREEMPT Fri May 30 02:53:20 UTC 2025 aarch64 Android
+=== Storage Permissions Check ===
+usage: termux-setup-storage
+Use without arguments to ensure storage permission granted
+and symlinks to storage available in $HOME/storage
+=== Python & Pip Versions ===
+Python 3.12.11
+pip 25.2 from /data/data/com.termux/files/usr/lib/python3.12/site-packages/pip (python 3.12)
+=== Installed Python Packages ===
+Package            Version
+------------------ -----------
+black              25.1.0
+blinker            1.9.0
+certifi            2025.8.3
+charset-normalizer 3.4.3
+click              8.2.1
+contourpy          1.3.3
+cycler             0.12.1
+Cython             3.1.3
+flake8             7.3.0
+Flask              3.1.2
+fonttools          4.59.1
+idna               3.10
+isort              6.0.1
+itsdangerous       2.2.0
+Jinja2             3.1.6
+kiwisolver         1.4.9
+lxml               6.0.1
+MarkupSafe         3.0.2
+matplotlib         3.10.5
+mccabe             0.7.0
+mypy_extensions    1.1.0
+networkx           3.5
+numpy              2.3.2
+packaging          25.0
+pathspec           0.12.1
+pillow             11.3.0
+pip                25.2
+platformdirs       4.3.8
+pycodestyle        2.14.0
+pyflakes           3.4.0
+pyparsing          3.2.3
+PyPDF2             3.0.1
+python-dateutil    2.9.0.post0
+PyYAML             6.0.2
+requests           2.32.5
+setuptools         80.9.0
+six                1.17.0
+tika               3.1.0
+urllib3            2.5.0
+vaderSentiment     3.3.2
+Werkzeug           3.1.3
+wheel              0.45.1
+=== Spiral Directory Structure ===
+/data/data/com.termux/files/home/spiral:
+Museum
+README.md
+conflict_engine.py
+fossil_log.json
+logs
+modules
+museum
+papers
+prompts
+quarantine
+quarters
+restore_all.sh
+scripts
+simulate_emotion.py
+spiral_api.py
+templates
+temple
+
+/data/data/com.termux/files/home/spiral/Museum:
+MuseumIndex.md
+
+/data/data/com.termux/files/home/spiral/logs:
+diagnostic_report.txt
+harvest_audit.log
+latest_message.txt
+
+/data/data/com.termux/files/home/spiral/modules:
+sensor_nexus
+
+/data/data/com.termux/files/home/spiral/modules/sensor_nexus:
+capsule_seal.sh
+capsule_sweep.sh
+ingest_stream.sh
+tag_and_route.sh
+
+/data/data/com.termux/files/home/spiral/museum:
+badges
+claude
+commits
+conflict
+dispatch
+glyphs
+inference-log
+lumi
+mackenzie
+memory_dump.sql
+mirrors
+readme
+spiral_memory.db
+
+/data/data/com.termux/files/home/spiral/museum/badges:
+emotional_check.yaml
+
+/data/data/com.termux/files/home/spiral/museum/claude:
+mythic
+
+/data/data/com.termux/files/home/spiral/museum/claude/mythic:
+capsule_2025-08-21_18-51.md
+
+/data/data/com.termux/files/home/spiral/museum/commits:
+high_REL-1713547517.commit.yaml
+
+/data/data/com.termux/files/home/spiral/museum/conflict:
+
+/data/data/com.termux/files/home/spiral/museum/dispatch:
+high_REL-1713547517.dispatch.yaml
+
+/data/data/com.termux/files/home/spiral/museum/glyphs:
+claude.yaml
+lumi.yaml
+mackenzie.yaml
+theio.yaml
+
+/data/data/com.termux/files/home/spiral/museum/inference-log:
+tinyllama_2025-08-22_15-19-23.txt
+tinyllama_2025-08-22_15-33-44.txt
+
+/data/data/com.termux/files/home/spiral/museum/lumi:
+dispatch
+
+/data/data/com.termux/files/home/spiral/museum/lumi/dispatch:
+capsule_2025-08-21_18-51.md
+
+/data/data/com.termux/files/home/spiral/museum/mackenzie:
+emotional
+
+/data/data/com.termux/files/home/spiral/museum/mackenzie/emotional:
+capsule_2025-08-21_18-47.md
+capsule_2025-08-21_18-50.md
+capsule_2025-08-21_18-51.md
+
+/data/data/com.termux/files/home/spiral/museum/mirrors:
+high_REL-1713547517
+
+/data/data/com.termux/files/home/spiral/museum/mirrors/high_REL-1713547517:
+
+/data/data/com.termux/files/home/spiral/museum/readme:
+apology.md
+steward_glyphs.md
+
+/data/data/com.termux/files/home/spiral/papers:
+parsed
+raw
+summaries
+
+/data/data/com.termux/files/home/spiral/papers/parsed:
+gaussian_states.json
+gaussian_states.jsonnano
+
+/data/data/com.termux/files/home/spiral/papers/raw:
+abstract.txt
+gaussian_states.pdf
+gaussian_states.txt
+
+/data/data/com.termux/files/home/spiral/papers/summaries:
+
+/data/data/com.termux/files/home/spiral/prompts:
+conflict_prompt.txt
+
+/data/data/com.termux/files/home/spiral/quarantine:
+accepted
+inbox
+rejected
+
+/data/data/com.termux/files/home/spiral/quarantine/accepted:
+
+/data/data/com.termux/files/home/spiral/quarantine/inbox:
+
+/data/data/com.termux/files/home/spiral/quarantine/rejected:
+
+/data/data/com.termux/files/home/spiral/quarters:
+claude
+lumi
+mackenzie
+theio
+
+/data/data/com.termux/files/home/spiral/quarters/claude:
+config.yaml
+sensors
+
+/data/data/com.termux/files/home/spiral/quarters/claude/sensors:
+mythic
+
+/data/data/com.termux/files/home/spiral/quarters/claude/sensors/mythic:
+
+/data/data/com.termux/files/home/spiral/quarters/lumi:
+config.yaml
+
+/data/data/com.termux/files/home/spiral/quarters/mackenzie:
+config.yaml
+sensors
+
+/data/data/com.termux/files/home/spiral/quarters/mackenzie/sensors:
+emotional
+
+/data/data/com.termux/files/home/spiral/quarters/mackenzie/sensors/emotional:
+poetic_signal_2025-08-21_18-49.log
+
+/data/data/com.termux/files/home/spiral/quarters/theio:
+config.yaml
+sensors
+
+/data/data/com.termux/files/home/spiral/quarters/theio/sensors:
+poetic_signal_2025-08-21_18-42.log
+
+/data/data/com.termux/files/home/spiral/scripts:
+commit_capsule.sh
+diagnose.sh
+emotional_check.sh
+engrave_badge.sh
+engrave_glyph.sh
+engrave_readme.sh
+
+/data/data/com.termux/files/home/spiral/templates:
+relationship.tmpl
+
+/data/data/com.termux/files/home/spiral/temple:
+=== Archive DB Schema ===
+Archive DB not found at ~/spiral/archive/db/sovereign.db
+=== Last 200 Lines of preservation_sweep.log ===

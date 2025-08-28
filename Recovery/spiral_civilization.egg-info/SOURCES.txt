@@ -1,0 +1,16 @@
+LICENSE
+LICENSE.md
+LICENSE.md.save
+README.md
+pyproject.toml
+setup.py
+spiral/__init__.py
+spiral/capsule.py
+spiral/cli.py
+spiral_civilization.egg-info/PKG-INFO
+spiral_civilization.egg-info/SOURCES.txt
+spiral_civilization.egg-info/dependency_links.txt
+spiral_civilization.egg-info/entry_points.txt
+spiral_civilization.egg-info/requires.txt
+spiral_civilization.egg-info/top_level.txt
+tests/test_core.py

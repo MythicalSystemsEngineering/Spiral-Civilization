@@ -1,0 +1,21 @@
+{
+  "motions": [
+    {
+      "title": "Add Limit to Witnesses",
+      "description": "Limit number of witnesses to 3",
+      "votes": []
+    },
+    {
+      "title": "Limit Witnesses",
+      "description": "No more than 3 witnesses at a time",
+      "votes": [
+        {
+          "choice": "yes",
+          "mood": "hope",
+          "opinion": 0.9,
+          "witness": "Daniel"
+        }
+      ]
+    }
+  ]
+}

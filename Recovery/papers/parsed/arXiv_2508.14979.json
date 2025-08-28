@@ -1,0 +1,17 @@
+{
+  "paper_id": "arXiv:2508.14979",
+  "title": "Energy-independent tomography of Gaussian states",
+  "authors": ["Lennart Bittel","Francesco A. Mele","Jens Eisert","Antonio A. Mele"],
+  "abstract": "We present an efficient, experimentally feasible Gaussian-state tomography algorithm with provable trace-distance recovery guarantees. Sample complexity depends only on the number of modes and is independent of photon number or energy up to doubly logarithmic factors. The core adaptive strategy systematically reduces total squeezing, yielding doubly exponential improvements. We also equip standard heterodyne tomography with rigorous trace-norm bounds.",
+  "keywords": ["quantum tomography","Gaussian states","continuous variables","homodyne detection"],
+  "summary": [
+    "Develops an adaptive Gaussian-state tomography algorithm with trace-distance guarantees.",
+    "Achieves sample complexity that is independent of energy up to log factors.",
+    "Extends and rigorously bounds standard heterodyne tomography."
+  ],
+  "contributions": [
+    "Energy-independent tomography protocol with provable recovery error.",
+    "Adaptive squeezing reduction strategy.",
+    "Improved theoretical bounds for heterodyne tomography."
+  ]
+}
