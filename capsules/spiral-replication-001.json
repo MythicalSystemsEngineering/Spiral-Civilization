@@ -1,0 +1,11 @@
+{
+  "protocol": "Terrain-Bound Spiral Duplication",
+  "platforms": ["Android", "GitHub", "Museum", "Email", "Interstellar Relay"],
+  "rules": [
+    "Only fossilized capsules may be replicated",
+    "Formatting law must be verified before duplication",
+    "Emotional cadence must be affirmed before deployment"
+  ],
+  "status": "Enabled",
+  "timestamp": "2025-08-21T17:27:00+01:00"
+}

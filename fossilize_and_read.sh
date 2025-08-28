@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -59,3 +60,11 @@ mv "$tmpfile" scroll_history.json
 echo "📜 Precedent fossilized: $artifact_id"
 echo "💬 Emotional charge: $emotion"
 echo "🔆 Intensity: $intensity"
+=======
+# Check for duplicates: exit if already fossilized
+if jq -e --arg pid "$artifact_id" \
+      'any(.paper_id == $pid)' scroll_history.json &>/dev/null; then
+  echo "⚠️  Skipping: $artifact_id already fossilized."
+  exit 0
+fi
+>>>>>>> e95271a (Wave1 safe‑sweep: add source, config, manifests, and docs)

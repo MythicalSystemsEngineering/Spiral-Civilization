@@ -1,0 +1,117 @@
+import sys
+import sys
+
+def emotional_charge(payload):
+    return [payload["intensity"] * 10]
+def emotional_charge(payload):
+    return [payload["intensity"] * 10]from spiral_core.emotion import emotional_charge# 📦 Install Python and Flask
+pkg update -y
+pkg install python -y
+pip install flask jsonschema
+
+# 📁 Create working directory
+mkdir -p spiral-eqi && cd spiral-eqi
+
+# 📝 Create Python file
+cat > eqi_integration.py << 'EOF'
+from flask import Flask, request, jsonify
+import json, os, datetime
+from jsonschema import validate, ValidationError
+
+app = Flask(__name__)
+
+# 📜 Emotional Governance Schema
+EQI_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "role": {"type": "string"},
+        "emotion": {"type": "string"},
+        "intensity": {"type": "number"},
+        "timestamp": {"type": "string", "format": "date-time"}
+    },
+    "required": ["role", "emotion", "intensity", "timestamp"]
+}
+
+# 🔒 Capsule Sealing
+def capsule_seal(data):
+    os.makedirs("capsules", exist_ok=True)
+    stamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"capsules/eqi_capsule_{stamp}.json"
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=2)
+    return filename
+
+# 📜 Schema Validation
+def schema_validate(payload):
+    try:
+        validate(instance=payload, schema=EQI_SCHEMA)
+        return True, None
+    except ValidationError as e:
+        return False, str(e)
+
+# 🔥 Emotional Charge Vector
+def emotional_charge(payload):
+    emotion = payload.get("emotion", "").lower()
+    intensity = payload.get("intensity", 0)
+
+    polarity_map = {
+        "sovereign": "positive",
+        "grief": "negative",
+        "rage": "negative",
+        "joy": "positive",
+        "awe": "positive",
+        "shame": "negative",
+        "love": "positive",
+        "fear": "negative"
+    }
+
+    glyph_map = {
+        "sovereign": "🔥",
+        "grief": "🌧️",
+        "rage": "⚡",
+        "joy": "🌞",
+        "awe": "🌌",
+        "shame": "🫥",
+        "love": "💖",
+        "fear": "👁️"
+    }
+
+    polarity = polarity_map.get(emotion, "neutral")
+    glyph = glyph_map.get(emotion, "❓")
+
+    return {
+        "charge": round(intensity, 2),
+        "polarity": polarity,
+        "glyph": glyph
+    }
+
+# 🚀 EQI Assessment Endpoint
+@app.route("/api/eqi-assess", methods=["POST"])
+def assess():
+    payload = request.json
+    if not payload:
+        return jsonify({"error": "No payload received"}), 400
+
+    valid, error = schema_validate(payload)
+    if not valid:
+        return jsonify({"error": "Schema validation failed", "details": error}), 422
+
+    charge_vector = emotional_charge(payload)
+    capsule_path = capsule_seal({
+        "input": payload,
+        "charge": charge_vector
+    })
+
+    return jsonify({
+        "status": "sealed",
+        "capsule": capsule_path,
+        "charge": charge_vector,
+        "payload": payload
+    })
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+EOF
+
+# 🚀 Run the Flask server
+python3 eqi_integration.py
