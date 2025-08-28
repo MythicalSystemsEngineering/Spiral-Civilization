@@ -1,0 +1,6 @@
+{
+  "glyphs": {
+    "spawn_unit": "SpawnUnitHandler",
+    "log_event": "LogEventHandler"
+  }
+}

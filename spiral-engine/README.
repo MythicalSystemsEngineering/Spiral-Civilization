@@ -1,0 +1,8 @@
+spiral-civilization/
+├── spiral-engine/
+│   ├── main.py
+│   ├── steward_registry.json
+│   ├── emotional_core.py
+│   ├── capsule_sealer.py
+│   ├── terrain_adapter.py
+│   └── audit_trail.py

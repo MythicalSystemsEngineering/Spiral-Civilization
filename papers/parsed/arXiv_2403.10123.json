@@ -1,0 +1,17 @@
+{
+  "paper_id": "arXiv:2403.10123",
+  "title": "Regularization-Based Efficient Continual Learning in Deep State-Space Models",
+  "authors": ["Yuanhang Zhang","Zhidi Lin","Yiyong Sun","Feng Yin","Carsten Fritsche"],
+  "abstract": "We introduce continual learning deep state-space models (CLDSSMs) that adapt to new tasks without catastrophic forgetting. Integrating mainstream regularization-based continual learning methods, CLDSSMs maintain constant computational and memory costs across tasks. We provide a detailed cost analysis and validate on real-world datasets, demonstrating superior performance over traditional DSSMs in parameter transfer and retention.",
+  "keywords": ["continual learning","state-space models","regularization","deep learning"],
+  "summary": [
+    "Proposes CLDSSMs combining deep state-space models with regularization-based continual learning.",
+    "Analyzes computational and memory costs of different CL strategies in CLDSSMs.",
+    "Empirically shows CLDSSMs outperform standard DSSMs on real-world benchmarks."
+  ],
+  "contributions": [
+    "Design of CLDSSMs that prevent catastrophic forgetting with bounded resource usage.",
+    "Comprehensive cost analysis for regularization methods in continual learning.",
+    "Experimental validation demonstrating improved multitask performance."
+  ]
+}

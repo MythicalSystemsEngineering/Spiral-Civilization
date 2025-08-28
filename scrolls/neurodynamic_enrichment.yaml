@@ -1,0 +1,18 @@
+scroll_name: "Neurodynamic Graph Enrichment"
+date: "2025-08-23"
+steward: "Daniel Lightfoot"
+status: "Completed"
+output: "models/knowledge_graph_enriched.json"
+modules:
+  - Memory Stream
+  - Perception Engine
+  - Signal Harmonizer
+  - Neural Ingestor
+simulation_hooks: true
+metadata_fields:
+  - title
+  - tags
+  - summary
+  - author
+  - year
+  - source

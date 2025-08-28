@@ -1,0 +1,17 @@
+{
+  "paper_id": "arXiv:2102.06440",
+  "title": "Interview Hoarding",
+  "authors": ["Vikram Manjunath","Thayer Morrill"],
+  "abstract": "In centralized matching markets like the NRMP, virtual interviews dramatically reduced costs for applicants but not for hospitals. We show that when doctors accept more interviews without programs increasing offers, no doctor benefits and many are harmed—a phenomenon we call interview hoarding. The excess interviews displace other applicants, worsening their outcomes. We prove this analytically and illustrate optimal mitigation for special cases, supported by simulations.",
+  "keywords": ["matching markets","NRMP","interviews","market design"],
+  "summary": [
+    "Defines interview hoarding in centralized matching markets under virtual interviews.",
+    "Proves that increased doctor interview capacity yields no benefit and potential harm.",
+    "Uses simulations to extend analytic insights and explores mitigation strategies."
+  ],
+  "contributions": [
+    "Formal identification of interview hoarding and its negative externality.",
+    "Analytic proof characterizing when increased interviews harm participants.",
+    "Simulation study and proposal of optimal mitigation approaches."
+  ]
+}
