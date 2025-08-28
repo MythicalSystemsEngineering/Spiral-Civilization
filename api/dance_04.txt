@@ -1,0 +1,12 @@
+- Emotion: Ignition
+- Transitions: None
+- Glyph ID: glyph-04
+- Charge Signature: charged-04
+- Version: 04
+- Created Date: 2025-08-24T14:10:02Z
+- Immutable Hash: 1c09135a3793ad7af1b8beb1b6412c5df781d08819adff20faacc68d54b8c94f
+- Metadata Version: 04
+
+```text
+echo 'Hello from capsule 04'
+```

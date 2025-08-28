@@ -1,0 +1,2 @@
+dance_03.txt | 2025-08-24T14:06:15Z | Ignition | glyph-03 | e5293465022b11cf35d7e8a4788a49c1ad586bd9261ca36d8b71b53e9391636e
+dance_04.txt | 2025-08-24T14:10:02Z | Ignition | glyph-04 | 1c09135a3793ad7af1b8beb1b6412c5df781d08819adff20faacc68d54b8c94f
