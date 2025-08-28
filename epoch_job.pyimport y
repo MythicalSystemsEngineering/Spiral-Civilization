@@ -1,2 +1,0 @@
-print(Args received:", sys.argv)import sys
-print("Args received:", sys.argv)
