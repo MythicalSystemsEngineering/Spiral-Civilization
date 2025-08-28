@@ -1,0 +1,17 @@
+{
+  "paper_id": "arXiv:2308.12845",
+  "title": "Implicit Obstacle Map-driven Indoor Navigation Model for Robust Obstacle Avoidance",
+  "authors": ["Wei Xie","Haobo Jiang","Shuo Gu","Jin Xie"],
+  "abstract": "Robust obstacle avoidance is one of the critical steps for successful goal-driven indoor navigation tasks. Visual image–based techniques still suffer from missed detections and unsatisfactory robustness. We propose a novel implicit obstacle map–driven framework, learning maps from historical trial-and-error rather than raw pixels. A non-local target memory aggregation module models relationships between target semantics and orientation clues, mining the most relevant object cues. Experiments on AI2-Thor and RoboTHOR demonstrate superior obstacle avoidance and navigation efficiency.",
+  "keywords": ["indoor navigation","obstacle avoidance","implicit mapping","non-local networks"],
+  "summary": [
+    "Introduces an implicit obstacle map learned from past experiences instead of raw visual inputs.",
+    "Designs a non-local memory aggregation module to link target semantics with orientation clues.",
+    "Demonstrates improved navigation robustness on AI2-Thor and RoboTHOR benchmarks."
+  ],
+  "contributions": [
+    "Novel framework for implicit obstacle mapping.",
+    "Non-local target memory aggregation for efficient cue mining.",
+    "Extensive empirical validation showing state-of-the-art obstacle avoidance."
+  ]
+}
