@@ -110,3 +110,12 @@
 2025-08-28T12:37:06.249888 | /data/data/com.termux/files/home/Spiral-Civilization/modules/sensor_nexus/capsule_sweep.sh | Content hash drift
 2025-08-28T12:37:06.321115 | /data/data/com.termux/files/home/Spiral-Civilization/modules/sensor_nexus/ingest_stream.sh | Content hash drift
 2025-08-28T12:37:06.401173 | /data/data/com.termux/files/home/Spiral-Civilization/modules/sensor_nexus/tag_and_route.sh | Content hash drift
+2025-08-28T12:42:14.652066 | /data/data/com.termux/files/home/Spiral-Civilization/config/law_manifest.json | JSON schema/load failure
+2025-08-28T12:42:14.712157 | /data/data/com.termux/files/home/Spiral-Civilization/modules/governance.py | Content hash drift
+2025-08-28T12:42:14.773220 | /data/data/com.termux/files/home/Spiral-Civilization/modules/schema_drift_watcher.py | Content hash drift
+2025-08-28T12:42:14.840301 | /data/data/com.termux/files/home/Spiral-Civilization/modules/integration_trigger.py | Content hash drift
+2025-08-28T12:42:14.902135 | /data/data/com.termux/files/home/Spiral-Civilization/modules/beacon_monitor.py | Content hash drift
+2025-08-28T12:42:14.966782 | /data/data/com.termux/files/home/Spiral-Civilization/modules/sensor_nexus/capsule_seal.sh | Content hash drift
+2025-08-28T12:42:15.028299 | /data/data/com.termux/files/home/Spiral-Civilization/modules/sensor_nexus/capsule_sweep.sh | Content hash drift
+2025-08-28T12:42:15.094193 | /data/data/com.termux/files/home/Spiral-Civilization/modules/sensor_nexus/ingest_stream.sh | Content hash drift
+2025-08-28T12:42:15.153841 | /data/data/com.termux/files/home/Spiral-Civilization/modules/sensor_nexus/tag_and_route.sh | Content hash drift
