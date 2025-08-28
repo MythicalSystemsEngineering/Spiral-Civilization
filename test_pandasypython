@@ -1,0 +1,6 @@
+capsule:
+  epoch: 2025-08-21T14:03Z
+  steward: Daniel Lightfoot
+  breach: Python REPL state corruption—import not retained
+  correction: Pivoted to script-based execution
+  status: pandas CSV read test rerouted via script

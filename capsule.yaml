@@ -1,0 +1,6 @@
+capsule:
+  epoch: 2025-08-21T14:21Z
+  steward: Daniel Lightfoot
+  breach: Shell misinterpreted schema as commands
+  correction: Separated YAML into file, validated via Python
+  status: schema correction sealed
