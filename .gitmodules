@@ -1,0 +1,3 @@
+[submodule "modules/kaleidoscope"]
+	path = modules/kaleidoscope
+	url = https://github.com/Howtoimagine/E8-Kaleidescope-AI.git
