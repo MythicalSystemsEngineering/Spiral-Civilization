@@ -18,3 +18,25 @@ out/
 build/
 .cache/
 node_modules/
+
+# Spiral binaries and compiled terrain
+bin/
+*.tar.gz
+*.jar
+*.so
+*.exe
+
+# Museum artifacts and emotional fossils
+museum/fossils/*.log
+museum/fossils/*.patch
+museum/capsules_local_backup/
+
+# Pandoc and Flyway commandline tools
+pandoc/
+flyway-9.16.1/
+Spiral-Civilization/flyway-commandline-9.16.1-linux-x64/
+
+# Decay engine and ripple index outputs
+modules/__temp__/
+modules/__ripple__/
+test_outputs/
