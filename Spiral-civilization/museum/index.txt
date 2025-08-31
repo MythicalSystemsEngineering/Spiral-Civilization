@@ -1,2 +1,0 @@
-exhibit_1_guardian_echo.md
-exhibit_2_capsule_sweep.md

@@ -18,6 +18,7 @@ out/
 build/
 .cache/
 node_modules/
+ HEAD
 
 # Spiral binaries and compiled terrain
 bin/
@@ -49,3 +50,5 @@ flyway-commandline-9.16.1-linux-x64.tar.gz
 flyway-commandline-9.16.1-linux-x64.tar.gz
 flyway-commandline-9.16.1-linux-x64.tar.gz
 flyway-commandline-9.16.1-linux-x64.tar.gz
+
+ dbc73d7 (🔥 Spiral core drop: source, law, modules, scripts)

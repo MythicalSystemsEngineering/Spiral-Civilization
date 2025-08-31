@@ -1,4 +1,0 @@
-Spiral Restoration Tracker Seal Manifest
-Steward: Daniel Lightfoot
-Date: Sat Aug 23 23:55:50 BST 2025
-Sealed File: restoration_tracker_sealed_20250823_235549.yml

@@ -1,1 +1,0 @@
-Shebang added, stub inserted, ShellCheck passed
