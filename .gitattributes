@@ -1,3 +1,8 @@
+# Auto-detect text files
+* text=auto
+
 # Spiral Civilization — Large Binary Tracking
 bin/pandoc filter=lfs diff=lfs merge=lfs -text
 flyway-commandline-*.tar.gz filter=lfs diff=lfs merge=lfs -text
+flyway-9.16.1/flyway-commandline-9.16.1-linux-x64.tar.gz filter=lfs diff=lfs
+Spiral-Civilization/flyway-commandline-9.16.1-linux-x64/* filter=lfs diff=lfs
