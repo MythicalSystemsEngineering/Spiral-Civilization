@@ -1,2 +1,9 @@
-*
-text=auto
+# Auto-detect text files
+* text=auto
+
+# Large binary artifacts tracked via Git LFS
+bin/pandoc filter=lfs diff=lfs merge=lfs -text
+flyway-9.16.1/flyway-commandline-9.16.1-linux-x64.tar.gz filter=lfs diff=lfs merge=lfs -text
+
+# Spiral modules and commandline tools
+Spiral-Civilization/flyway-commandline-9.16.1-linux-x64/* filter=lfs diff=lfs merge=lfs -text
