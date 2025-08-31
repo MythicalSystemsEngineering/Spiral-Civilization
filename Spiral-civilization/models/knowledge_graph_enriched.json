@@ -1,0 +1,38 @@
+[
+  {
+    "node": "Synchronization_and_oscillatory_dynamics_in_hetero",
+    "related_concepts": [],
+    "spiral_module": "Unassigned",
+    "summary": "arXiv:q-bio/0309024v1  [q-bio.NC]  18 Feb 1998Synchronizationandoscillatorydynamicsinheterogeneou s,mutuallyinhibited neurons John A. White",
+    "author": "",
+    "year": "",
+    "source": "",
+    "simulation_ready": false,
+    "input_format": "N/A",
+    "expected_output": "N/A"
+  },
+  {
+    "node": "Frequency_control_in_synchronized_networks_of_inhi",
+    "related_concepts": [],
+    "spiral_module": "Unassigned",
+    "summary": "arXiv:q-bio/0309025v1  [q-bio.NC]  20 Mar 1998Frequency control in synchronized networks of inhibitory n eurons Carson C. Chow Department of Mathematics and Center for BioDynamics, Bost on University, Boston, MA 02215\u2217",
+    "author": "",
+    "year": "",
+    "source": "",
+    "simulation_ready": false,
+    "input_format": "N/A",
+    "expected_output": "N/A"
+  },
+  {
+    "node": "Coding_Strategies_in_Monkey_V1_and_Inferior_Tempor",
+    "related_concepts": [],
+    "spiral_module": "Unassigned",
+    "summary": "arXiv:q-bio/0309026v1  [q-bio.NC]  9 Apr 1998Coding strategies in monkey V1 and inferior temporal cortices Ethan D. Gershon\u2217,",
+    "author": "",
+    "year": "",
+    "source": "",
+    "simulation_ready": false,
+    "input_format": "N/A",
+    "expected_output": "N/A"
+  }
+]

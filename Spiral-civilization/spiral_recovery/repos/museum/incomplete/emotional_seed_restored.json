@@ -1,0 +1,14 @@
+{
+  "scroll_name": "Restored Emotional Seed",
+  "original_date": "UNKNOWN",
+  "restored_by": "Daniel Lightfoot",
+  "restoration_date": "2025-08-23",
+  "status": "Restored",
+  "directories": {
+    "example_emotion": {
+      "ignition_sources": ["Insert source here"],
+      "emotional_binding": "Insert emotional binding",
+      "cognitive_domain": "Insert cognitive domain"
+    }
+  }
+}
