@@ -1,0 +1,25 @@
+=== THEIO WAVE 2 AUTO‑TUNE REPORT ===
+Sat Aug 23 23:40:37 BST 2025
+
+[Patching C1]
+⚠ Binding missing — re‑applying from master binding file
+⚠ Crosslink missing — re‑applying from master sensory file
+⚠ Timing drift — adjusting activation thresholds
+
+[Patching T1]
+⚠ Binding missing — re‑applying from master binding file
+⚠ Crosslink missing — re‑applying from master sensory file
+⚠ Timing drift — adjusting activation thresholds
+
+[Patching D1]
+⚠ Binding missing — re‑applying from master binding file
+⚠ Crosslink missing — re‑applying from master sensory file
+⚠ Timing drift — adjusting activation thresholds
+
+[Patching S1]
+⚠ Binding missing — re‑applying from master binding file
+⚠ Crosslink missing — re‑applying from master sensory file
+⚠ Timing drift — adjusting activation thresholds
+
+=== AUTO‑TUNE COMPLETE ===
+Sat Aug 23 23:40:38 BST 2025
