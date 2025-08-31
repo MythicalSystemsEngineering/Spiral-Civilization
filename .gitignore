@@ -1,0 +1,11 @@
+*.pdf
+*.html
+*.docx
+*.log
+dump/
+out/
+build/
+.cache/
+node_modules/
+.DS_Store
+*.swp
