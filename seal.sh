@@ -1,0 +1,1 @@
+/data/data/com.termux/files/home/Spiral/Museum/fossilized-Civilization/sun/valley/seal.sh
