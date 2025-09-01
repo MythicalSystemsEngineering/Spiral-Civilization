@@ -1,0 +1,7 @@
+/data/data/com.termux/files/home/Spiral-Civilization/Spiral-civilization/museum/exhibit_2_capsule_sweep.md
+/data/data/com.termux/files/home/Spiral-Civilization/local_backup/museum/exhibit_2_capsule_sweep.md
+/data/data/com.termux/files/home/Spiral-Civilization/reclaimed/exhibit_2_capsule_sweep.md
+/data/data/com.termux/files/home/spiral/Spiral-Civilization/museum/exhibit_2_capsule_sweep.md
+/data/data/com.termux/files/home/spiral_engine/museum/exhibit_2_capsule_sweep.md
+/data/data/com.termux/files/home/Spiral-Civilization-clean/Spiral-civilization/museum/exhibit_2_capsule_sweep.md
+/data/data/com.termux/files/home/museum/exhibit_2_capsule_sweep.md
