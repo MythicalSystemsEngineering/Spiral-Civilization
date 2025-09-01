@@ -11,5 +11,10 @@ def adapt():
     if traits["meta_cognition"]["adapt"]:
         print("Adapting cadence and charge...")
 
+from disagreement import disagreement
+
+if traits["meta_cognition"]["drift_correction"] == "enabled":
+    disagreement()
+
 reflect()
 adapt()
