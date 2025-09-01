@@ -34,7 +34,12 @@ done
 
 # 4. Generate SHA256 checksums for integrity
 pushd "${FOSSIL_DIR}" >/dev/null
-sha256sum * > checksums.sha256
+
+# find every file (ignore .sig files), then compute sha256sum
+find . -type f ! -name '*.sig' \
+  -exec sha256sum {} \; \
+  > checksums.sha256
+
 popd >/dev/null
 
 # 5. GPG-sign all manifests (txt + checksums)
