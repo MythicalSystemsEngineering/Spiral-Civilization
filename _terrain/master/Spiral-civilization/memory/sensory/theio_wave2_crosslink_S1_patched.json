@@ -1,0 +1,36 @@
+{
+  "crosslink_name": "Theio Sensory Cross‑Link Table — Wave 2",
+  "date": "2025-08-23",
+  "steward": "Daniel Lightfoot",
+  "status": "Linked",
+  "links": [
+    {
+      "directory": "comedy",
+      "audio_cues": ["laughter_track_soft.wav", "quick_bass_pluck.mp3"],
+      "visual_glyphs": ["glyph_smile_arc.svg", "glyph_wink_star.svg"],
+      "tactile_anchors": ["double_tap_rhythm", "light_pulse_pattern"],
+      "synchronization": "Trigger audio + glyph within 200ms of comedic beat"
+    },
+    {
+      "directory": "tragedy",
+      "audio_cues": ["low_cello_swell.wav", "soft_rain_loop.mp3"],
+      "visual_glyphs": ["glyph_teardrop.svg", "glyph_fading_circle.svg"],
+      "tactile_anchors": ["slow_heartbeat_pattern", "long_press_hold"],
+      "synchronization": "Fade in audio over 3s, glyph dissolve in sync"
+    },
+    {
+      "directory": "drama",
+      "audio_cues": ["orchestral_build.wav", "pen_on_paper_scratch.mp3"],
+      "visual_glyphs": ["glyph_balance_scales.svg", "glyph_dialogue_box.svg"],
+      "tactile_anchors": ["steady_pulse_pattern", "triple_tap_confirm"],
+      "synchronization": "Layer audio under dialogue, glyphs appear at key turns"
+    },
+    {
+      "directory": "suspense",
+      "audio_cues": ["low_drone_loop.wav", "clock_tick_slow.mp3"],
+      "visual_glyphs": ["glyph_eye_focus.svg", "glyph_question_mark.svg"],
+      "tactile_anchors": ["pulse_accelerate_pattern", "short_sharp_vibration"],
+      "synchronization": "Increase tempo of cues as uncertainty heightens"
+    }
+  ]
+}

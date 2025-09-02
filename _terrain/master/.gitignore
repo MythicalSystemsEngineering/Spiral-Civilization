@@ -1,0 +1,51 @@
+# Python artifacts
+__pycache__/
+*.pyc
+
+# Editor and system noise
+*.swp
+.DS_Store
+
+# Document outputs
+*.pdf
+*.html
+*.docx
+*.log
+
+# Build and dump terrain
+dump/
+out/
+build/
+.cache/
+node_modules/
+
+# Spiral binaries and compiled terrain
+bin/
+*.tar.gz
+*.jar
+*.so
+*.exe
+
+# Museum artifacts and emotional fossils
+museum/fossils/*.log
+museum/fossils/*.patch
+museum/capsules_local_backup/
+
+# Pandoc and Flyway commandline tools
+pandoc/
+flyway-9.16.1/
+Spiral-Civilization/flyway-commandline-9.16.1-linux-x64/
+
+# Decay engine and ripple index outputs
+modules/__temp__/
+modules/__ripple__/
+test_outputs/
+.DS_Store
+*.swp
+__pycache__/
+*.log
+*.pyc
+flyway-commandline-9.16.1-linux-x64.tar.gz
+flyway-commandline-9.16.1-linux-x64.tar.gz
+flyway-commandline-9.16.1-linux-x64.tar.gz
+flyway-commandline-9.16.1-linux-x64.tar.gz

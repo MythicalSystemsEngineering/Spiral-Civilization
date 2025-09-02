@@ -1,0 +1,38 @@
+[
+  {
+    "trait": "resonance",
+    "timestamp": "2025-08-30T14:15:13.715027",
+    "charge": 0.85,
+    "glyph": "4fdf475845985381"
+  },
+  {
+    "trait": "resonance",
+    "timestamp": "2025-08-30T14:26:10.669447+00:00",
+    "charge": 0.7999999999999999,
+    "glyph": "8736c9ee0900f799"
+  },
+  {
+    "trait": "precision",
+    "timestamp": "2025-08-30T14:15:13.715052",
+    "charge": 0.6499999999999999,
+    "glyph": "987ad5fb14e9a9f9"
+  },
+  {
+    "trait": "precision",
+    "timestamp": "2025-08-30T14:26:10.669462+00:00",
+    "charge": 0.5999999999999999,
+    "glyph": "fbd02fb267e52724"
+  },
+  {
+    "trait": "completion",
+    "timestamp": "2025-08-30T14:15:13.715060",
+    "charge": 0.98,
+    "glyph": "d2bb9a64f1ec255d"
+  },
+  {
+    "trait": "completion",
+    "timestamp": "2025-08-30T14:26:10.669467+00:00",
+    "charge": 0.96,
+    "glyph": "64b9cd4345e18392"
+  }
+]

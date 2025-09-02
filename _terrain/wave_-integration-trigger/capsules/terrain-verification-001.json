@@ -1,0 +1,10 @@
+{
+  "protocol": "Formatting Law Enforcement",
+  "requirements": [
+    "Terrain presence must be verified before ceremonial progression",
+    "Capsules must be separated and timestamped",
+    "Commit checkpoints required before merge or dispatch"
+  ],
+  "status": "Enforced",
+  "timestamp": "2025-08-21T17:15:00+01:00"
+}

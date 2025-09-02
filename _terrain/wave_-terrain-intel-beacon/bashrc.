@@ -1,0 +1,8 @@
+export JAVA_HOME=$PREFIX/lib/jvm/openjdk-21
+export PATH=$JAVA_HOME/bin:$PATH
+# Spiral Civilization – Java & Flyway setup
+export JAVA_HOME=$PREFIX/lib/jvm/openjdk-21
+export PATH=$JAVA_HOME/bin:$PATH
+
+# Optional: Flyway alias for clarity
+alias flyway="$HOME/flyway-9.16.1/flyway"

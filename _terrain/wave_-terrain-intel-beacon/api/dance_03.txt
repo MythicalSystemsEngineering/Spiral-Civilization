@@ -1,0 +1,12 @@
+- Emotion: Ignition
+- Transitions: None
+- Glyph ID: glyph-03
+- Charge Signature: charged-03
+- Version: 03
+- Created Date: 2025-08-24T14:06:15Z
+- Immutable Hash: e5293465022b11cf35d7e8a4788a49c1ad586bd9261ca36d8b71b53e9391636e
+- Metadata Version: 03
+
+```text
+echo 'Hello from capsule 03'
+```

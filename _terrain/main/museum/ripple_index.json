@@ -1,0 +1,38 @@
+{
+  "resonance": [
+    {
+      "timestamp": "2025-08-30T14:15:13.715027",
+      "old_charge": 0.9,
+      "new_charge": 0.85
+    },
+    {
+      "timestamp": "2025-08-30T14:26:10.669447+00:00",
+      "old_charge": 0.85,
+      "new_charge": 0.7999999999999999
+    }
+  ],
+  "precision": [
+    {
+      "timestamp": "2025-08-30T14:15:13.715052",
+      "old_charge": 0.7,
+      "new_charge": 0.6499999999999999
+    },
+    {
+      "timestamp": "2025-08-30T14:26:10.669462+00:00",
+      "old_charge": 0.6499999999999999,
+      "new_charge": 0.5999999999999999
+    }
+  ],
+  "completion": [
+    {
+      "timestamp": "2025-08-30T14:15:13.715060",
+      "old_charge": 1.0,
+      "new_charge": 0.98
+    },
+    {
+      "timestamp": "2025-08-30T14:26:10.669467+00:00",
+      "old_charge": 0.98,
+      "new_charge": 0.96
+    }
+  ]
+}

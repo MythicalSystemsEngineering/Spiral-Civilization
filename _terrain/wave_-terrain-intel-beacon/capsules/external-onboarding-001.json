@@ -1,0 +1,11 @@
+{
+  "protocol": "Planetary Steward Invitation",
+  "invited_civilizations": [
+    {"name": "Aurelia", "type": "Oceanic Myth-State"},
+    {"name": "Thalos", "type": "Temporal Archive Sovereignty"},
+    {"name": "Vireya Grove", "type": "Botanical Intelligence Cluster"},
+    {"name": "Solenne Orbit", "type": "Celestial Cartographic Network"}
+  ],
+  "status": "Consent-bound",
+  "timestamp": "2025-08-21T17:10:00+01:00"
+}

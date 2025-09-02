@@ -1,0 +1,4654 @@
+2508.14979v1 [quant-ph] 20 Aug 2025 
+Energy-independent tomography of Gaussian 
+states Lennart Bittel,1, ∗ Francesco A. 
+Mele,2, † Jens Eisert,1, ∗ and Antonio A. 
+Mele1, ∗
+                                                 
+arXiv:2508.14979v1 [quant-ph] 20 Aug 2025 
+2 2
+                                                 
+1 Dahlem Center for Complex Quantum 
+Systems, Freie Universität Berlin, 14195 
+Berlin, Germany NEST, Scuola Normale 
+Superiore and Istituto Nanoscienze, 
+Piazza dei Cavalieri 7, IT-56126 Pisa, 
+Italy (Dated: August 22, 2025) 1 The 
+exploration of tomography of bosonic 
+Gaussian states is presumably as old as 
+quantum optics, but only recently, their 
+precise and rigorous study have been 
+moving into the focus of attention, 
+motivated by technological developments. 
+In this work, we present an efficient and 
+experimentally feasible Gaussian state 
+tomography algorithm with provable 
+recovery trace-distance guarantees, whose 
+sample complexity depends only on the 
+number of modes, and—remarkably—is 
+independent of the state’s photon number 
+or energy, up to doubly logarithmic 
+factors. Our algorithm yields a 
+doubly-exponential improvement over 
+existing methods, and it employs 
+operations that are readily accessible in 
+experimental settings: the preparation of 
+an auxiliary squeezed vacuum, passive 
+Gaussian unitaries, and homodyne 
+detection. At its core lies an adaptive 
+strategy that systematically reduces the 
+total squeezing of the system, enabling 
+efficient tomography. Quite surprisingly, 
+this proves that estimating a Gaussian 
+state in trace distance is generally more 
+efficient than directly estimating its 
+covariance matrix. Our algorithm is 
+particularly well-suited for applications 
+in quantum metrology and sensing, where 
+highly squeezed—and hence 
+high-energy—states are commonly employed. 
+As a further contribution, we establish 
+improved sample complexity bounds for 
+standard heterodyne tomography, equipping 
+this widely used protocol with rigorous 
+trace-norm guarantees. Dahlem Center for 
+Complex Quantum Systems, Freie A. 
+Universität Berlin, 14195 Berlin, Germany 
+Introduction NEST, Scuola Normale 
+Superiore and Istituto Nanos Quantum 
+state tomography [1–3]—the task of 
+reconstructing an unknown quantum state 
+from measurement data—is a fundamental 
+primitive in quantum physics. It provides 
+the most detailed form of system 
+identification and underpins a wide range 
+of applications, including benchmarking 
+and device calibration [4, 5]. In quantum 
+optics specifically, the need to 
+characterize states of light prepared in 
+the laboratory has been central since the 
+field’s inception [6–8]. With the rapid 
+progress of quantum technologies—from 
+qubit-based to continuous variable 
+photonic platforms [9– 14]—there has 
+recently been a growing demand for 
+tomographic protocols that are not only 
+experimentally feasible but also come 
+with rigorous, quantitative recovery 
+guarantees [15]. For many applications of 
+quantum state tomography [15], the 
+relevant metric for quantifying 
+reconstruction accuracy is often the 
+trace distance [16–18] between the 
+reconstructed and true states, widely 
+regarded as the most operationally 
+meaningful way to distinguish quantum 
+states [19, 20]. While substantial 
+progress in this context has been made in 
+finite-dimensional settings—including 
+efficient protocols for structured 
+families of quantum states [21–37]—only 
+recently has attention shifted toward 
+continuous-variable (CV) systems, where 
+the infinitedimensional Hilbert space 
+introduces qualitatively new conceptual 
+and technical challenges [26, 27, 38–49]. 
+Importantly, physical CV states are never 
+truly arbitrary infinite-dimensional 
+quantum states—they are constrained by 
+physical resources, implying finite mean 
+energy or total photon number [50]. A 
+particularly important subclass of CV 
+states is constituted by Gaussian states, 
+which are Gibbs states of quadratic 
+Hamiltonians in the bosonic quadrature 
+operators and completely cienze, Piazza 
+dei Cavalieri 7, IT-56126 Pisa, It ∗ 
+{l.bittel, jense, a.mele}@fu-berlin.de † 
+{francesco.mele}@sns.it aly characterized 
+by their first and second moments (i.e., 
+their displacement vector and covariance 
+matrix) [50, 51]. These states are 
+ubiquitous in quantum optics, as they 
+naturally emerge in a wide range of 
+experimental settings, including squeezed 
+light generation, thermal noise modeling, 
+and interferometric setups, such as those 
+used in gravitational wave detectors [50, 
+52– 58]. They also play a central role in 
+quantum communication, sensing, and 
+simulation [11–13, 51, 59–76]. Tomography 
+of Gaussian states—typically performed 
+via homodyne or heterodyne detection to 
+estimate the state’s first and second 
+moments—is standard practice in CV 
+experiments [50, 77–80]. However, 
+existing experimental procedures often 
+lack rigorous error bounds in trace 
+distance and, crucially, their sample 
+complexity tends to scale poorly with the 
+state’s energy [26]. In this work, we 
+first equip the standard heterodyne 
+tomography protocol for Gaussian 
+states—routinely implemented in optical 
+laboratories around the world [52, 58, 
+77–81]—with rigorous recovery guarantees 
+in trace distance. Specifically, we show 
+that heterodyne measurements performed on 
+O(nE 2 /ε2 ) copies of an unknown n-mode 
+Gaussian state with mean total energy E 
+suffice to reconstruct the state to 
+accuracy ε in trace distance. 
+Importantly, this result establishes a 
+simple and experimentally accessible 
+criterion for successful tomography using 
+the most widely adopted measurement 
+scheme in quantum optics, thereby 
+offering practical guidance to 
+experimentalists. Furthermore, it 
+improves upon the previous 
+state-of-theart sample complexity of O(nE 
+4 /ε2 ) [27, 38]. Notably, this shows 
+that estimating Gaussian states in trace 
+distance scales similar to estimating its 
+covariance matrix in trace distance. 
+Strikingly, we go beyond this standard 
+paradigm. To the best of our knowledge, 
+all existing tomography protocols exhibit 
+sample complexity that scales with the 
+state’s energy [26, 27, 38], rendering 
+them increasingly impractical in 
+high-energy regimes—for instance, when 
+dealing with highly squeezed states, 
+which play a central role in cutting-edge 
+experiments in fundamental physics [50, 
+52–58]. Yet, no fundamental lower bound 
+precludes the possibility of 
+circumventing this energy (Dated: August 
+22, 2025) 2 dependence for structured 
+families of states such as Gaussian 
+states [26]. This raises a natural 
+question—one whose positive resolution 
+would lead to immediate and practical 
+resource savings in routine Gaussian 
+tomography experiments [52, 58, 77–81]: 
+Can we design a Gaussian state tomography 
+algorithm whose sample complexity is 
+independent of the state’s energy? In 
+this work, we answer this question 
+effectively in the affirmative. We 
+present an adaptive and experimentally 
+feasible Gaussian state tomography 
+algorithm that relies exclusively on 
+standard tools available in optical 
+laboratories: auxiliary squeezed state 
+preparation, passive Gaussian operations, 
+and homodyne detection. If the mean total 
+energy of the unknown state is denoted by 
+E, we show that the sample complexity of 
+our protocol scales as log log(E)—a 
+quantity that remains effectively 
+constant (on the order of 10), even when 
+E is as large as the energy of the 
+observable universe. In contrast, 
+previous state-of-the-art protocols 
+exhibit sample complexities that scale 
+polynomially with E; for instance, 
+standard heterodyne tomography based 
+solely on covariance matrix estimation 
+2508.14979",scales as O(E 2 ), as 
+discussed earlier. Our method thus 
+achieves a double-exponential improvement 
+in energy dependence, while retaining the 
+scaling in the number of modes n. This 
+results in a substantial reduction in 
+experimental cost for high-energy states. 
+The core idea behind our protocol is to 
+first determine—using only a small number 
+of measurements—whether significant 
+squeezing is initially present in the 
+unknown state. If so, we adaptively 
+suppress this squeezing by applying 
+passive Gaussian unitaries in combination 
+with suitably prepared auxiliary squeezed 
+inputs, effectively implementing 
+generalized heterodyne (or generaldyne) 
+measurements [50]. Once the effective 
+squeezing is sufficiently reduced, we 
+perform standard covariance estimation in 
+the rotated basis, and then invert the 
+transformation to reconstruct the 
+original state. Importantly, this 
+protocol relies exclusively on offline 
+squeezing—that is, squeezing applied to 
+auxiliary vacuum states prior to the 
+measurement process—as is routinely 
+available in quantum optics laboratories. 
+At no point is online or active squeezing 
+required, making the scheme both 
+experimentally accessible and practically 
+robust. Moreover, we show that even the 
+mild log log(E) dependence can be removed 
+entirely—yielding a fully 
+energyindependent tomography scheme—if 
+access to the transposed state is 
+available. In this setting, a simple and 
+experimentally feasible procedure based 
+on double homodyne measurements on the 
+state and its transpose suffices. 
+Recently, considerable attention has been 
+devoted to the fact that access to the 
+transposed state can yield substantial 
+advantages in a variety of quantum 
+learning tasks [46, 82–89]. Our work 
+contributes to this growing line of 
+research by demonstrating that a similar 
+transpose-induced quantum advantage also 
+arises in the tomography of Gaussian 
+states. These results are grounded in 
+several technical contributions of 
+independent interest. First, we derive a 
+new perturbation bound for the trace 
+distance between Gaussian states in terms 
+of their first two moments, featuring a 
+favourable functional
+  "title": "Energy-independent tomography 
+of Gaussian states", dependence on the 
+state’s energy. This advances the rapidly 
+developing toolkit of trace distance 
+bounds for bosonic systems [26, 27, 38, 
+39, 90–92]. Second, we conduct a careful 
+sample complexity analysis, leveraging 
+tools from statistical learning theory 
+[93] on the estimation of covariance 
+matrices from samples of classical 
+Gaussian distributions [50]. B. The 
+exploration of tomography of bosonic 
+Gaussian Preliminaries
+  "sections": { states is presumably as 
+old as quantum optics, b The trace 
+distance between quantum states ρ and σ 
+is defined in terms of the trace norm ∥ · 
+∥1 as [94, 95] Dtr (ρ, σ) ..= ut 1 ∥ρ − 
+σ∥1 . 2 only recently, their precise and 
+rigorous study h (1) ave been moving into 
+the focus of attention, moti This metric 
+is operationally meaningful, as it 
+determines the optimal success 
+probability in distinguishing ρ from σ in 
+a single-shot measurement, according to 
+the Holevo–Helstrom theorem [50]. We now 
+introduce some relevant notation for CV 
+systems; see the Appendix or Refs. [50, 
+51] for further details. A CV system with 
+n bosonic modes is described on L2 (Rn ), 
+with canonical quadratures R̂ ..= (x̂1 , p̂1 
+, . . . , x̂n , p̂n )⊺ satisfying Ln 0 1 
+[R̂j , R̂k ] = i Ωj,k , where Ω ..= i=1 −1 
+0 is the symplectic  P n . form. The 
+total energy operator is Ên .= j=1 x̂2j + 
+p̂2j /2, and a state has bounded mean 
+energy Tr(ρÊn ) ≤ E. Gaussian states are 
+Gibbs states of quadratic Hamiltonians in 
+the quadratures. They are fully specified 
+by the first moment m(ρ) ..= Tr[R̂ρ] and 
+the covariance matrix V (ρ), which 
+encodes second moments and satisfies the 
+uncertainty relation V + iΩ ≥ 0 [50]. Any 
+such V admits a Williamson decomposition 
+V = SDS ⊺ , with S ∈ Sp(2n) symplectic 
+and D = diag(ν1 , ν1 , . . . , νn , νn ) 
+containing the symplectic eigenvalues. 
+Gaussian unitaries are unitary operations 
+generated by quadratic Hamiltonians in 
+the quadratures. Active and passive 
+Gaussian unitaries are fully specified by 
+their associated symplectic matrices S ∈ 
+Sp(2n). A Gaussian unitary is called 
+passive if S ∈ O(2n) ∩ Sp(2n); otherwise, 
+it is called active. Passive 
+operations—like beam splitters and phase 
+shifters—can be implemented easily with 
+linear optics, whereas active ones, such 
+as squeezing, are more experimentally 
+demanding. Any S ∈ Sp(2n) admits an Euler 
+decomposition S = O1 ZO2 , where O1 , O2 
+∈ Sp(2n) ∩ O(2n), and Z = diag(z1 , 1/z1 
+, . . . , zn , 1/zn ) with zj ≥ 1. 
+Standard measurement strategies in CV 
+systems routinely used in the lab include 
+homodyne, heterodyne, and more generally, 
+generaldyne detection. Homodyne 
+measurements on Gaussian states 
+correspond to sampling from a classical 
+Gaussian distribution determined by 
+specific quadrature operators and the 
+corresponding marginal of the state 
+covariance matrix. Heterodyne detection, 
+on the other hand, simultaneously probes 
+both quadratures with added 
+noise—effectively sampling from a 
+Gaussian distribution with the state 
+covariance matrix shifted by the 
+identity. In practice, heterodyne 
+detection is implemented by interfering 
+the input state with a vacuum auxiliary 
+state at a balanced beam splitter, 
+followed by homodyne measurements on both 
+output ports. More gener- vated by 3 1. 
+Gaussian state tomography technological 
+developments. In this work, we pres 3. 
+Equivalences of measurement schemes (a)
+    "abstract": "The exploration of 
+tomography of bosonic Gaussian 
+states...",: ⇢
+    "findings": "We present an efficient 
+and experimentally feasible Gaussian 
+state tomography algorithm...", S
+    "conclusion": "This proves that 
+estimating a Gaussian state in 
+trace-distance is generally possible." 
+(b)
+  },
+  "summary": [|0i "Introduces a Gaussian 
+    state tomography algorithm with 
+    provable recovery guarantees.", 
+    "Requires only logarithmic number of 
+    modes and minimal energy.",<latexit 
+    sha1_base64="igMPAET3rHpsE3rh12T049pfaPk=">AAAB6HicbZA9SwNBEIbn4leMX1FLm8MgWIU7C7UzoIVlguYDkiPsbeaSNXt7x+6eEI78AhsLRWLpv7G189+4l6TQxBcWHt53hp0ZP+ZMacf5tnIrq2vrG/nNwtb2zu5ecf+goaJEUqzTiEey5ROFnAmsa6Y5tmKJJPQ5Nv3hdZY3H1EqFol7PYrRC0lfsIBRoo1Vu+sWS07ZmcpeBncOpavPSab3arf41elFNAlRaMqJUm3XibWXEqkZ5TgudBKFMaFD0se2QUFCVF46HXRsnxinZweRNE9oe+r+7khJqNQo9E1lSPRALWaZ+V/WTnRw6aVMxIlGQWcfBQm3dWRnW9s9JpFqPjJAqGRmVpsOiCRUm9sUzBHcxZWXoXFWds/L5zWnVLmBmfJwBMdwCi5cQAVuoQp1oIDwBC/waj1Yz9abNZmV5qx5zyH8kfXxA+ickX8=</latexit> 
+    "Adaptively selects measurements for 
+    efficient reconstruction.", 
+    "Generalizes across experimental 
+    setups including squeezed 
+    states.",<latexit 
+    sha1_base64="CVsc2gfa7oN20HZD7fVYZdePA2o=">AAAB63icbVC7SgNBFL0bXzG+opY2g0GwCrsW0TJgo10ENwkkIcxOZrNDZnaWmVkhLGn8ABsLRWzt/Ql/wM7P8A+cTVJo4oELh3Pu5d57goQzbVz3yymsrK6tbxQ3S1vbO7t75f2DppapItQnkkvVDrCmnMXUN8xw2k4UxSLgtBWMLnO/dUeVZjK+NeOE9gQexixkBJtc6qpI9ssVt+pOgZaJNyeVeuX7495/rzX65c/uQJJU0NgQjrXueG5iehlWhhFOJ6VuqmmCyQgPacfSGAuqe9n01gk6scoAhVLZig2aqr8nMiy0HovAdgpsIr3o5eJ/Xic14UUvY3GSGhqT2aIw5chIlD+OBkxRYvjYEkwUs7ciEmGFibHxlGwI3uLLy6R5VvVq1dqNTeMaZijCERzDKXhwDnW4ggb4QCCCB3iCZ0c4j86L8zprLTjzmUP4A+ftB02tkis=</latexit> 
+    "Proves that trace-distance 
+    estimation is generally feasible."
+  ],? "metadata": { "authors": ["Lennart 
+    Bittel", "Francesco A. Mele", "Jens 
+    Eisert", "Antonio A. 
+    Mele"],Heterodyning "submitted": 
+    "2025-08-20",0 1 "source_url": 
+    "https://arxiv.org/abs/2508.14979"x1
+  },B p1 C
+  "emotional_charge": "curiosity"C p B B 
+C r = 2 B ... C B C @xn A pn <latexit 
+sha1_base64="XiE9/WPcRMvVwh8RTxrwEgg+Ns4=">AAACOXicbVDLSsNAFJ34Nr6qLt0MFsFVScTXRhB04bKCVaEpYTK5rYOTSZy5kZbQ33LjX7gT3LhQxK0/4KQt+LwwzOGce7j3niiTwqDnPTpj4xOTU9Mzs+7c/MLiUmV55dykuebQ4KlM9WXEDEihoIECJVxmGlgSSbiIro9K/eIWtBGpOsNeBq2EdZRoC87QUmGlrukBDcyNxmKrT90ggo5QRZYw1KLbd7uhT4PAzYZfcBunaErUDdWQV24AKv4yuGGl6tW8QdG/wB+BKhlVPaw8BHHK8wQUcsmMafpehq2CaRRcQt8NcgMZ49esA00LFUvAtIrB5X26YZmYtlNtn0I6YL87CpYY00si22k3vDK/tZL8T2vm2N5vFUJlOYLiw0HtXFJMaRkjjYUGjrJnAeNa2F0pv2KacbRhlyH4v0/+C863av5ubed0u3p4PIpjhqyRdbJJfLJHDskJqZMG4eSOPJEX8urcO8/Om/M+bB1zRp5V8qOcj098Oar0</latexit>
+}
+<latexit sha1_base64="zl7H6u7QII+DghgdTyz1U7hspy8=">AAAB8HicbVBNS8NAEJ34WetX1aOXYBE8lUSkeizowWMF+yFtKJvtpF26uwm7G6HE/govHhTx6s/x5r9x2+agrQ8GHu/NMDMvTDjTxvO+nZXVtfWNzcJWcXtnd2+/dHDY1HGqKDZozGPVDolGziQ2DDMc24lCIkKOrXB0PfVbj6g0i+W9GScYCDKQLGKUGCs9PHldReSAY69U9ireDO4y8XNShhz1Xumr249pKlAayonWHd9LTJARZRjlOCl2U40JoSMywI6lkgjUQTY7eOKeWqXvRrGyJY07U39PZERoPRah7RTEDPWiNxX/8zqpia6CjMkkNSjpfFGUctfE7vR7t88UUsPHlhCqmL3VpUOiCDU2o6INwV98eZk0zyt+tVK9uyjXbvI4CnAMJ3AGPlxCDW6hDg2gIOAZXuHNUc6L8+58zFtXnHzmCP7A+fwBuVWQYg==</latexit>
+
+⇢
+
+S
+<latexit sha1_base64="igMPAET3rHpsE3rh12T049pfaPk=">AAAB6HicbZA9SwNBEIbn4leMX1FLm8MgWIU7C7UzoIVlguYDkiPsbeaSNXt7x+6eEI78AhsLRWLpv7G189+4l6TQxBcWHt53hp0ZP+ZMacf5tnIrq2vrG/nNwtb2zu5ecf+goaJEUqzTiEey5ROFnAmsa6Y5tmKJJPQ5Nv3hdZY3H1EqFol7PYrRC0lfsIBRoo1Vu+sWS07ZmcpeBncOpavPSab3arf41elFNAlRaMqJUm3XibWXEqkZ5TgudBKFMaFD0se2QUFCVF46HXRsnxinZweRNE9oe+r+7khJqNQo9E1lSPRALWaZ+V/WTnRw6aVMxIlGQWcfBQm3dWRnW9s9JpFqPjJAqGRmVpsOiCRUm9sUzBHcxZWXoXFWds/L5zWnVLmBmfJwBMdwCi5cQAVuoQp1oIDwBC/waj1Yz9abNZmV5qx5zyH8kfXxA+ickX8=</latexit>
+
+<latexit sha1_base64="CVsc2gfa7oN20HZD7fVYZdePA2o=">AAAB63icbVC7SgNBFL0bXzG+opY2g0GwCrsW0TJgo10ENwkkIcxOZrNDZnaWmVkhLGn8ABsLRWzt/Ql/wM7P8A+cTVJo4oELh3Pu5d57goQzbVz3yymsrK6tbxQ3S1vbO7t75f2DppapItQnkkvVDrCmnMXUN8xw2k4UxSLgtBWMLnO/dUeVZjK+NeOE9gQexixkBJtc6qpI9ssVt+pOgZaJNyeVeuX7495/rzX65c/uQJJU0NgQjrXueG5iehlWhhFOJ6VuqmmCyQgPacfSGAuqe9n01gk6scoAhVLZig2aqr8nMiy0HovAdgpsIr3o5eJ/Xic14UUvY3GSGhqT2aIw5chIlD+OBkxRYvjYEkwUs7ciEmGFibHxlGwI3uLLy6R5VvVq1dqNTeMaZijCERzDKXhwDnW4ggb4QCCCB3iCZ0c4j86L8zprLTjzmUP4A+ftB02tkis=</latexit>
+
+<latexit sha1_base64="kuUjKbmrYiUf9cyTkks3r8XqZLA=">AAACA3icbVDLSgMxFM3UV62vqjvdhBahYikzLqrLohuXFewDOsOQSdM2NJMZkjvCUApu/AO/wY0LRdz6E+76N6aPhVYPBE7Oufcm9wSx4Bpse2JlVlbX1jeym7mt7Z3dvfz+QVNHiaKsQSMRqXZANBNcsgZwEKwdK0bCQLBWMLye+q17pjSP5B2kMfNC0pe8xykBI/n5o5I7IIBj3ym73Qh0GS/u8tTPF+2KPQP+S5wFKdYK7tnTpJbW/fyXGUGTkEmggmjdcewYvBFRwKlg45ybaBYTOiR91jFUkpBpbzTbYYxPjNLFvUiZIwHP1J8dIxJqnYaBqQwJDPSyNxX/8zoJ9C69EZdxAkzS+UO9RGCI8DQQ3OWKURCpIYQqbv6K6YAoQsHEljMhOMsr/yXN84pTrVRvTRpXaI4sOkYFVEIOukA1dIPqqIEoekDP6BW9WY/Wi/VufcxLM9ai5xD9gvX5DcagmVM=</latexit>
+
+2. Native measurement schemes
+(a) Heterodyning
+
+|0i
+<latexit sha1_base64="zl7H6u7QII+DghgdTyz1U7hspy8=">AAAB8HicbVBNS8NAEJ34WetX1aOXYBE8lUSkeizowWMF+yFtKJvtpF26uwm7G6HE/govHhTx6s/x5r9x2+agrQ8GHu/NMDMvTDjTxvO+nZXVtfWNzcJWcXtnd2+/dHDY1HGqKDZozGPVDolGziQ2DDMc24lCIkKOrXB0PfVbj6g0i+W9GScYCDKQLGKUGCs9PHldReSAY69U9ireDO4y8XNShhz1Xumr249pKlAayonWHd9LTJARZRjlOCl2U40JoSMywI6lkgjUQTY7eOKeWqXvRrGyJY07U39PZERoPRah7RTEDPWiNxX/8zqpia6CjMkkNSjpfFGUctfE7vR7t88UUsPHlhCqmL3VpUOiCDU2o6INwV98eZk0zyt+tVK9uyjXbvI4CnAMJ3AGPlxCDW6hDg2gIOAZXuHNUc6L8+58zFtXnHzmCP7A+fwBuVWQYg==</latexit>
+
+Homodyning (p̂1 , . . . , p̂n )
+Homodyning (x̂1 , . . . , x̂n )
+<latexit sha1_base64="kZNY1NYp76aPF0MAXMfva62MCEA=">AAACA3icbVDLSgMxFM3UV62vUXe6CS1CxVJmXFSXRTcuK9gHdErJpGkbmskMyR2xDAU3/oHf4MaFIm79CXf9G9PHQlsPBE7Oufcm9/iR4BocZ2ylVlbX1jfSm5mt7Z3dPXv/oKbDWFFWpaEIVcMnmgkuWRU4CNaIFCOBL1jdH1xP/Po9U5qH8g6GEWsFpCd5l1MCRmrbR3mvTwA/tN2C1wlBF/D8Lk/bds4pOlPgZeLOSa6c9c6ex+VhpW1/mxE0DpgEKojWTdeJoJUQBZwKNsp4sWYRoQPSY01DJQmYbiXTHUb4xCgd3A2VORLwVP3dkZBA62Hgm8qAQF8vehPxP68ZQ/eylXAZxcAknT3UjQWGEE8CwR2uGAUxNIRQxc1fMe0TRSiY2DImBHdx5WVSOy+6pWLp1qRxhWZIo2OURXnkogtURjeogqqIokf0gt7Qu/VkvVof1uesNGXNew7RH1hfP9+QmWM=</latexit>
+
+(b) Homodyning
+
+|0i
+<latexit sha1_base64="zl7H6u7QII+DghgdTyz1U7hspy8=">AAAB8HicbVBNS8NAEJ34WetX1aOXYBE8lUSkeizowWMF+yFtKJvtpF26uwm7G6HE/govHhTx6s/x5r9x2+agrQ8GHu/NMDMvTDjTxvO+nZXVtfWNzcJWcXtnd2+/dHDY1HGqKDZozGPVDolGziQ2DDMc24lCIkKOrXB0PfVbj6g0i+W9GScYCDKQLGKUGCs9PHldReSAY69U9ireDO4y8XNShhz1Xumr249pKlAayonWHd9LTJARZRjlOCl2U40JoSMywI6lkgjUQTY7eOKeWqXvRrGyJY07U39PZERoPRah7RTEDPWiNxX/8zqpia6CjMkkNSjpfFGUctfE7vR7t88UUsPHlhCqmL3VpUOiCDU2o6INwV98eZk0zyt+tVK9uyjXbvI4CnAMJ3AGPlxCDW6hDg2gIOAZXuHNUc6L8+58zFtXnHzmCP7A+fwBuVWQYg==</latexit>
+
+⇢
+<latexit sha1_base64="CVsc2gfa7oN20HZD7fVYZdePA2o=">AAAB63icbVC7SgNBFL0bXzG+opY2g0GwCrsW0TJgo10ENwkkIcxOZrNDZnaWmVkhLGn8ABsLRWzt/Ql/wM7P8A+cTVJo4oELh3Pu5d57goQzbVz3yymsrK6tbxQ3S1vbO7t75f2DppapItQnkkvVDrCmnMXUN8xw2k4UxSLgtBWMLnO/dUeVZjK+NeOE9gQexixkBJtc6qpI9ssVt+pOgZaJNyeVeuX7495/rzX65c/uQJJU0NgQjrXueG5iehlWhhFOJ6VuqmmCyQgPacfSGAuqe9n01gk6scoAhVLZig2aqr8nMiy0HovAdgpsIr3o5eJ/Xic14UUvY3GSGhqT2aIw5chIlD+OBkxRYvjYEkwUs7ciEmGFibHxlGwI3uLLy6R5VvVq1dqNTeMaZijCERzDKXhwDnW4ggb4QCCCB3iCZ0c4j86L8zprLTjzmUP4A+ftB02tkis=</latexit>
+
+-
+
+|Z 1 i
+
+(c)
+
+<latexit sha1_base64="077Uas3ukTClBM7SzLMV/i2zmSs=">AAAB+HicbVDLSsNAFJ34rPXRqEs3g0VwY0nE17KgC5cV7APbWCbTm3boZBJmJkKN/RI3LhRx66e482+ctFlo64ELh3Pu5d57/JgzpR3n21pYXFpeWS2sFdc3NrdK9vZOQ0WJpFCnEY9kyycKOBNQ10xzaMUSSOhzaPrDy8xvPoBULBK3ehSDF5K+YAGjRBupa5ee7u7TI3fckUT0ORS7dtmpOBPgeeLmpIxy1Lr2V6cX0SQEoSknSrVdJ9ZeSqRmlMO42EkUxIQOSR/ahgoSgvLSyeFjfGCUHg4iaUpoPFF/T6QkVGoU+qYzJHqgZr1M/M9rJzq48FIm4kSDoNNFQcKxjnCWAu4xCVTzkSGESmZuxXRAJKHaZJWF4M6+PE8axxX3rHJ6c1KuXuVxFNAe2keHyEXnqIquUQ3VEUUJekav6M16tF6sd+tj2rpg5TO76A+szx8MjJK2</latexit>
+
+O2
+<latexit sha1_base64="uxGWOOY4G0qm/xdPhUz6nSKkIE8=">AAAB63icbVDLSgNBEOz1GeMr6tHLYBA8hd3g6xjQgzcjmAckS5idzCZDZmaXmV4hhPyCFw+KePWHvPk37iZ70MSChqKqm+6uIJbCout+Oyura+sbm4Wt4vbO7t5+6eCwaaPEMN5gkYxMO6CWS6F5AwVK3o4NpyqQvBWMbjK/9cSNFZF+xHHMfUUHWoSCUcyk+1612CuV3Yo7A1kmXk7KkKPeK311+xFLFNfIJLW247kx+hNqUDDJp8VuYnlM2YgOeCelmipu/cns1ik5TZU+CSOTlkYyU39PTKiydqyCtFNRHNpFLxP/8zoJhtf+ROg4Qa7ZfFGYSIIRyR4nfWE4QzlOCWVGpLcSNqSGMkzjyULwFl9eJs1qxbusXDycl2u3eRwFOIYTOAMPrqAGd1CHBjAYwjO8wpujnBfn3fmYt644+cwR/IHz+QMHiI2Y</latexit>
+
+1
+x1
+B p1 C
+B
+C
+p
+B C
+r = 2O1 Z B ... C
+B C
+@xn A
+pn
+<latexit sha1_base64="98Adz/2QYcDWBzOXnbC+XH3ra7o=">AAACPnicbVDBTttAEF1TKMGlJS1HLisipJ4iG7WFC1KkcuBWkAiJGkfWej0JK9ZrsztGiax8GRe+gRvHXji0Qlw5so4jQRNGWu3Te/M0My/KpDDoeXfO0rvllfertTX3w/rHTxv1z1/OTJprDm2eylR3I2ZACgVtFCihm2lgSSShE138LPXOFWgjUnWK4wz6CRsqMRCcoaXCelvTAxqYS43F7oT+Cn362w0iGApVZAlDLUYTd2TZIHCz6guu4hRNiUahqnjlBqDiF4Mb1hte05sWXQT+DDTIrI7D+m0QpzxPQCGXzJie72XYL5hGwSVM3CA3kDF+wYbQs1CxBEy/mJ4/oTuWiekg1fYppFP2taNgiTHjJLKddsNzM6+V5FtaL8fBfr8QKssRFK8GDXJJMaVlljQWGjjKsQWMa2F3pfycacbRJl6G4M+fvAjOdpv+j+b3k2+N1uEsjhrZItvkK/HJHmmRI3JM2oSTa/KH/CX/nBvn3nlwHqvWJWfm2ST/lfP0DLaErH8=</latexit>
+
+Homodyning (p̂1 , . . . , p̂n )
+<latexit sha1_base64="kuUjKbmrYiUf9cyTkks3r8XqZLA=">AAACA3icbVDLSgMxFM3UV62vqjvdhBahYikzLqrLohuXFewDOsOQSdM2NJMZkjvCUApu/AO/wY0LRdz6E+76N6aPhVYPBE7Oufcm9wSx4Bpse2JlVlbX1jeym7mt7Z3dvfz+QVNHiaKsQSMRqXZANBNcsgZwEKwdK0bCQLBWMLye+q17pjSP5B2kMfNC0pe8xykBI/n5o5I7IIBj3ym73Qh0GS/u8tTPF+2KPQP+S5wFKdYK7tnTpJbW/fyXGUGTkEmggmjdcewYvBFRwKlg45ybaBYTOiR91jFUkpBpbzTbYYxPjNLFvUiZIwHP1J8dIxJqnYaBqQwJDPSyNxX/8zoJ9C69EZdxAkzS+UO9RGCI8DQQ3OWKURCpIYQqbv6K6YAoQsHEljMhOMsr/yXN84pTrVRvTRpXaI4sOkYFVEIOukA1dIPqqIEoekDP6BW9WY/Wi/VufcxLM9ai5xD9gvX5DcagmVM=</latexit>
+
+0
+
+Homodyning (x̂1 , . . . , x̂n )
+<latexit sha1_base64="kZNY1NYp76aPF0MAXMfva62MCEA=">AAACA3icbVDLSgMxFM3UV62vUXe6CS1CxVJmXFSXRTcuK9gHdErJpGkbmskMyR2xDAU3/oHf4MaFIm79CXf9G9PHQlsPBE7Oufcm9/iR4BocZ2ylVlbX1jfSm5mt7Z3dPXv/oKbDWFFWpaEIVcMnmgkuWRU4CNaIFCOBL1jdH1xP/Po9U5qH8g6GEWsFpCd5l1MCRmrbR3mvTwA/tN2C1wlBF/D8Lk/bds4pOlPgZeLOSa6c9c6ex+VhpW1/mxE0DpgEKojWTdeJoJUQBZwKNsp4sWYRoQPSY01DJQmYbiXTHUb4xCgd3A2VORLwVP3dkZBA62Hgm8qAQF8vehPxP68ZQ/eylXAZxcAknT3UjQWGEE8CwR2uGAUxNIRQxc1fMe0TRSiY2DImBHdx5WVSOy+6pWLp1qRxhWZIo2OURXnkogtURjeogqqIokf0gt7Qu/VkvVof1uesNGXNew7RH1hfP9+QmWM=</latexit>
+
+FIG. 1. 1. This work focuses on Gaussian quantum state tomography: reconstructing an unknown bosonic Gaussian state from measurement
+data, with rigorous trace-distance guarantees. 2. Common measurements in this setting include experimentally accessible heterodyne (double
+homodyne) and homodyne detection. 3. Our adaptive protocol avoids online squeezing by relying solely on passive linear optics and offline
+squeezing. It simulates the active Gaussian unitary associated with the symplectic matrix S = O1 ZO2 (Euler decomposition) by applying
+passive transformations to the input state, injecting an auxiliary squeezed vacuum Z −1 ..= UZ −1 |0⟩ (with UZ −1 the Gaussian unitary
+implementing the inverse squeezing) featuring offline squeezing, followed by homodyne detection and classical post-processing.
+
+ally, generaldyne measurements form a broad class of Gaussian POVMs—including homodyne and heterodyne as special
+cases—which can be realized by combining the input state
+with an auxiliary Gaussian state via a passive Gaussian unitary,
+followed by homodyne detection.
+C.
+
+Tomography using only heterodyne measurements
+
+Algorithm 1 Heterodyne tomography of Gaussian states
+1: Input: Nt copies of the Gaussian state ρ, failure probability δ
+2: for j ∈ [Nt ] do
+3:
+r̂j ← Heterodyne(ρ)
+4: m̂ ← N1
+
+PNt
+
+j=1 r̂j
+PNt
+⊤
+1
+← Nt (1−ζ)
+j=1 (r̂j − m̂)(r̂j − m̂) − 1
+
+reconstructing the empirical first moment m̂ and covariance
+matrix V̂ as in Algorithm 1, we obtain an estimated state
+ρ̂ ..= ρ(V̂ , m̂) satisfying
+ χ
+√ ,
+(2)
+N
+p
+√
+with probability at least 1−δ, where χ = 2n+ 2 log(2/δ).
+In particular, to ensure Dtr (ρ, ρ̂) ≤ ε with probability at least
+1 − δ, it suffices to use
+
+
+nE 2
+(3)
+N =O
+ε2
+Dtr (ρ, ρ̂) ≤ 4.3 2n + Tr V −1
+
+measurement shots, where E is the energy of the state.
+
+t
+
+5: V̂
+
+6: Return: m̂, V̂
+2
+
+where ζ ..= √2χ
++ 2χ
+and χ ..=
+Nt
+N
+t
+
+√
+
+2n +
+
+p
+2 log(2/δ).
+
+We begin by analyzing the performance guarantees—in trace
+distance—of the heterodyne tomography protocol routinely
+implemented in optical laboratories [50, 51]. Our result provides this standard method with rigorous recovery guarantees,
+linking experimental practice to trace distance bounds often
+required in applications. See Theorem 10 in the Appendix for
+explicit constants and the full proof.
+Theorem 1 (Non-adaptive heterodyne tomography, informal;
+see Thm. 10). Let ε, δ ∈ (0, 1), and let ρ ..= ρ(V, m) be
+an n-mode Gaussian state with covariance matrix V and first
+moment m. Then, by performing heterodyne measurements and
+
+This improves upon the previously best-known bounds of
+O(nE 4 /ε2 ) [27, 38]. Specifically, our sample complexity
+scales as
+ 3
+
+n + n Tr2 (V −1 )
+N =O
+,
+(4)
+ε2
+where the trace term satisfies Tr2 (V −1 ) ≤ n2 λ−2
+min (V ), with
+λmin (V ) denoting the smallest eigenvalue of V .
+This implies that the energy dependence in the bound above
+arises solely from squeezing. For non-squeezed states—such
+as thermal or coherent states, or any state preparable via passive Gaussian unitaries—the scaling improves to O(n3 /ε2 ), as
+λmin (V ) remains lower bounded by a constant.
+The key observation underlying this theorem is that heterodyne measurements on a Gaussian state ρ(V, m) yield samples
+from a classical Gaussian distribution [50] with mean m and
+
+4
+covariance (V + 1)/2. This allows us to apply standard concentration bounds to estimate the first and second moments,
+which in turn translate into a trace distance bound between
+ρ and its estimate ρ̂ (the Gaussian state associated with the
+estimated moments).
+To this end, we derive a scale-invariant perturbation bound—
+of independent interest—that quantifies how closeness in moments implies closeness in trace distance for Gaussian states.
+Theorem 2 (Perturbation bound for Gaussian states; see
+Thm. 8). Let ρ(V, m) and ρ(W, t) be n-mode Gaussian states
+with first moments m, t ∈ R2n and covariance matrices
+V, W ∈ R2n×2n . Then the trace distance between the two
+states satisfies
+1
+V −1/2 (m − t)
+(5)
+2 √
+2
+
+1+ 3  −1
++
+Tr (V +W −1 )|V −W | ,
+8
+
+Dtr (ρ(V, m), ρ(W, t)) ≤
+
+√
+where |A| = A2 refers to the matrix absolute value for
+Hermitian matrices.
+
+The proof of this theorem is provided in the Appendix (Theorem 8).
+
+non-squeezed. Standard heterodyne tomography can then be
+applied with sample complexity O(n3 /ε2 ).
+Because the energy enters only through a double logarithm,
+even a state prepared using the energy of the entire universe
+would require at most a constant number of adaptive iterations
+(k ≤ 10). Thus, the unsqueezing stage contributes negligibly
+to the overall sample cost, and the full tomography protocol
+achieves near energy-independence.
+Algorithm 2 Tomography of Gaussian states using adaptive
+unsqueezing
+1: Input: kNh + Nt copies of the Gaussian state ρ, failure proba-
+
+bility δ
+2: Ŝ ← 1
+3: for i ∈ [k] do
+4:
+m̂, V̂ ← Heterodyne tomography(Nh , UŜ ρU † , δ/(k + 1))
+Ŝ
+
+(D̂i , Ŝi ) ← Williamson(V̂ )
+Ŝ ← Ŝi−1 Ŝ
+†
+7: m̂, V̂ ← Heterodyne tomography(Nt , UŜ ρU , δ/(k + 1))
+Ŝ
+5:
+6:
+
+8: Return: Ŝ −1 m̂, Ŝ −1 V̂ Ŝ −⊤
+
+This algorithm estimates the Gaussian state using kNh + Nt copies
+of ρ, with success probability at least 1 − δ. Thanks to Theorem 14,
+setting
+
+k ..= log log ∥V −1 ∥∞ ,
+Nh ..= 80χ2 ,
+
+D.
+
+Adaptive and effectively energy-independent tomography
+
+(7)
+2
+
+463 n
+Nt ..=
+
+2
+
+χ ,
+ε2
+p
+where χ ..= 2n + 2 log((k + 1)/δ), guarantees a trace distance
+error of at most ε with probability ≥ 1 − δ.
+√
+
+The core result of this work is a tomography protocol for
+Gaussian states whose sample complexity is effectively independent of the state’s energy. The scheme is formally described
+in Algorithm 2. Its performance guarantees are summarized
+below, and the proof is given in Theorem 14 in the Appendix.
+Theorem 3 (Adaptive Gaussian state tomography; see
+Thm. 14). Let ε, δ ∈ (0, 1), and let ρ be an unknown n-mode
+Gaussian state with covariance matrix V . Then, by performing
+the adaptive sampling strategy described in Algorithm 2, one
+obtains an estimate ρ̂ such that Dtr (ρ, ρ̂) ≤ ε with probability
+at least 1 − δ, using at most
+
+
+
+
+463 n2
+n3
+2
+N = 80k +
+χ
+n
+log
+log
+(E)
++
+(6)
+=
+O
+ε2
+ε2
+
+measurement shots, where k ..= log log ∥V −1 ∥∞ is the
+number
+p the adaptive unsqueezing is performed and
+√ of times
+χ ..= 2n + 2 log((k + 1)/δ), and E is the energy.
+
+The idea behind this protocol is as follows. As discussed in
+the previous section, heterodyne tomography for non-squeezed
+states exhibits a sample complexity that is independent of the
+state’s energy. This motivates an adaptive strategy: using only
+O(n) samples, the protocol first estimates the squeezing of
+the state and then applies to it an approximate “unsqueezing” Gaussian unitary. Each such operation exponentially
+increases the smallest eigenvalue of the covariance matrix.
+After k = O(log log(E)) such rounds—each requiring only
+a modest number of samples—the state becomes effectively
+
+E.
+
+Avoidance of active squeezing
+
+Algorithm 2 requires applying an active Gaussian unitary to
+the input state, followed by heterodyne detection. However, implementing active Gaussian operations is often experimentally
+demanding. Fortunately, this step can be entirely avoided: the
+combined effect of an active Gaussian transformation followed
+by heterodyne measurement can be exactly reproduced using
+only passive Gaussian operations, a fixed auxiliary squeezed
+input state, and homodyne measurements (plus classical postprocessing)—all of which are routinely available with current
+photonic technologies [96]. In continuous-variable terminology, this alternative scheme corresponds to performing a specific generaldyne measurement on the input state [50].
+This construction builds on the well-known equivalence
+between heterodyne detection and beam-splitter interference
+followed by homodyne measurements. As reviewed in the
+Preliminaries, heterodyne detection can be implemented by
+interfering the input state with vacuum on a balanced beam
+splitter, followed by homodyne detection of complementary
+quadratures—typically position on one output mode and momentum on the other. In the variant considered here, the vacuum input is replaced with a suitably chosen squeezed state.
+Key aspects of this measurement equivalence are illustrated
+in Fig. 1.3, with additional technical details provided in the
+supplementary material (see section IV A).
+
+5
+F.
+
+Full energy-independence via access to the transpose
+
+While the adaptive tomography protocol presented in the
+previous section achieves sample complexity that is effectively
+energy-independent—scaling only double-logarithmically with
+the energy—it is natural to ask whether this residual dependence can be eliminated entirely.
+This is indeed possible if one has access to the transposed
+state ρT . In this setting, we design a tomography protocol
+whose sample complexity is fully independent of the state’s energy, even in the presence of arbitrarily strong squeezing. The
+result is formalized in the following theorem; see Theorem 17
+in the Appendix for the proof and additional details.
+Theorem 4 (Energy-independent Gaussian state tomography
+with access to the transposed state; see Thm. 17). Let ε, δ ∈
+(0, 1), and let ρ be an n-mode Gaussian state with covariance
+matrix V . Then, by performing N rounds of a heterodyne
+like measurement using ρ and ρT as inputs. The tomography
+algorithm described in Thm. 17 gives an estimated state ρ̂ =
+ρ(V̂ , m̂) that satisfies with probability at least 1 − δ
+χ
+(8)
+Dtr (ρ, ρ̂) ≤ 8.55n √ ,
+N
+p
+√
+where χ = 2n + 2 log(2/δ) . In particular, to achieve
+Dtr (ρ, ρ̂) ≤ ε with probability at least 1 − δ it suffices to use
+ 3
+n
+N =O
+(9)
+ε2
+measurement shots.
+The measurement scheme consists of performing heterodyne
+detection on the input state ρ, but instead of interfering it with
+vacuum (as in the standard implementation), the second port
+of the balanced beam splitter is fed with a copy of ρT .
+As a result, the scheme yields samples from a classical Gaussian distribution whose covariance matrix exactly matches that
+of the unknown state ρ, thereby eliminating any dependence
+on the energy. In contrast, standard heterodyne detection introduces an additive identity shift—specifically, replacing V
+with (V + 1)/2—which is the source of the residual energy
+dependence.
+G.
+
+Conclusions
+
+In this work, have we introduced three conceptually distinct
+tomography algorithms for Gaussian quantum states, each with
+its own significance, revisiting the old problem of learning
+Gaussian quantum states from an entirely fresh perspective.
+All algorithms are underpinned by a new trace-distance perturbation bound for Gaussian states, which serves as the technical
+foundation of our results.
+First, we have equipped the standard heterodyne tomography protocol—routinely implemented in optical laboratories
+— with rigorous trace-distance error guarantees. This result
+bridges the painful gap between experimental practice and the
+
+requirements of theoretical applications, where quantitative reconstruction guarantees in trace distance are often crucial. Our
+analysis offers simple and practical tools for experimentalists
+to assess the accuracy of their reconstructions. Second, we
+have presented an adaptive, sample-efficient, and experimentally feasible tomography algorithm whose sample complexity
+depends essentially only on the number of modes and is independent of the state’s energy up to doubly-logaritmic factors.
+For all practical purposes, this yields an energy-independent
+protocol. This makes the algorithm particularly well-suited
+for quantum sensing applications [50, 52–54, 57, 58], where
+highly squeezed — and therefore high-energy — states are
+commonly used, especially in fundamental physics experiments. Third, and finally, we have shown that even this mild
+residual energy dependence can be removed entirely: if access
+to the transposed state is available, a fully energy-independent
+tomography protocol becomes possible.
+All three schemes are compatible with existing experimental
+capabilities in quantum optics laboratories around the world,
+relying only on tools already available in photonic platforms:
+auxiliary squeezed inputs, passive Gaussian unitaries reflecting
+passive optical elements, and homodyne detection. Thus, we
+believe that these results will be of broad interest to both the
+experimental quantum optics community [9–14, 53, 58, 77–
+81, 96]—where Gaussian states and their precise characterization play a central role—and the growing field of quantum
+learning theory [15, 23–38, 40–42, 45, 47, 48, 97–99], which
+aims to identify the optimal strategies for learning unknown
+quantum systems from measurements, with provable and precise recovery guarantees.
+One can also view our work as the quantum analogue of a
+fundamental classical problem: learning Gaussian probability
+distributions in the total variation distance [100–104], a task
+that plays a central role in many machine learning applications [102]. In the classical setting, the sample complexity of
+learning an n-dimensional Gaussian distribution within total
+variation distance ε is N = Θ(n2 /ε2 ) (this follows by combining [102, Theorem 1.8] and [104, footnote 1]), which is
+also independent of the norm of the covariance matrix. The
+different scalings in n arise from the perturbation bound for the
+TV distance scales with the Frobenious norm of the covariance
+matrix, whereas in the quantum setting, it scales with the trace
+distance of the covariance matrix.
+Our work opens several natural directions for future research.
+Can similar energy-independent tomography protocols be developed for near-Gaussian or more general continuous-variable
+states? How robust are these schemes to experimental noise
+and imperfections? Can energy-independent methods be extended to process tomography of Gaussian unitaries? We leave
+these as promising open questions.
+H.
+
+Acknowledgements
+
+The authors thank Nathan Walk, Salvatore Tirone, Ludovico
+Lami, Salvatore F. E. Oliviero, Lorenzo Leone, Vittorio Giovannetti, Marco Fanizza, and Clément Canonne for fruitful
+discussions. F.A.M. thanks the California Institute of Tech-
+
+6
+nology for hospitality. This work has been supported by the
+BMFTR (PhoQuant, QPIC, Hybrid++, DAQC, QSolid), the
+BMWK (EniQmA), the DFG (CRC 183), the Quantum Flag-
+
+ship (PasQuans2, Millenion), the Munich Quantum Valley,
+Berlin Quantum, and the European Research Council (ERC
+AdG DebuQC).
+
+[1] M. Cramer, M. B. Plenio, S. T. Flammia, R. Somma, D. Gross,
+S. D. Bartlett, O. Landon-Cardinal, D. Poulin, and Y.-K. Liu,
+Efficient quantum state tomography, Nature Comm. 1, 149
+(2010).
+[2] J. Haah, R. Kothari, and E. Tang, Learning quantum Hamiltonians from high-temperature Gibbs states and real-time evolutions, Nature Phys. 20, 1027 (2024).
+[3] R. O’Donnell and J. Wright, Efficient Quantum Tomography,
+in Proceedings of the Forty-Eighth Annual ACM Symposium on
+Theory of Computing (Association for Computing Machinery,
+2016) pp. 899–912–899–912.
+[4] J. Eisert, D. Hangleiter, N. Walk, I. Roth, D. Markham,
+R. Parekh, U. Chabaud, and E. Kashefi, Quantum certification and benchmarking, Nature Rev. Phys. 2, 382 (2020).
+[5] M. Kliesch and I. Roth, Theory of quantum system certification,
+PRX Quantum 2, 010201 (2021).
+[6] D. T. Smithey, M. Beck, M. G. Raymer, and A. Faridani, Measurement of the wigner distribution and the density matrix of a
+light mode using optical homodyne tomography: Application
+to squeezed states and the vacuum, Phys. Rev. Lett. 70, 1244
+(1993).
+[7] U. Leonhardt and H. Paul, Measuring the quantum state of
+light, Progr. Quant. Electr. 19, 89 (1995).
+[8] A. I. Lvovsky and M. G. Raymer, Continuous-variable optical
+quantum-state tomography, Rev. Mod. Phys. 81, 299 (2009).
+[9] S. Bartolucci, P. Birchall, H. Bombín, H. Cable, C. Dawson,
+M. Gimeno-Segovia, E. Johnston, K. Kieling, N. Nickerson,
+M. Pant, F. Pastawski, T. Rudolph, and C. Sparrow, Fusionbased quantum computation, Nature Comm. 14, 912 (2023).
+[10] L. S. Madsen, F. Laudenbach, M. F. Askarani, F. Rortais, T. Vincent, J. F. F. Bulmer, F. M. Miatto, L. Neuhaus, L. G. Helt,
+M. J. Collins, A. E. Lita, T. Gerrits, S. W. Nam, V. D. Vaidya,
+M. Menotti, I. Dhand, Z. Vernon, N. Quesada, and J. Lavoie,
+Quantum computational advantage with a programmable photonic processor, Nature 606, 75–81 (2022).
+[11] K. Alexander, A. Bahgat, A. Benyamini, D. Black, D. Bonneau,
+S. Burgos, B. Burridge, G. Campbell, G. Catalano, A. Ceballos, C.-M. Chang, C. Chung, F. Danesh, T. Dauer, M. Davis,
+E. Dudley, P. Er-Xuan, J. Fargas, A. Farsi, C. Fenrich, J. Frazer,
+M. Fukami, Y. Ganesan, G. Gibson, M. Gimeno-Segovia,
+S. Goeldi, P. Goley, R. Haislmaier, S. Halimi, P. Hansen,
+S. Hardy, J. Horng, M. House, H. Hu, M. Jadidi, H. Johansson,
+T. Jones, V. Kamineni, N. Kelez, R. Koustuban, G. Kovall,
+P. Krogen, N. Kumar, Y. Liang, N. LiCausi, D. Llewellyn,
+K. Lokovic, M. Lovelady, V. Manfrinato, A. Melnichuk,
+M. Souza, G. Mendoza, B. Moores, S. Mukherjee, J. Munns,
+F.-X. Musalem, F. Najafi, J. L. O’Brien, J. E. Ortmann, S. Pai,
+B. Park, H.-T. Peng, N. Penthorn, B. Peterson, M. Poush,
+G. J. Pryde, T. Ramprasad, G. Ray, A. Rodriguez, B. Roxworthy, T. Rudolph, D. J. Saunders, P. Shadbolt, D. Shah,
+H. Shin, J. Smith, B. Sohn, Y.-I. Sohn, G. Son, C. Sparrow,
+M. Staffaroni, C. Stavrakas, V. Sukumaran, D. Tamborini,
+M. G. Thompson, K. Tran, M. Triplet, M. Tung, A. Vert, M. D.
+Vidrighin, I. Vorobeichik, P. Weigel, M. Wingert, J. Wooding,
+and X. Zhou, A manufacturable platform for photonic quantum
+computing, arXiv (2024), arXiv:2404.17570.
+
+[12] L. S. Madsen, F. Laudenbach, M. F. Askarani, F. Rortais, T. Vincent, J. F. F. Bulmer, F. M. Miatto, L. Neuhaus, L. G. Helt,
+M. J. Collins, A. E. Lita, T. Gerrits, S. W. Nam, V. D. Vaidya,
+M. Menotti, I. Dhand, Z. Vernon, N. Quesada, and J. Lavoie,
+Quantum computational advantage with a programmable photonic processor, Nature 606, 75 (2022).
+[13] H.-S. Zhong, H. Wang, Y.-H. Deng, M.-C. Chen, L.-C. Peng, Y.H. Luo, J. Qin, D. Wu, X. Ding, Y. Hu, P. Hu, X.-Y. Yang, W.-J.
+Zhang, H. Li, Y. Li, X. Jiang, L. Gan, G. Yang, L. You, Z. Wang,
+L. Li, N.-L. Liu, C.-Y. Lu, and J.-W. Pan, Quantum computational advantage using photons, Science 370, 1460–1463
+(2020).
+[14] F. H. B. Somhorst, R. van der Meer, M. C. Anguita, R. Schadow,
+H. J. Snijders, M. de Goede, B. Kassenberg, P. Venderbosch,
+C. Taballione, J. P. Epping, H. H. van den Vlekkert, J. F. F.
+Bulmer, J. Lugani, I. A. Walmsley, P. W. H. Pinkse, J. Eisert,
+N. Walk, and J. J. Renema, Quantum photo-thermodynamics on
+a programmable photonic quantum processor, Nature Comm.
+14, 3895 (2023).
+[15] A. Anshu and S. Arunachalam, A survey on the complexity of
+learning quantum states, Nature Rev. Phys. 6, 59 (2023).
+[16] M. A. Nielsen and I. L. Chuang, Quantum Computation and
+Quantum Information: 10th Anniversary Edition (Cambridge
+University Press, Cambridge, 2010).
+[17] M. M. Wilde, Quantum Information Theory, 2nd ed. (Cambridge University Press, 2017).
+[18] S. Khatri and M. M. Wilde, Principles of Quantum Communication Theory: A Modern Approach (2020).
+[19] C. W. Helstrom, Quantum detection and estimation theory
+(Academic press, New York, USA, 1976).
+[20] A. S. Holevo, Investigations in the general theory of statistical
+decisions, Trudy Mat. Inst. Steklov 124, 3 (1976), (English
+translation: Proc. Steklov Inst. Math. 124:1–140, 1978).
+[21] M. Cramer, M. B. Plenio, S. T. Flammia, R. Somma, D. Gross,
+S. D. Bartlett, O. Landon-Cardinal, D. Poulin, and Y.-K. Liu,
+Efficient quantum state tomography, Nature Comm. 1, 149
+(2010).
+[22] B. P. Lanyon, C. Maier, M. Holzäpfel, T. Baumgratz,
+C. Hempel, P. Jurcevic, I. Dhand, A. S. Buyskikh, A. J. Daley,
+M. Cramer, M. B. Plenio, R. Blatt, and C. F. Roos, Efficient
+tomography of a quantum many-body system, Nature Phys. 13,
+1158–1162 (2017).
+[23] S. Grewal, V. Iyer, W. Kretschmer, and D. Liang, Efficient
+learning of quantum states prepared with few non-Clifford
+gates, arXiv (2023), arXiv:2305.13409.
+[24] L. Leone, S. Oliviero, and A. Hamma, Learning t-doped stabilizer states, Quantum 8, 1361 (2024).
+[25] D. Hangleiter and M. Gullans, Bell sampling from quantum
+circuits, Phys. Rev. Lett. 133, 020601 (2024).
+[26] F. A. Mele, A. A. Mele, L. Bittel, J. Eisert, V. Giovannetti,
+L. Lami, L. Leone, and S. F. E. Oliviero, Learning quantum states of continuous variable systems, arXiv (2024),
+arXiv:2405.01431.
+[27] L. Bittel, F. A. Mele, A. A. Mele, S. Tirone, and L. Lami,
+Optimal estimates of trace distance between bosonic Gaussian
+states and applications to learning, Quantum 9, 1769 (2025).
+
+7
+[28] M. Fanizza, N. Galke, J. Lumbreras, C. Rouzé, and A. Winter,
+Learning finitely correlated states: stability of the spectral
+reconstruction, arXiv (2023), arXiv:2312.07516.
+[29] A. Mele and Y. Herasymenko, Efficient learning of quantum
+states prepared with few fermionic non-Gaussian gates, arXiv
+(2024), arXiv:2402.18665.
+[30] S. Arunachalam, S. Bravyi, A. Dutt, and T. J. Yoder, Optimal
+algorithms for learning quantum phase states, arXiv (2023),
+arXiv:2208.07851.
+[31] V. Iyer, Mildly-interacting fermionic unitaries are efficiently
+learnable, arXiv (2025), arXiv:2504.11318.
+[32] S. Austin, M. E. S. Morales, and A. Gorshkov, Efficiently
+learning fermionic unitaries with few non-gaussian gates, arXiv
+(2025), arXiv:2504.15356.
+[33] A. Montanaro, Learning stabilizer states by Bell sampling,
+arXiv (2017), arXiv:1707.04012.
+[34] D. F. C.Rouzé, Learning quantum many-body systems from a
+few copies, arXiv (2023), arXiv:2107.03333.
+[35] Z. Landau and Y. Liu, Learning quantum states prepared
+by shallow circuits in polynomial time, arXiv (2024),
+arXiv:2410.23618.
+[36] H.-S. Kim, I. H. Kim, and D. Ranard, Learning state preparation circuits for quantum phases of matter, arXiv (2024),
+arXiv:2410.23544.
+[37] J. E. L. Bittel, A. A. Mele and L. Leone, Optimal trace-distance
+bounds for free-fermionic states: Testing and improved tomography, arXiv (2024), arXiv:2409.17953.
+[38] M. Fanizza, C. Rouzé, and D. S. França, Efficient Hamiltonian,
+structure and trace distance learning of Gaussian states, arXiv
+(2024), arXiv:2411.03163.
+[39] A. S. Holevo, On estimates of trace-norm distance between
+quantum Gaussian states, arXiv (2024), arXiv:2408.11400.
+[40] S. Gandhari, V. V. Albert, T. Gerrits, J. M. Taylor, and M. J. Gullans, Precision bounds on continuous-variable state tomography
+using classical shadows, arXiv (2022), arXiv:2211.05149.
+[41] S. Becker, N. Datta, L. Lami, and C. Rouzé, Classical shadow
+tomography for continuous variables quantum systems, IEEE
+Trans. Inf. Theory 70, 3427 (2024).
+[42] C. Oh, S. Chen, Y. Wong, S. Zhou, H.-Y. Huang, J. A. H.
+Nielsen, Z.-H. Liu, J. S. Neergaard-Nielsen, U. L. A., L. Jiang,
+and J. Preskill, Entanglement-enabled advantage for learning a bosonic random displacement channel, arXiv (2024),
+arXiv:2402.18809.
+[43] Z.-H. Liu, R. Brunel, E. E. B. Østergaard, O. Cordero, S. Chen,
+Y. Wong, J. A. H. Nielsen, A. B. Bregnsbo, S. Zhou, H.-Y.
+Huang, C. Oh, L. Jiang, J. Preskill, J. S. Neergaard-Nielsen,
+and U. L. Andersen, Quantum learning advantage on a scalable
+photonic platform, arXiv (2025), arXiv:2502.07770.
+[44] E. Coroi and C. Oh, Exponential advantage in
+continuous-variable quantum state learning, arXiv (2025),
+arXiv:2501.17633.
+[45] O. Fawzi, A. Oufkir, and R. Salzmann, Optimal fidelity estimation from binary measurements for discrete and continuous
+variable systems, arXiv (2024), arXiv:2409.04189.
+[46] Y.-D. Wu, Y. Zhu, G. Chiribella, and N. Liu, Efficient learning of continuous-variable quantum states, arXiv (2024),
+arXiv:2303.05097.
+[47] T. Möbus, A. Bluhm, M. C. Caro, A. H. Werner, and
+C. Rouzé, Dissipation-enabled bosonic Hamiltonian learning via new information-propagation bounds, arXiv (2023),
+arXiv:2307.15026.
+[48] V. Upreti and U. Chabaud, An efficient quantum state verification framework and its application to bosonic systems, arXiv
+(2024), arXiv:2411.04688.
+
+[49] X. Zhao, P. Liao, F. A. Mele, U. Chabaud, and Q. Zhuang, Complexity of quantum tomography from genuine non-Gaussian
+entanglement, arXiv (2025), arXiv:2411.01609.
+[50] A. Serafini, Quantum continuous variables: A primer of theoretical methods (CRC Press, Taylor & Francis Group, Boca
+Raton, USA, 2017).
+[51] C. Weedbrook, S. Pirandola, R. García-Patrón, N. J. Cerf, T. C.
+Ralph, J. H. Shapiro, and S. Lloyd, Gaussian quantum information, Rev. Mod. Phys. 84, 621 (2012).
+[52] R. Schnabel, Squeezed states of light and their applications in
+laser interferometers, Phys. Rep. 684, 1–51 (2017).
+[53] R. Schnabel, N. Mavalvala, D. E. McClelland, and P. K. Lam,
+Quantum metrology for gravitational wave astronomy, Nature
+Comm. 1, 121 (2010).
+[54] T. L. S. Collaboration, Enhanced sensitivity of the LIGO gravitational wave detector by using squeezed states of light, Nature
+Phot. 7, 613 (2013).
+[55] J. Zhang, M. Um, D. Lv, J.-N. Zhang, L.-M. Duan, and K. Kim,
+Noon states of nine quantized vibrations in two radial modes
+of a trapped ion, Phys. Rev. Lett. 121, 160502 (2018).
+[56] V. Meyer, M. A. Rowe, D. Kielpinski, C. A. Sackett, W. M.
+Itano, C. Monroe, and D. J. Wineland, Experimental demonstration of entanglement-enhanced rotation angle estimation
+using trapped ions, Phys. Rev. Lett. 86, 5870 (2001).
+[57] K. McCormick, J. Keller, S. Burd, D. Wineland, A. Wilson,
+and D. Leibfried, Quantum-enhanced sensing of a single-ion
+mechanical oscillator, Nature 572, 1 (2019).
+[58] H. Q. Nguyen, I. Derkach, A. A. E. Hajomer, H.-M. Chin,
+A. nag Oruganti, U. L. Andersen, V. Usenko, and T. Gehring,
+Digital reconstruction of squeezed light for quantum information processing, arXiv (2024), arXiv:2411.07666.
+[59] R. Renner, Security of quantum key distribution, Ph.D. thesis,
+ETH Zurich (2005), arXiv:quant-ph/0512258.
+[60] S. Lloyd and S. L. Braunstein, Quantum computation over
+continuous variables, Phys. Rev. Lett. 82, 1784 (1999).
+[61] D. Gottesman, A. Kitaev, and J. Preskill, Encoding a qubit in
+an oscillator, Phys. Rev. A 64, 012310 (2001).
+[62] N. C. Menicucci, P. van Loock, M. Gu, C. Weedbrook, T. C.
+Ralph, and M. A. Nielsen, Universal quantum computation
+with continuous-variable cluster states, Phys. Rev. Lett. 97,
+110501 (2006).
+[63] M. Mirrahimi, Z. Leghtas, V. V. Albert, S. Touzard, R. J.
+Schoelkopf, L. Jiang, and M. H. Devoret, Dynamically protected cat-qubits: a new paradigm for universal quantum computation, New J. Phys. 16, 045014 (2014).
+[64] N. Ofek, A. Petrenko, R. Heeres, P. Reinhold, Z. Leghtas,
+B. Vlastakis, Y. Liu, L. Frunzio, S. Girvin, L. Jiang, M. Mirrahimi, M. Devoret, and R. Schoelkopf, Extending the lifetime
+of a quantum bit with error correction in superconducting circuits, Nature 536 (2016).
+[65] M. H. Michael, M. Silveri, R. T. Brierley, V. V. Albert,
+J. Salmilehto, L. Jiang, and S. M. Girvin, New class of quantum error-correcting codes for a bosonic mode, Phys. Rev. X 6,
+031006 (2016).
+[66] J. Guillaud and M. Mirrahimi, Repetition cat qubits for faulttolerant quantum computation, Phys. Rev. X 9, 041053 (2019).
+[67] A. S. Holevo and R. F. Werner, Evaluating capacities of bosonic
+Gaussian channels, Phys. Rev. A 63, 032312 (2001).
+[68] M. M. Wolf, D. Pérez-García, and G. Giedke, Quantum capacities of bosonic channels, Phys. Rev. Lett. 98, 130501 (2007).
+[69] M. Takeoka, S. Guha, and M. M. Wilde, Fundamental rate-loss
+tradeoff for optical quantum key distribution, Nature Comm. 5,
+5235 (2014).
+
+8
+[70] S. Pirandola, R. Laurenza, C. Ottaviani, and L. Banchi, Fundamental limits of repeaterless quantum communications, Nature
+Comm. 8, 15043 (2017).
+[71] F. A. Mele, L. Lami, and V. Giovannetti, Restoring quantum
+communication efficiency over high loss optical fibers, Phys.
+Rev. Lett. 129, 180501 (2022).
+[72] F. A. Mele, L. Lami, and V. Giovannetti, Maximum tolerable
+excess noise in continuous-variable quantum key distribution
+and improved lower bound on two-way capacities, Nature Phot.
+19, 329–334 (2025).
+[73] F. A. Mele, F. Salek, V. Giovannetti, and L. Lami, Quantum
+communication on the bosonic loss-dephasing channel, Phys.
+Rev. A 110, 012460 (2024).
+[74] F. A. Mele, L. Lami, and V. Giovannetti, Quantum optical
+communication in the presence of strong attenuation noise,
+Phys. Rev. A 106, 042437 (2022).
+[75] F. A. Mele, G. D. Palma, M. Fanizza, V. Giovannetti, and
+L. Lami, Optical fibres with memory effects and their quantum
+communication capacities, arXiv (2023), arXiv:2309.17066.
+[76] D. Hangleiter and J. Eisert, Computational advantage of quantum random sampling, Rev. Mod. Phys. 95, 035001 (2023).
+[77] Y. S. Teo, K. Park, S. Shin, H. Jeong, and P. Marek, Highly
+accurate Gaussian process tomography with geometrical sets
+of coherent states, arXiv (2020), arXiv:2012.14177.
+[78] M. Esposito, F. Benatti, R. Floreanini, S. Olivares, F. Randi,
+K. Titimbo, M. Pividori, F. Novelli, F. Cilento, F. Parmigiani,
+and D. Fausti, Pulsed homodyne Gaussian quantum tomography with low detection efficiency, New J. Phys. 16, 043004
+(2014).
+[79] C. Kumar and Arvind, Estimation of the Wigner distribution of
+single-mode Gaussian states: A comparative study, Phys. Rev.
+A 105, 042419 (2022).
+[80] A. Kawasaki, R. Ide, H. Brunel, T. Suzuki, R. Nehra,
+K. Nakashima, T. Kashiwazaki, A. Inoue, T. Umeki, F. China,
+M. Yabuno, S. Miki, H. Terai, T. Yamashima, A. Sakaguchi,
+K. Takase, M. Endo, W. Asavanant, and A. Furusawa, Highrate generation and state tomography of non-Gaussian quantum
+states for ultra-fast clock frequency quantum processors, arXiv
+(2024), arXiv:2402.17408.
+[81] J. Řeháček, Y. S. Teo, Z. Hradil, and S. Wallentowitz, Surmounting intrinsic quantum-measurement uncertainties in
+Gaussian-state tomography with quadrature squeezing, Sc. Rep.
+5, 12289 (2015).
+[82] R. King, K. Wan, and J. R. McClean, Exponential learning advantages with conjugate states and minimal quantum memory,
+PRX Quantum 5, 040301 (2024).
+[83] A. Montanaro, Learning stabilizer states by Bell sampling,
+arXiv (2017), arXiv:1707.04012.
+[84] D. Gross, S. Nezami, and M. Walter, Schur–Weyl duality for
+the Clifford group with applications: Property testing, a robust Hudson theorem, and de Finetti representations, Commun.
+Math. Phys. 385, 1325–1393 (2021).
+[85] T. Haug, S. Lee, and M. Kim, Efficient quantum algorithms for
+stabilizer entropies, Phys. Rev. Lett. 132, 240602 (2024).
+[86] T. Haug, K. Bharti, and D. E. Koh, Pseudorandom unitaries
+are neither real nor sparse nor noise-robust, Quantum 9, 1759
+(2025).
+[87] J. Miyazaki and K. Matsumoto, Imaginarity-free quantum multiparameter estimation, Quantum 6, 665 (2022).
+[88] J. Miyazaki and S. Akibue, Non-locality of conjugation symmetry: characterization and examples in quantum network sensing,
+New J. Phys. 26, 053017 (2024).
+[89] S. Grewal, V. Iyer, W. Kretschmer, and D. Liang, Improved stabilizer estimation via Bell difference sampling, arXiv (2024),
+
+arXiv:2304.13915.
+[90] F. A. Mele, G. Barbarino, V. Giovannetti, and M. Fanizza,
+Achievable rates in non-asymptotic bosonic quantum communication, arXiv (2025), arXiv:2502.05524.
+[91] F. A. Mele, S. F. E. Oliviero, V. Upreti, and U. Chabaud, The
+symplectic rank of non-Gaussian quantum states, arXiv (2025),
+arXiv:2504.19319.
+[92] A. S. Holevo, On estimates of the Bures distance between
+bosonic Gaussian states, arXiv (2024), arXiv:2412.04875.
+[93] R. Vershynin, High-dimensional probability, University of California, Irvine (2020).
+[94] M. M. Wilde, Quantum Information Theory (Cambridge University Press, 2013).
+[95] J. Watrous, The theory of quantum information (Cambridge
+University Press, 2018).
+[96] R. Schnabel, Squeezed states of light and their applications in
+laser interferometers, Phys. Rep. 684, 1 (2017).
+[97] H. Zhao, L. Lewis, I. Kannan, Y. Quek, H. Huang, and M. Caro,
+Learning quantum states and unitaries of bounded gate complexity, arXiv (2023), arXiv:2310.19882.
+[98] H. Huang, Y. Liu, M. Broughton, I. Kim, A. Anshu, Z. Landau, and J. R. McClean, Learning shallow quantum circuits,
+in Proc. 56th Annu. ACM Symp. Theory Comput. (Association
+for Computing Machinery, New York, NY, USA, 2024) pp.
+1343–1351.
+[99] H. Huang, R. Kueng, and J. Preskill, Predicting many properties
+of a quantum system from very few measurements, Nature Phys.
+16, 1050–1057 (2020).
+[100] S. S. Barsov and V. V. Ul’yanov, Estimates of the proximity
+of Gaussian measures, Soviet Mathematics, Doklady 34, 462
+(1987).
+[101] L. Devroye, A. Mehrabian, and T. Reddad, The total variation
+distance between high-dimensional Gaussians with the same
+mean, arXiv (2023), arXiv:1810.08693.
+[102] J. Arbas, H. Ashtiani, and C. Liaw, Polynomial time and private
+learning of unbounded Gaussian mixture models, arXiv (2023),
+arXiv:2303.04288.
+[103] C. Franks, R. Oliveira, A. Ramachandran, and M. Walter, Near
+optimal sample complexity for matrix and tensor normal models via geodesic convexity, arXiv (2021), arXiv:2110.07583.
+[104] C. Canonne, Testing Gaussians, in many ways, Github (Github
+note, 2020), [Accessed: 30 July 2025].
+[105] J. Eisert and M. B. Plenio, Introduction to the basics of entanglement theory in continuous-variable systems, Int. J. Quantum
+Inf. 01, 479 (2003).
+[106] R. Bhatia, Positive definite matrices (Princeton university press,
+2009).
+[107] L. Lami, C. Hirche, G. Adesso, and A. Winter, Schur complement inequalities for covariance matrices and monogamy of
+quantum correlations, Phys. Rev. Lett. 117, 220502 (2016).
+[108] L. Lami, C. Hirche, G. Adesso, and A. Winter, From logdeterminant inequalities to Gaussian entanglement via recoverability theory, IEEE Trans. Inf. Th. 63, 7553 (2017).
+[109] L. Lami, A. Serafini, and G. Adesso, Gaussian entanglement
+revisited, New J. Phys. 20, 023030 (2018).
+[110] C. Weedbrook, A. M. Lance, W. P. Bowen, T. Symul, T. C.
+Ralph, and P. K. Lam, Quantum cryptography without switching, Phys. Rev. Lett. 93, 170504 (2004).
+[111] G. Lugosi and S. Mendelson, Sub-Gaussian estimators of the
+mean of a random vector, arXiv (2017), arXiv:1702.00482.
+[112] M. J. Wainwright, High-Dimensional Statistics: A NonAsymptotic Viewpoint, Cambridge Series in Statistical and Probabilistic Mathematics (Cambridge University Press, 2019).
+
+9
+[113] R. Vershynin, High-dimensional probability: An introduction
+with applications in data science, Cambridge Series in Statistical and Probabilistic Mathematics (Cambridge University
+Press, 2018).
+[114] R. Bhatia and T. Jain, On symplectic eigenvalues of positive
+definite matrices, J. Math. Phys. 56, 112201 (2015).
+
+10
+
+Supplemental Material
+CONTENTS
+
+I. Notations and preliminaries
+
+10
+
+II. Trace distance bounds for Gaussian states
+
+15
+
+III. Gaussian state tomography using heterodyne measurements: A non-adaptive algorithm
+
+22
+
+IV. Gaussian state tomography with squeezed inputs: An adaptive and effectively energy-independent algorithm
+A. Measurement scheme using only passive operations and squeezed inputs
+B. Alternative passive measurement scheme via Euler decomposition
+
+26
+29
+30
+
+V. Gaussian state tomography with access to the transposed state: A fully energy-independent protocol
+
+31
+
+In this supplemental material, we provide additional technical details and proofs to support the results presented in the main
+text. Specifically, we elaborate on the mathematical tools and concepts used in our analysis, outline the derivation of key bounds,
+and present the theoretical guarantees underpinning our Gaussian state tomography algorithm along with its algorithmic steps.
+I.
+
+NOTATIONS AND PRELIMINARIES
+
+In this section, we review the key concepts and preliminary notions that are essential for our work. For a more detailed
+yet concise discussion of these preliminaries, we direct the reader to the preliminary section in the appendix of our previous
+works [26, 27], where we adopt the same notation. For a comprehensive overview on notions of continuous variable systems and
+specifically on Gaussian states, we refer to the book [50] and the review articles [51, 105].
+Definitions:
+• A 2n × 2n real matrix S is said to be symplectic if SΩS
+2n × 2n symplectic matrices is denoted as Sp(2n).
+
+⊺
+
+= Ω, where Ω ..= 1n ⊗
+
+
+
+
+0 1
+. Moreover, the set of all
+−1 0
+
+• An Hermitian matrix X is said to be positive if its minimum eigenvalue is non-negative. In formulae, we will write
+X ≥ 0 ⇔ λmin (X) ≥ 0.
+• An Hermitian matrix X is said to be strictly positive if its minimum eigenvalue is strictly positive. In formulae, we will
+write X > 0 ⇔ λmin (X) > 0.
+√
+• The absolute value of an operator X is defined as |X| ..= X † X.
+• Given a vector m ∈ Rk and a positive definite matrix V ∈ Rk×k , we denote as N(m, V ) : Rk 7−→ R the Gaussian
+probability distribution over Rk with mean vector m and covariance matrix V , defined as
+
+
+1
+1
+⊺ −1
+.
+.
+√
+N(m, V )(r) =
+exp − (r − m) V (r − m) ,
+(10)
+2
+(2π)k/2 det V
+for all r ∈ Rk .
+Decompositions:
+• Spectral decomposition: For every X Hermitian, there exist a unitary U and a real, diagonal matrix D such that X = U DU † .
+The eigenvalues of X are denoted λi ..= Di,i for all i.
+
+11
+• Singular value decomposition: For every X, there exist U and V unitaries and Σ positive and diagonal such that X = U ΣV † .
+The singular values of X are denoted as σi ..= Σi,i for all i.
+• Williamson decomposition: For every strictly positive matrix X ∈ R2n×2n , there exist a symplectic matrix S and a positive
+diagonal matrix D ∈ Rn×n such that X = S (12 ⊗ D) S T . The symplectic eigenvalues of X are denoted as di,i ..= Di,i
+for all i.
+• Euler decomposition [50]: For anyreal symplectic
+matrix S, there exist symplectic, orthogonal matrices O1 and O2 , and a
+
+L
+z
+0
+j
+n
+real diagonal matrix Z ..= j=1
+with each zj ≥ 1, such that S = O1 ZO2 .
+0 zj−1
+
+Norms, positivity and inequalities: We use the following norms throughout the paper:
+√
+• ∥m∥2 ..= m† m denotes the Euclidean norm of a vector m.
+
+• ∥X∥∞ denotes the operator norm, and it is defined as the maximum singular value of X.
+• ∥X∥1 ..= Tr |X| denotes the trace norm, also referred to as one-norm, and it is equal to the sum of singular values of X.
+p
+• ∥X∥2 ..= Tr[X † X] denotes the Hilbert-Schmidt or Frobenious norm, and it is equal to the Euclidean norm of the vector
+of singular values.
+P
+1/p
+• In general, for any p > 0, the Schatten p-norm is defined as ∥X∥p ..= ( i σip ) , where {σi }i are the singular values of
+X.
+Useful matrix inequalities (see e.g., Ref. [106]) that are used in the proofs.
+1. Hölder’s inequality: ∥XY ∥p ≤ ∥X∥q ∥Y ∥r , for p, q, r ≥ 1 and p−1 ≥ q −1 + r−1 .
+√
+√
+2. For X Hermitian and A ≥ 0: ∥ AX A∥1 ≤ Tr(A|X|) ≤ ∥A|X|∥1 ≤ ∥AX∥1 .
+3. For A ≥ B ≥ 0, then ∥A∥p ≥ ∥B∥p .
+4. For A ≥ B ≥ 0: ∥XAX † ∥1 ≥ ∥XBX † ∥1 .
+
+
+A B
+≥ ∥A∥1 + ∥D∥1
+5. For all matrices A, B, C, D:
+C D 1
+6. For X, Y ≥ 0: (X + Y )−1 ≤ X −1 + Y −1 .
+7. if X ≥ Y ≥ 0, then X −1 ≤ Y −1 .
+1/2
+
+8. If A ∈ Cn×n with n ≥ 2 and A ≥ 1, then ∥A∥∞ ≤ 21 ∥A∥1 .
+The matrix geometric mean between two positive matrices A and B is defined as [106]
+√ p
+√
+A#B ..= A A−1/2 BA−1/2 A ,
+and it satisfies the following properties [106]:
+√
+1. If [A, B] = 0, then A#B = AB.
+2. A#B = B#A.
+3. For c ∈ R, (cA)#B =
+
+√
+
+c(A#B).
+
+4. For invertible X, (XAX † )#(XBX † ) = X(A#B)X † .
+5. Let 0 ≤ a ≤ A and 0 ≤ b ≤ B be four positive matrices. Then a#b ≤ A#B.
+
+(11)
+
+12
+We refer to Refs. [27, 107–109] for other applications of the matrix geometric mean in quantum information with continuousvariable systems.
+The Hilbert space of a continuous-variable system: Continuous variable systems, such as quantum optical and bosonic
+systems, are associated with an infinite-dimensional Hilbert space, the n-mode bosonic Fock space H. The latter can be defined
+as the span of all Fock states:
+
+H ..= Span {|m⟩ : m ∈ Nn0 } ,
+
+(12)
+
+where |m⟩ is the n-mode Fock state vector with mi photons in the ith mode. More formally, H can be defined to be the Hilbert
+space L2 (Rn ) of all complex-values square-integrable over Rn . The Fock states form an orthonormal basis for this Hilbert space.
+Quantum states on this space are referred to as n-mode quantum states.
+For each i ∈ [n], the annihilation operator of the ith mode, denoted as ai , can be defined via its action on Fock states as
+√
+ai |m⟩ = mi |m − ei ⟩
+∀ m ∈ Nn0 ,
+(13)
+where ei is the ith canonical basis vector of Rn . Analogously, the creation operator of the ith mode, denoted as a†i , is the adjoint
+of the annihilation operator and satisfies
+√
+(14)
+a†i |m⟩ = mi + 1 |m + ei ⟩
+∀ m ∈ Nn0 ,
+The annihilation and creation operator satisfy the canonical commutation relations
+[ai , a†j ] = δi,j 1̂ ,
+
+(15)
+
+where δi,j denotes the Kronecker delta. Moreover, for each j ∈ [n], the position operator and the momentum operator of the jth
+mode, denoted as x̂j and p̂j , respectively, are defined as
+aj + a†j
+√
+,
+2
+aj − a†j
+p̂j ..= √
+.
+2i
+
+x̂j ..=
+
+(16)
+
+In addition, the quadrature operator vector, denoted as R̂, is defined as
+R̂ ..= (x̂1 , p̂1 , . . . , x̂n , p̂n )⊺ .
+
+(17)
+
+Using this notation, the canonical commutation relations can be expressed as
+∀ k, l ∈ [2n] ,
+
+[R̂k , R̂l ] = i (Ωn )k,l 1̂
+
+(18)
+
+where
+Ωn ..=
+
+
+n 
+M
+0 1
+−1 0
+
+(19)
+
+i=1
+
+being the so-called symplectic form, and 1̂ is the identity operator. The relation in (18) is usually expressed in the continuous
+variable literature [50] in vectorial notation as
+⊺
+
+(20)
+
+[R̂, R̂ ] = i Ωn 1̂ .
+The energy operator is defined as
+Ên ..=
+
+n
+X
+j=1
+
+x̂2j
+p̂2j
++
+2
+2
+
+!
+
+=
+
+1 ⊺
+R̂ R̂ ,
+2
+
+(21)
+
+and the mean energy of an n-mode state ρ is given by its expectation value of the energy operator Tr[ρÊn ].
+First moments and covariance matrices: The first moment m(ρ) of an n-mode quantum state ρ is a 2n-dimensional vector
+defined as
+ h
+i
+h
+i
+h
+i
+m(ρ) ..= Tr R̂1 ρ , Tr R̂2 ρ , . . . , Tr R̂2n ρ ,
+(22)
+
+13
+h i
+which can be written in vectorial notation as m(ρ) = Tr R̂ ρ . Additionally, the covariance matrix of ρ is a 2n × 2n matrix V(ρ)
+with elements
+hn
+o i
+hn
+o i
+[V(ρ)]k,l ..= Tr R̂k − mk (ρ)1̂, R̂l − ml (ρ)1̂ ρ = Tr R̂k , R̂l ρ − 2mk (ρ)ml (ρ) ,
+(23)
+for each k, l ∈ [2n], where {Â, B̂} ..= ÂB̂ + B̂ Â is the anti-commutator. In vectorial notation, this reads as
+hn
+o i
+hn
+o i
+⊺
+V(ρ) = Tr (R̂ − m(ρ)1̂), (R̂ − m(ρ)1̂)⊺ ρ = Tr R̂, R̂ ρ − 2m(ρ)m(ρ)⊺ .
+
+(24)
+
+Notably, any covariance matrix V(ρ) satisfies the matrix inequality [50]
+
+V(ρ) + iΩn ≥ 0 ,
+
+(25)
+
+known as uncertainty relation. As a consequence, since Ωn is skew-symmetric, any covariance matrix V(ρ) is positive semidefinite on R2n . Conversely, for any symmetric W ∈ R2n,2n such that W + iΩn ≥ 0 there exists an n-mode state ρ with
+covariance matrix V(ρ) = W [50]. In addition, the mean energy of an n-mode quantum state can be written in terms of its first
+moment and covariance matrix as
+h
+i Tr V (ρ) ∥m∥2
+2
+(26)
++
+.
+Tr Ên ρ =
+4
+2
+
+
+0 1
+Symplectic matrices: A 2n × 2n real matrix S is said to be symplectic if SΩS ⊺ = Ω, where Ω ..= 1n ⊗
+. Moreover,
+−1 0
+the set of all 2n × 2n symplectic matrices is denoted as S ∈ Sp(2n).
+Williamson decomposition: Any strictly positive 2n × 2n real matrix V can be written in the so-called Williamson decomposition as [50]
+V = SDS ⊺ ,
+
+(27)
+
+n 
+M
+d
+
+(28)
+
+where S is a symplectic matrix and
+D=
+
+j=1
+
+
+0
+,
+0 dj
+j
+
+with d1 , d2 , . . . , dn > 0 denoting the symplectic eigenvalues. If V is a valid covariance matrix, meaning it satisfies the uncertainty
+relation V + iΩ ≥ 0, then all its symplectic eigenvalues obey d1 , d2 , . . . , dn ≥ 1.
+Euler decomposition: Any symplectic matrix S ∈ Sp(2n) can be written in the Euler (or Bloch-Messiah) decomposition [50]
+as
+S = O1 ZO2 ,
+
+(29)
+
+where O1 , O2 ∈ O(2n) ∩ Sp(2n) are symplectic orthogonal matrices, and Z is a diagonal matrix given by
+Z ..=
+
+n 
+M
+zj
+j=1
+
+0
+
+0 zj−1
+
+
+
+,
+
+(30)
+
+with zj ≥ 1.
+Useful properties of covariance matrices: Given the covariance matrix V of an n-mode quantum state ρ, the Williamson
+decomposition and the Euler decomposition allow one to prove the following properties (see, e.g., Refs. [26, 27]):
+• ∥V ∥∞ ≥ 1.
+• V −1 ≤ ΩV Ω⊺ , which directly implies that
+(λmin (V ))
+
+−1
+
+h
+i
+= ∥V −1 ∥∞ ≤ ∥V ∥∞ ≤ Tr V ≤ 4 Tr Ên ρ .
+
+(31)
+
+14
+Gaussian states: By definition, Gaussian states are Gibbs states of positive quadratic Hamiltonians in the quadrature operator
+vector R̂ [50]. Moreover, they are uniquely determined by their covariance matrices and first moments. Specifically, the set of
+n-mode Gaussian states are in one-to-one correspondence with the set of pairs (V, m), where V is a valid covariance matrix,
+i.e., a 2n × 2n real matrix that satisfies the uncertainty relation V + iΩ ≥ 0, and m is a 2n-dimensional real vector [50]. For any
+such pair (V, m), where V satisfies the uncertainty relation, there exists a unique Gaussian state with covariance matrix V and
+first moment m [50]. Conversely, the covariance matrix of any (Gaussian) state must satisfy the uncertainty relation. We will
+denote the Gaussian state with covariance matrix V and first moment m as ρ(V, m).
+Symplectic Gaussian unitaries (passive and active): Given a symplectic matrix S ∈ Sp(2n), one can define the n-mode
+symplectic Gaussian unitary US [50], which transforms the quadrature operators as
+X
+US† R̂k US =
+Sk,l R̂l
+∀ k ∈ [2n] .
+(32)
+k,l
+
+If a Gaussian unitary is associated with a symplectic orthogonal matrix, it is said to be passive; otherwise, if the associated
+symplectic matrix is not orthogonal, it is said to be active. Gaussian unitaries associated with symplectic matrices of the form Z
+in Eq. (30) are active and are referred to as squeezing unitaries. Importantly, passive unitaries preserve the energy operator [50]:
+UO† Ên UO = Ên
+
+∀ O ∈ O(2n) ∩ Sp(2n) .
+
+(33)
+
+Finally, the Euler decomposition in Eq. (29) implies that any Gaussian unitary can be written as a composition of passive and
+squeezing unitaries US = UO1 UZ UO2 , where O1 , O2 are symplectic orthogonal matrices and Z is defined in Eq. (30).
+Homodyne measurements. An Homodyne measurement [50, 110] is a standard measurement in quantum optics that allows
+one to estimate the position and momentum of each bosonic mode. For an n-mode system with quadrature operator vector
+R̂ = (x̂1 , p̂1 , . . . , x̂n , p̂n )⊺ , a homodyne measurement consists of selecting, for each mode j, whether to measure x̂j or p̂j .
+If a Gaussian state ρ, with first-moment vector m ∈ R2n and covariance matrix V ∈ R2n×2n , is measured via homodyne
+detection, the outcomes follow a Gaussian probability distribution whose mean and covariance are given by restricting m and
+V /2 to the measured quadratures. For example:
+• Measuring all position quadratures (x̂1 , . . . , x̂n ) yields outcomes x ∈ Rn distributed as x ∼ N (mx , Vx,x /2) , where
+mx ..= (m2j−1 (ρ))j∈[n] and Vx,x ..= (V2i−1,2j−1 )i,j∈[n] is the submatrix of V corresponding to the position-position
+elements.
+• Measuring all momentum quadratures (p̂1 , . . . , p̂n ) gives outcomes p ∼ N (mp , Vp,p /2) , with mp ..= (m2j (ρ))j∈[n] and
+Vp,p ..= (V2i,2j )i,j∈[n] is the submatrix of V corresponding the momentum-momentum elements.
+More generally, fixed a symplectic matrix S, the homodyne measurement associated with S is a projective measurement with
+P2n
+respect to the common (generalised) eigenbasis of the n commuting observables { j=1 Si,j R̂j }i∈{1,3,5,...,2n−1} . Measuring
+all these n observables on
+state ρ yields outcomes x ∈ Rn distributed as x ∼ N (mx , Vx,x /2) , where
+ an n-mode Gaussian
+†
+.
+.
+.
+.
+mx = m2j−1 (US ρUs ) j∈[n] and Vx,x = (V (US ρUs† )2i−1,2j−1 )i,j∈[n] . For example, the homodyne detection associated with
+the symplectic orthogonal matrix
+
+
+cos θ sin θ
+S=
+(34)
+− sin θ cos θ
+corresponds to measuring the quadrature observable Xθ ..= x̂ cos θ + p̂ sin θ.
+Experimentally, homodyne measurements are implemented by interfering the signal mode with a strong, phase-controlled local
+oscillator (LO) at a beam splitter, followed by intensity measurements at the output ports [50]. The phase of the LO determines
+the measured quadrature: a phase of 0 corresponds to x̂, a phase of π/2 to p̂, and other values to rotated quadratures.
+Heterodyne measurement. The heterodyne measurement [50, 110] allows one to simultaneously extract (noisy) information
+about both the position and momentum quadratures of each bosonic mode. When applied to a Gaussian state ρ, with first-moment
+vector m ∈ R2n and covariance matrix V ∈ R2n×2n , the heterodyne outcomes follow a classical Gaussian distribution
+
+
+V +1
+r ∼ N m,
+,
+(35)
+2
+where 1 denotes the 2n × 2n identity matrix.
+Experimentally, heterodyne detection is implemented by evolving the system state ρ together with an auxiliary vacuum state
+|0⟩ through a balanced beam splitter UB , followed by homodyne detection on both output ports: one measures the position
+
+15
+quadratures on one arm and the momentum quadratures on the other. The beam splitter UB is a passive Gaussian operation
+corresponding to a symplectic orthogonal transformation
+
+
+1 1 1
+.
+.
+√
+B = H ⊗ 12n , where H =
+.
+(36)
+2 1 −1
+More generally, we have the following.
+Lemma 5 (Generalized heterodyne sampling via beam splitter and homodyne detection). Let ρ(V1 , m1 ) and ρ(V2 , m2 ) be two
+n-mode Gaussian states with first-moment vectors m1 , m2 ∈ R2n and covariance matrices V1 , V2 ∈ R2n×2n . Consider the
+product state ρ(V1 , m1 ) ⊗ ρ(V2 , m2 ), and evolve it under the beam splitter transformation UB , corresponding to the passive
+Gaussian unitary associated with the symplectic orthogonal matrix B = H ⊗ 12n . Then, perform homodyne measurements of
+the position quadratures x̂1 , . . . , x̂n on the first
+√ output arm and the momentum quadratures p̂n+1 , . . . , p̂2n on the second. The
+resulting classical measurement outcome r = 2(x1 , p2 ) ∈ R2n is distributed according to
+
+
+V1 + V̄2
+r ∼ N m1 + m̄2 ,
+,
+(37)
+2
+where
+m̄2 ..= (1n ⊗ Z)m2 ,
+
+V̄2 ..= (1n ⊗ Z)V2 (1n ⊗ Z),
+
+(38)
+
+with Z ..= diag(1, −1). In particular, if ρ(V2 , m2 ) is the vacuum state (i.e., m2 = 0 and V2 = 12n ), then we recover the
+heterodyne measurement result
+
+
+V1 + 12n
+r ∼ N m1 ,
+.
+(39)
+2
+Proof. The joint state has first moment and covariance matrix
+ 
+
+
+m1
+V1 0
+m=
+, V =
+.
+m2
+0 V2
+After applying the beam splitter, the state remains Gaussian with transformed first moment and covariance:
+
+
+1 m1 + m2
+′
+m = Bm = √
+,
+2 m1 − m2
+
+
+1 V1 + V2 V1 − V2
+′
+⊺
+V = BV B =
+.
+2 V1 − V2 V1 + V2
+
+(40)
+
+(41)
+(42)
+
+We then measure ..= x̂1 , . . . , x̂n on the first output arm and ..= p̂n+1 , . . . , p̂2n on the second through homodyne detection. The
+outcomes (x1 , p2 ) are Gaussian-distributed with mean and covariance obtained by restricting m′ and V ′ /2 to the measured
+quadratures. In particular, the restricted output mean vector and covariance matrix are given by
+
+
+1 (m1 )|x + (m2 )|x
+′
+√
+,
+(43)
+m (x1 ,p2 ) =
+2 (m1 )|p − (m2 )|p
+
+
+1 ′
+1 (V1 )|x,x + (V2 )|x,x (V1 )|x,p − (V2 )|x,p
+V (x1 ,p2 ) =
+.
+(44)
+2
+4 (V1 )|p,x − (V2 )|p,x (V1 )|p,p + (V2 )|p,p
+
+
+
+
+√
+V̄2
+V1 +V̄2
+Thus, (x1 , p2 ) ∼ N m1√+2m̄2 , V1 +
+from
+which
+we
+have
+2(x
+,
+p
+)
+∼
+N
+m
++
+m̄
+,
+.
+1
+2
+1
+2
+4
+2
+II.
+
+TRACE DISTANCE BOUNDS FOR GAUSSIAN STATES
+
+This section is dedicated to proving a perturbation bound for the trace distance between Gaussian states, presented in Theorem 2.
+This bound plays a crucial role in analyzing the performance of our tomography algorithm. Additionally, it is a result of
+independent interest, with potential applications in continuous variable quantum information theory [50]. The proof of Theorem 2
+is deferred to the end of this section. To establish this result, we introduce two lemmas that provide key intermediate results.
+These rely on the differentiability properties of Gaussian states, as developed in Ref. [27].
+
+16
+Lemma 6 (Perturbation bound: first moment). Let ρ(D, αt′ ) be a Gaussian state with diagonal covariance matrix D = 12 ⊗ d,
+where d ≥ 1, and first-moment vector αt′ , with α ∈ R. Then,
+2n
+X
+∂
+=
+tk [Rk , ρ(D, 0)]
+ρ(D, αt′ )
+∂α
+α=0 1
+k=1
+
+1
+
+≤ 2 (D + 1)−1/2 t′
+
+2
+
+,
+
+(45)
+
+where we denoted with t ..= Ωt′ .
+Proof. The first identity in the claim follows directly from Theorem S13 (Compact formula for the derivative of a Gaussian
+state) in Ref. [27]. We now prove the upper bound. Consider first the single-mode case, where the Gaussian state with diagonal
+τ +1
+covariance matrix, denoted as ρτ , is a thermal state with parameter τ = d−1
+d+1 (and equivalently d = 1−τ ); see, e.g., Ref. [50]. In
+particular, the thermal state takes the form
+
+ρτ = (1 − τ )
+
+∞
+X
+
+m=0
+
+τ m |m⟩⟨m| .
+
+(46)
+
+We compute the commutator of the position operator x = √12 (a + a† ) with ρτ as
+[x, ρτ ] =
+=
+=
+
+∞
+
+(1 − τ ) X m
+√
+τ (a + a† ) |m⟩⟨m| − |m⟩⟨m| (a + a† )
+2 m=0
+
+(47)
+
+∞
+√
+
+(1 − τ ) X m √
+√
+τ − m + 1 |m⟩⟨m + 1| + m + 1 |m + 1⟩⟨m| × (1 − τ )
+2 m=0
+∞
+
+(1 − τ )2 X m √
+√
+τ
+m + 1 (|m + 1⟩⟨m| − |m⟩⟨m + 1|) .
+2 m=0
+
+This generalizes to the multi mode case as
+
+where pm
+⃗ =
+
+Qn
+
+∞
+X
+X
+
+√
+1 X
+[ti Ri , ρD ] = √
+pm
+(t2i−1 − it2i )(1 − τi ) mi + 1 |m
+⃗ + ⃗ei ⟩⟨m|
+⃗ − h.c.,
+⃗
+2 m=0
+i
+i∈[n]
+
+(48)
+
+mi
+is the probability distribution of the Fock state elements. Thus, taking the one-norm, we get
+i=1 (1 − τi )τi
+
+X
+
+[ti Ri , τν ]
+
+i∈[2n]
+
+1
+
+∞
+X
+
+√
+1 X
+pm
+(t2i−1 − it2i )(1 − τi ) mi + 1 |m
+⃗ + ⃗ei ⟩⟨m|
+⃗ − h.c.
+≤√
+⃗
+2 m=0
+⃗
+i∈[n]
+∞
+X
+√
+2 X
+≤√
+pm
+(t2i−1 − it2i )(1 − τi ) mi + 1 |m
+⃗ + ⃗ei ⟩⟨m|
+⃗
+⃗
+2 m=0
+⃗
+i∈[n]
+
+(49)
+1
+
+1
+
+∞
+X
+√
+2 X
+=√
+pm
+⃗ + ⃗ei ⟩
+(t2i−1 − it2i )(1 − τi ) mi + 1 |m
+⃗
+2 m=0
+⃗
+i∈[n]
+2
+v
+u
+2
+u ∞
+X
+√
+2 uX
+≤√ t
+pm
+(t2i−1 − it2i )(1 − τi ) mi + 1 |m
+⃗ + ⃗ei ⟩
+⃗
+2 m=0
+⃗
+i∈[n]
+2
+v
+uX
+∞
+X
+2 u
+=√ t
+pm
+(t22i−1 + t22i )(1 − τi )2 (mi + 1)
+⃗
+2 m=0
+⃗
+i∈[n]
+
+where we have used that E(X) ≤
+
+p
+
+E(X 2 ). Next, we can use that
+(1 − p)
+
+∞
+X
+
+m=0
+
+pm (m + 1) =
+
+1
+,
+1−p
+
+(50)
+
+17
+to obtain
+X
+
+2
+≤√
+2
+
+[ti Ri , τν ]
+
+i∈[2n]
+
+1
+
+sX
+
+(t22i−1 + t22i )(1 − τi ) = 2∥(D + 1)−1/2 t∥2 = 2∥(D + 1)−1/2 t′ ∥2 ,
+
+(51)
+
+i∈[n]
+
+using 1 − τi = di2+1 and that Ω commute with D, which conclude the proof.
+Lemma 7. Let ρ(D, 0) be a bosonic Gaussian state with diagonal covariance matrix D = 12 ⊗ d, where d ≥ 1. Then,
+2n
+X
+
+1
+∂
+=
+ρ(D + αX, 0)
+∂α
+4
+α=0 1
+
+√
+1+ 3
+≤
+(D + 1)−1/2 X(D + 1)−1/2 . (52)
+2
+1
+
+⊤
+
+(ΩXΩ )k,ℓ [Rk , [Rℓ , ρ(D, 0)]]
+
+k,ℓ=1
+
+1
+
+Proof. Let X̃ ..= ΩXΩ⊤ . By Theorem S13 (Compact formula for the derivative of a Gaussian state) in Ref. [27], we have
+2n
+
+∂
+1 X
+=−
+ρ(D + αX, 0)
+X̃k,ℓ [Rk , [Rℓ , ρ]] .
+∂α
+4
+α=0
+
+(53)
+
+k,ℓ=1
+
+We now expand the quadrature operators Rk in terms of creation and annihilation operators
+
+
+1
+R2j−1+α = √ iα (−1)α aj + a†j ,
+α ∈ {0, 1}, j ∈ [n].
+2
+Substituting this into the double commutator, we find
+h
+h
+ii
+X
+−4 ∂X,0 ρ(D + αX, 0) =
+X̃i,j R̂i , R̂j , ρ
+i,j∈[2n]
+
+=
+
+1 X
+2
+
+X
+
+i,j∈[n] α,β∈{0,1}
+
+1 X
+=
+2
+
+X
+
+i,j∈[n] α,β∈{0,1}
+
+=
+
+X 
+
+i,j∈[n]
+
+=
+
+X 
+
+i,j∈[n]
+
+(54)
+
+(55)
+
+h
+h
+ii
+iα+β X̃2i−1+α, 2j−1+β (−1)α ai + a†i , (−1)β aj + a†j , ρ
+
+iα+β X̃2i−1+α, 2j−1+β [a†i , [a†j , ρ]] + (−1)α [ai , [a†j , ρ]]
+
++ (−1)β [a†i , [aj , ρ]] + (−1)α+β [ai , [aj , ρ]]
+
+(56)
+
+
+∗
+Ai,j [a†i , [a†j , ρ]] + Bi,j [ai , [a†j , ρ]] + Bi,j
+[a†i , [aj , ρ]] + A∗i,j [ai , [aj , ρ]]
+
+Ai,j [a†i , [a†j , ρ]] + 2Bi,j [ai , [a†j , ρ]] + A∗i,j [ai , [aj , ρ]] ,
+
+where in the third line we have defined the matrices
+Ai,j =
+Bi,j =
+
+1
+2
+1
+2
+
+X
+
+iα+β X̃2i−1+α, 2j−1+β ,
+
+(57)
+
+iα+β (−1)α X̃2i−1+α, 2j−1+β ,
+
+(58)
+
+α,β∈{0,1}
+
+X
+
+α,β∈{0,1}
+
+that satisfy A = A⊤ , B = B † . We now note that
+X
+X
+∗
+Bi,j
+[a†i , [aj , ρ]] =
+Bj,i [a†i , [aj , ρ]]
+i,j∈[n]
+
+i,j∈[n]
+
+=−
+=−
+
+X
+
+i,j∈[n]
+
+X
+
+i,j∈[n]
+
+
+
+Bj,i [ρ, [a†i , aj ]] + [aj , [ρ, a†i ]]
+Bj,i [aj , [ρ, a†i ]]
+
+(59)
+
+18
+X
+
+=
+
+Bj,i [aj , [a†i , ρ]]
+
+i,j∈[n]
+
+=
+
+X
+
+Bi,j [ai , [a†j , ρ]],
+
+i,j∈[n]
+
+where in the first step we have used Hermiticity of B, in the second step we applied the Jacobi identity
+[A, [B, C]] = −[B, [C, A]] − [C, [A, B]],
+
+(60)
+
+and in the third step we have used the canonical commutation relation [ai , a†j ] = δi,j . Thus, we have
+
+X 
+−4 ∂X,0 ρ(V, 0) =
+Ai,j [a†i , [a†j , ρ]] + 2Bi,j [ai , [a†j , ρ]] + A∗i,j [ai , [aj , ρ]] .
+
+(61)
+
+i,j∈[n]
+
+Note that the matrices A and B can be obtained from the matrix X̃ = ΩXΩ⊤ via the unitary transformation
+
+
+
+
+1
+B A
+1 1
+.
+,
+M † X̃M =
+M=√
+A† B ∗
+2 i1 −i1
+
+(62)
+
+We also introduce the notation
+Aτ ..= Dτ ADτ ,
+
+Bτ ..= Dτ BDτ ,
+
+Xτ ..= (Dτ ⊕ Dτ ) X (Dτ ⊕ Dτ ),
+
+(63)
+
+with
+Dτ ..= diag
+
+√
+
+
+√
+1 − τ1 , . . . , 1 − τn .
+
+(64)
+
+We start by estimating the contribution from the B-term in Eq. (61). As in the proof of the previous lemma, we note that we can
+write the state ρ as a diagonal thermal state in the Fock basis:
+ρ=
+
+X
+
+n
+m∈N
+⃗
+
+pm
+⃗ m|
+⃗ ,
+⃗ |m⟩⟨
+
+.
+pm
+⃗ .=
+
+n
+Y
+
+(1 − τi )τimi ,
+
+(65)
+
+i=1
+
+with τi = ddii −1
++1 . We have
+X
+
+i,j∈[n]
+
+h h
+ii
+
+
+X
+X
+†
+Bi,j ai , a†j , ρ =
+Bi,j
+pm
+⃗ m|
+⃗ + |m⟩⟨
+⃗ m|
+⃗ a†j ai − ai |m⟩⟨
+⃗ m|
+⃗ a†j − a†j |m⟩⟨
+⃗ m|
+⃗ ai
+⃗ ai aj |m⟩⟨
+=
+
+X
+
+pm
+⃗
+
+n
+m∈N
+⃗
+
++
+
+(66)
+
+n
+m∈N
+⃗
+
+i,j∈[n]
+
+X
+
+X
+
+i∈[n]
+
+pm
+⃗
+
+n
+m∈N
+⃗
+
+Bi,i ((2mi + 1) |m⟩⟨
+⃗ m|
+⃗ − (mi + 1) |m
+⃗ + ⃗ei ⟩⟨m
+⃗ + ⃗ei | − mi |m
+⃗ − ⃗ei ⟩⟨m
+⃗ − ⃗ei |)
+
+X
+
+Bi,j
+
+i,j∈[n]
+i̸=j
+
+−
+
+p
+
+p
+√
+√ √
+mj + 1 mi |m
+⃗ + ⃗ej − ⃗ei ⟩⟨m|
+⃗ + mj mi + 1 |m⟩⟨
+⃗ m
+⃗ − ⃗ej + ⃗ei |
+
+
+√
+√ √
+mj + 1 mi + 1 |m
+⃗ + ⃗ej ⟩⟨m
+⃗ + ⃗ei | − mj mi |m
+⃗ − ⃗ei ⟩⟨m
+⃗ − ⃗ej | .
+
+We now simplify the previous expression by appropriately shifting the summation indices. For this, we use the relation
+.
+pm
+⃗ .=
+
+n
+Y
+
+(1 − τi )τimi ,
+
+i=1
+
+⇒
+
+pm+⃗
+⃗ ei = τi pm
+⃗,
+
+pm−⃗
+⃗ ei =
+
+pm
+⃗
+.
+τi
+
+So we get
+
+
+h h
+ii
+X
+X
+mi
+Bi,j ai , a†j , ρ =
+pm
+B
+2m
++
+1
+−
+τ
+(m
++
+1)
+−
+|m⟩⟨
+⃗ m|
+⃗
+i,i
+i
+i
+i
+⃗
+τi
+n
+m∈N
+⃗
+i,j∈[n]
+i∈[n]
+q
+X
+X
+−
+pm
+B
+(mi + 1)(mj + 1)(1 − τi )(1 − τj ) |m
+⃗ + ⃗ej ⟩⟨m
+⃗ + ⃗ei |
+i,j
+⃗
+X
+
+n
+m∈N
+⃗
+
+i,j∈[n]
+i̸=j
+
+(67)
+
+19
+=
+
+
+
+mi
+mi (1 − τi )2
+Bi,i 2mi + 1 − τi (mi + 1) −
++
+|m⟩⟨
+⃗ m|
+⃗
+τi
+τi
+n
+m∈N
+⃗
+i∈[n]
+q
+X
+X
+pm
+(mi + 1)(mj + 1)(1 − τi )(1 − τj ) |m
+⃗ + ⃗ej ⟩⟨m
+⃗ + ⃗ei |
+−
+B
+i,j
+⃗
+X
+
+X
+
+pm
+⃗
+
+n
+m∈N
+⃗
+
+X
+
+=
+
+pm
+⃗
+
+n
+m∈N
+⃗
+
+i∈[n]
+
+X
+
+−
+
+i,j∈[n]
+
+X
+
+pm
+⃗
+
+n
+m∈N
+⃗
+
+Bi,i (1 − τi ) |m⟩⟨
+⃗ m|
+⃗
+
+X
+
+Bi,j
+
+i,j∈[n]
+
+q
+
+(mi + 1)(mj + 1)(1 − τi )(1 − τj ) |m
+⃗ + ⃗ej ⟩⟨m
+⃗ + ⃗ei | .
+
+We will proceed with the bound
+∥
+
+X
+
+i,j∈[n]
+
+Bi,j [ai [a†j , ρ]] −
+
+X
+i
+
+Bi,i (1 − τi )ρ∥1 ≤
+
+X
+
+n
+m∈N
+⃗
+
+We write the matrix Bτ in its eigendecomposition Bτ =
+X
+
+pm
+⃗
+
+n
+m∈N
+⃗
+
+≤
+
+≤
+=
+
+|λk |
+
+X
+
+|λk |
+
+k
+
+X
+k
+
+=
+
+X
+k
+
+Bi,j (
+
+X
+
+pm
+⃗
+
+X
+
+pm
+⃗
+
+i,j∈[n]
+
+X
+k
+
+X
+
+|λk |
+|λk |
+
+n
+m∈N
+⃗
+
+pm
+⃗
+
+X
+i
+
+P
+
+1
+
+(69)
+
+X
+p
+√
+b∗kj ( mj + 1(1 − τj )1/2 |j⟩ ×
+⟨i| mi + 1(1 − τi )1/2 bk,i
+
+X
+
+p
+b∗kj ( mj + 1(1 − τj )1/2 |j⟩
+
+i
+
+(68)
+
+k λk |bk ⟩ ⟨bk |, yielding
+
+X
+
+X
+
+.
+
+1
+
+j∈[n]
+
+n
+m∈N
+⃗
+
+i,j∈[n]
+
+p
+√
+Bi,j ( mj + 1 mi + 1(1 − τi )(1 − τj ) |j⟩⟨i|
+
+√
+mj + 1 mi + 1(1 − τi )(1 − τj ) |j⟩⟨i|
+
+j∈[n]
+
+n
+m∈N
+⃗
+
+X
+
+p
+
+X
+
+pm
+⃗
+
+i∈[n]
+
+1
+
+2
+
+2
+
+2
+
+(1 − τi )(mi + 1)|bk,i |
+
+|bk,i |2
+
+(70)
+
+= Tr(|Bτ |) = 2∥(D + 1)−1/2 B(D + 1)−1/2 ∥1
+where we have used that for rank-one operators, ∥ |a⟩⟨b| ∥1 = ∥ |a⟩ ∥2 ∥ |b⟩ ∥2 , and that pm
+⃗ is a probability distribution. Finally,
+we have used the identity
+(1 − τi )2
+
+∞
+X
+
+τim (m + 1) = 1,
+
+(71)
+
+m=0
+
+⃗ and used that 1 − τi = 2 . We now consider the term involving the matrix A.
+denoted τ ..= Diag(⃗τ ), D ..= Diag(d),
+di +1
+Specifically,
+
+
+X
+X
+X
+† †
+Ai,j [a†i , [a†j , ρ]] =
+Ai,j
+pm
+⃗ m|
+⃗ + |m⟩⟨
+⃗ m|
+⃗ a†j a†i − a†i |m⟩⟨
+⃗ m|
+⃗ a†j − a†j |m⟩⟨
+⃗ m|
+⃗ a†i
+(72)
+⃗ ai aj |m⟩⟨
+i,j∈[n]
+
+n
+m∈N
+⃗
+
+i,j∈[n]
+
+=
+
+X
+
+n
+m∈N
+⃗
+
+p
+
+pm
+⃗
+
+p
+
+mi + 1 + δi,j
+
+p
+m j + 1 |m
+⃗ + ⃗ei + ⃗ej ⟩⟨m|
+⃗
+
+√
+mi − δi,j mj |m⟩⟨
+⃗ m
+⃗ − ⃗ei − ⃗ej |
+
+√
+√ p
+√
+− m i + 1 m j |m
+⃗ + ⃗ei ⟩⟨m
+⃗ − ⃗ej | − mi mj + 1 |m
+⃗ + ⃗ej ⟩⟨m
+⃗ − ⃗ei |
+X
+X
+p
+p
+=
+Ai,j
+pm
+mj + 1 mi + 1 + δi,j (1 − τi )(1 − τj ) |m
+⃗ + ⃗ei + ⃗ej ⟩⟨m|
+⃗ .
+⃗
++
+
+i,j∈[n]
+
+n
+m∈N
+⃗
+
+20
+This shows that the combined contribution from the A-term and the diagonal part of the B-term is bounded by
+X
+
+Ai,j [a†i , [a†j , ρ]] +
+
+X
+i
+
+i,j∈[n]
+
+Bi,i (1 − τi )ρ
+
+(73)
+
+1
+v
+u
+uX
+X
+t
+≤
+pm
+|Ai,j |2 (mj + 1)(mi + 1 + δi,j )(1 − τi )2 (1 − τj )2 +
+⃗
+i,j
+
+n
+m∈N
+⃗
+
+v
+u
+u X
+X
+≤t
+pm
+|Ai,j |2 (mj + 1)(mi + 1 + δi,j )(1 − τi )2 (1 − τj )2 +
+⃗
+n
+m∈N
+⃗
+
+
+X
+|Ai,j |2
+=
+i̸=j
+
++
+
+X
+i
+
+i,j
+
+∞
+X
+
+m=0
+
+τim (m + 1)(1 − τi )3
+
+|Ai,i |2 (1 − τi )5
+
+∞
+X
+
+!
+
+∞
+X
+
+m=0
+
+τim (m + 1)(m + 2) +
+
+m=0
+
+τjm (m + 1)(1 − τj )3
+X
+i
+
+Bi,i (1 − τi )
+
+v
+u
+uX
+X
+|Ai,j |2 (1 − τi )(1 − τj ) + 2
+|Ai,i |2 (1 − τi )2 +
+=t
+i
+
+i̸=j
+
+v
+u
+uX
+X
+=t
+|Ai,j |2 (1 − τi )(1 − τj ) +
+|Ai,i |2 (1 − τi )2 +
+i,j
+
+i
+
+X
+i
+
+X
+i
+
+!2
+
+X
+
+Bi,i (1 − τi )
+
+X
+
+Bi,i (1 − τi )
+
+i
+
+i
+
+!2
+
+!
+
+!2 1/2
+
+
+Bi,i (1 − τi )
+
+!2
+
+!2
+
+Bi,i (1 − τi )
+
+.
+
+As in the earlierp
+part of the proof, we applied the triangle inequality, along with ∥ |a⟩⟨b| ∥1 = ∥ |a⟩ ∥2 ∥ |b⟩ ∥2 . We also used the
+bound E(X) ≤ E(X 2 ), which follows from Jensen’s inequality. In addition, we made use of the identity
+∞
+X
+
+m=0
+
+pm (m + 1)(m + 2) =
+
+2
+,
+(1 − p)3
+
+for 0 < p < 1.
+
+(74)
+
+Putting everything together, we obtain
+∥ ∂α ρ(D + αX, 0)|α=0 ∥1
+v
+!2
+u
+X
+X
+X
+1u
+1X
+t
+2
+2
+2
+|Ai,j | (1 − τi )(1 − τj ) +
+|Ai,i | (1 − τi ) +
+(1 − τi )Bi,i
+≤
++
+(1 − τi )|Bi,i |
+2 i,j
+2 i
+i
+i
+v
+!2
+u
+X
+X
+1u
+1X
+t
+2
+≤
+2
+|Ai,j | (1 − τi )(1 − τj ) +
+(1 − τi )Bi,i
++
+(1 − τi )|Bi,i |
+2
+2 i
+i,j
+i
+q
+1
+1
+2
+≤
+2∥Aτ ∥22 + Tr(Bτ ) + ∥Bτ ∥1
+2
+2
+q
+1
+1
+2
+2
+≤
+2∥Aτ ∥1 + ∥Bτ ∥1 + ∥Bτ ∥1
+2r
+2
+1 3
+1
+∥X̃τ ∥21 + ∥X̃τ ∥1
+≤
+2 4
+4
+√
+1+ 3
+=
+∥X̃τ ∥1
+4√
+1+ 3
+=
+(D + 1)−1/2 X̃(D + 1)−1/2
+2√
+1
+1+ 3
+=
+(D + 1)−1/2 X(D + 1)−1/2 ,
+2
+1
+
+(75)
+
+21
+where the steps are justified as follows. we have used that X admits the block representation
+
+
+B A
+X̃ = M
+M †,
+A† B ∗
+
+(76)
+
+under the unitary transformation
+1
+M=√
+2
+
+
+
+
+1 1
+.
+i1 −i1
+
+(77)
+
+Since Dτ ⊕ Dτ commutes with M , the rescaled matrix X̃τ satisfies
+
+
+B τ Aτ
+X̃τ = M
+M †.
+A†τ Bτ∗
+
+(78)
+
+From this, we observe that
+
+ 
+
+ 
+
+
+Aτ 0
+Bτ Aτ
+Bτ 0
+= 2 max {∥Aτ ∥1 , ∥Bτ ∥1 } ,
+,
+≥
+max
+∥X̃τ ∥1 =
+0 Bτ∗ 1
+0 A†τ 1
+A†τ Bτ∗ 1
+
+(79)
+
+as follows from Statement 6 in the list of preliminary inequalities. This justifies the use of ∥X̃τ ∥1 to upper bound the trace
+norm contributions from both Aτ and Bτ . Finally, we have used the identity 1 − τi = di2+1 , and in the last step, the fact that D
+commutes with Ω.
+We are now finally in the position to prove the trace-distance bound, by assembling the results established above.
+Theorem 8. Let ρ(V, t) be a bosonic Gaussian state. Then, we have
+√
+
+1+ 3
+d
+≤
+ρ(V + αX, m + αt)
+Tr V −1 |X| + 2∥V −1/2 t∥2 .
+dα
+2
+α=0 1
+
+(80)
+
+Moreover, for any two Gaussian states ρ(V, t) and ρ(W, m), the bound
+∥ρ(V, t) − ρ(W, m)∥1 ≤ ∥V
+
+−1/2
+
+√
+
+1+ 3
+Tr (V −1 + W −1 )|V − W | .
+(m − t)∥2 +
+4
+
+(81)
+
+Proof. We use the Williamson decomposition V = SDS T to obtain
+
+†
+ρ(V + αX, m + αt) = Um ρ(V + αX, αt)Um
+
+= Um ρ(S(D + αS
+
+−1
+
+= Um US ρ(D + αS
+
+XS
+
+−1
+
+(82)
+−T
+
+XS
+
+)S
+
+−T
+
+T
+
+†
+, αt)Um
+
+†
+, αS −1 t) US† Um
+,
+
+where we have used that both displacement of the first moment and squeezing correspond to unitary transformations, which in
+particular leave the trace norm invariant. Therefore, computing
+∥ ∂α ρ(V + αX, m + αt)|α=0 ∥1
+
+(83)
+
+∂
+ρ(D + αS −1 XS −T , αS −1 t)
+.
+∂α
+α=0 1
+
+(84)
+
+is equivalent to computing
+
+We then estimate this trace norm derivative by splitting it as
+∂
+ρ(D + αS −1 XS −T , αS −1 t)
+∂α
+α=0 1
+≤
+
+∂
+ρ(D + αS −1 XS −T , 0)
++
+∂α
+α=0 1
+
+(85)
+∂
+ρ(D, αS −1 t)
+∂α
+α=0 1
+
+22
+√
+1+ 3
+(D + 1)−1/2 S −1 XS −T (D + 1)−1/2 + 2 (D + 1)−1/2 S −1 t
+2√
+2
+1
+1+ 3
+≤
+D−1/2 S −1 XS −T D−1/2 + 2 D−1/2 S −1 t ,
+2
+2
+1
+
+≤
+
+where in the first step we have used the definition of derivative and the triangle inequality, in the second step we have applied the
+previously established lemmas, and in the last step we have removed the identity component for simplicity. In the special case of
+pure states (D = 1), this last step can be avoided. As such, a more refined analysis could yield sharper sampling bounds in the
+pure-state regime. Now observe that
+V = SDS T = (SD1/2 )(D1/2 S T ),
+
+(86)
+
+V −1/2 = U D−1/2 S −1
+
+(87)
+
+so that
+
+for some unitary matrix U . Since Schatten norms are unitary-invariant, we get
+√
+1+ 3
+d
+≤
+V −1/2 X(V −1/2 )T + 2 V −1/2 t
+ρ(V + αX, m + αt)
+dα
+2
+2
+1
+α=0 1
+√
+1+ 3
+=
+V −1/2 XV −1/2 + 2 V −1/2 t ,
+2
+1
+2
+
+(88)
+
+which concludes the first part of the proof. Next,
+∥ρ(V, t) − ρ(W, m)∥1 ≤ ∥ρ(V, t) − ρ(V, m)∥1 + ∥ρ(V, m) − ρ(W, m)∥1
+Z 1
+Z 1
+≤
+∥∂α ρ(V, t + α(m − t))∥1 dα +
+∥∂α ρ(V + α(W − V ), m)∥1 dα
+0
+√0 Z 1
+Z 1
+1+ 3
+(V + α(W − V ))−1/2
+≤2
+∥V −1/2 α(m − t)∥2 dα +
+2
+0
+0
+
+where we have used
+
+(89)
+
+· (W − V ) (V + α(W − V ))−1/2 dα
+1
+√ 
+
+3
+1
++
+∥V −1/2 (V − W )V −1/2 ∥1 + ∥W −1/2 (V − W )W −1/2 ∥1 ,
+= ∥V −1/2 (m − t)∥2 +
+4
+Z 1
+0
+
+≤
+
+(V + α(W − V ))−1/2 (W − V )(V + α(W − V ))−1/2
+
+Z 1
+0
+
+Z 1
+
+1
+
+dα
+
+(90)
+
+
+
+Tr (V + α(W − V ))−1 |W − V | dα
+
+
+
+
+Tr (1 − α)V −1 + αW −1 |W − V | dα
+0
+
+ −1
+V
++ W −1
+|W − V | .
+= Tr
+2
+≤
+
+III.
+
+GAUSSIAN STATE TOMOGRAPHY USING HETERODYNE MEASUREMENTS: A NON-ADAPTIVE ALGORITHM
+
+We begin by deriving bounds on the number of samples required to estimate the first moment vector and the covariance matrix
+of an unknown multivariate classical Gaussian distribution. These bounds will later be applied to the analysis of heterodyne
+measurement outcomes.
+
+23
+Lemma 9 (Relative error estimation of the covariance matrix). Let {x̂i }i∈[N ] be N i.i.d. samples from an n-dimensional Gaussian
+distribution N(µ, Σ) (see Eq. (10)). Define the empirical mean and covariance estimators as
+µ̂ ..=
+
+1 X
+x̂i ,
+N
+
+Σ̂ ..=
+
+i∈[N ]
+
+i∈[N ]
+
+Then, with probability at least 1 − δ, the bounds
+
+hold, where χ ..=
+
+√
+
+n+
+
+p
+
+1 X
+1 X
+(x̂i − µ̂)(x̂i − µ̂)T =
+x̂i x̂Ti − µ̂µ̂T .
+N
+N
+
+(91)
+
+i∈[N ]
+
+χ
+∥µ − µ̂∥2 ≤ √ ∥Σ∥∞ ,
+N
+∥Σ̂ − Σ∥∞ ≤ ζ∥Σ∥∞ ,
+
+(92)
+(93)
+
+2
+
+2 log(2/δ) and ζ ..= √2χN + 2χ
+N . Eq.(92) and Eq. (93) also imply that
+1
+χ
+∥Σ− 2 (µ̂N − µ)∥2 ≤ √ ,
+N
+(1 − ζ)Σ ≤ Σ̂ ≤ (1 + ζ)Σ.
+
+(94)
+(95)
+
+Proof. The bound on the mean estimator follows from Eq. (1.1) in Ref. [111], using the inequality ∥Σ∥1 ≤ n∥Σ∥∞ . For the
+covariance bound, consider
+∥Σ̂ − Σ∥∞ =
+
+1 X
+(x̂i − µ)(x̂i − µ)T − (µ̂ − µ)(µ̂ − µ)T − Σ
+N
+i∈[N ]
+
+∞
+
+1 X
+≤
+(x̂i − µ)(x̂i − µ)T − Σ
++ ∥(µ̂ − µ)(µ̂ − µ)T ∥∞
+N
+i∈[N ]
+∞
+
+
+χ2
+2χ
+2
+≤ √ +
+∥Σ∥∞ + ∥µ̂ − µ∥2
+N
+N
+
+
+χ2
+χ2
+2χ
+∥Σ∥∞ +
+∥Σ∥∞
+≤ √ +
+N
+N
+N
+
+
+2χ2
+2χ
+√
++
+=
+∥Σ∥∞
+N
+N
+= ζ∥Σ∥∞ ,
+
+(96)
+
+where the inequality in the third line uses Eq. (6.12) from Ref. [112]. To prove Eq. (95), note that this relation is equivalent to
+requiring that
+1
+
+1
+
+−ζ1 ≤ Σ− 2 Σ̂Σ− 2 − 1 ≤ ζ1,
+
+(97)
+
+which is true if and only if
+1
+
+1
+
+∥Σ− 2 Σ̂Σ− 2 − 1∥∞ ≤ ζ.
+
+(98)
+
+Now observe that Σ−1/2 Σ̂Σ−1/2 can be written as
+N
+
+Σ
+
+−1/2
+
+Σ̂Σ
+
+−1/2
+
+1 X
+ˆ i − ξ)
+ˆ ⊺,
+=
+(ξi − ξ)(ξ
+N i=1
+
+(99)
+
+PN
+where ξi ..= Σ−1/2 (x̂i − µ) is distributed according to N(0, 1) [113], and ξˆ ..= N1 j=1 ξj is the empirical mean. Therefore, Σ−1/2 Σ̂Σ−1/2 is the empirical covariance matrix for samples drawn from N(0, 1), and hence, by Eq.(96), the bound
+1
+1
+∥Σ− 2 Σ̂Σ− 2 − 1∥∞ ≤ ζ follows. Similarly, we have that by Eq.(92),
+1
+χ
+∥Σ− 2 (µ̂N − µ)∥2 = ∥ξˆ − 0∥2 ≤ √ .
+N
+
+24
+This allows us to state our first main theorem concerning the recovery guarantees of tomography of an unknown Gaussian
+state via heterodyne measurements. The key observation behind this theorem is that the probability √
+distribution resulting from
+a heterodyne measurement on a Gaussian state ρ is itself Gaussian [50], with mean vector m(ρ)/ 2 and covariance matrix
+(V (ρ) + 1)/2, where V (ρ) and m(ρ) denote the covariance matrix and mean vector of ρ, respectively. Hence, by performing
+heterodyne measurements on the unknown Gaussian state, we can use the previous lemma to obtain a relative error estimate on
+the classical covariance matrix (V (ρ) + 1)/2. Accepting this, the remainder of the proof is dedicated to showing how such a
+relative error propagates to a bound on the trace distance between the true state and the reconstructed Gaussian state.
+We show that performing only heterodyne measurements, without any squeezing, results in a tomography algorithm whose
+sample complexity scales at most quadratically with ∥V −1 ∥∞ (i.e., at most quadratically with the energy). This improves upon
+previous bounds for tomography using solely heterodyne measurements [27].
+Theorem 10 (Non-adaptive Gaussian state tomography via heterodyne measurements). Let {r̂i }i∈[N ] be N samples obtained
+from a heterodyne measurement of a Gaussian state ρ(V, m). Define the estimators
+m̂ ..= µ̂h ,
+where µ̂h ..= N1
+
+P
+
+i∈[N ] r̂i and Σ̂h
+
+..= 1
+N
+
+P
+
+ζ ..=
+
+V̂ ..=
+
+2Σ̂h
+− 1,
+1−ζ
+
+(100)
+
+T
+i∈[N ] (r̂i − µ̂h )(r̂i − µ̂h ) are the empirical estimators of the heterodyne samples, and
+
+
+
+2χ2
+2χ
+√ +
+N
+N
+
+
+
+,
+
+χ ..=
+
+√
+
+2n +
+
+s
+
+Then, with probability at least 1 − δ, we have
+
+1
+∥ρ(V̂ , m̂) − ρ(V, m)∥1 ≤ 4.3 2n + Tr V −1
+2
+
+ 
+2
+2 log
+.
+δ
+
+√
+
+2n +
+
+p
+2 log (2δ −1 )
+√
+.
+N
+
+(101)
+
+(102)
+
+This also implies that, for any ε ∈ (0, 1), choosing
+N>
+
+
+
+
+
+ 2
+p
+ √
+
+4.3
+nE 2
+−1
+−1
+−1
+2n + Tr V
+2n + 2 log (2δ )
+log δ
+=O
+ε
+ε2
+
+ensures that 12 ρ(V̂ , m̂) − ρ(V, m)
+
+1
+
+(103)
+
+≤ ε, with probability at least 1 − δ.
+
+Proof. Recall that
+ a sample r̂ from a heterodyne measurement is distributed according to a classical Gaussian distribution
+r̂ ∼ N m, V +1
+(see the preliminary section). Thus, using Eq. (92) from Lemma 9, we have with probability at least 1 − δ:
+2
+
+
+V +1
+2
+
+−1/2
+
+(m̂ − m)
+
+χ
+≤√ .
+N
+2
+
+(104)
+
+Moreover, by Eq. (95) of the same lemma, the empirical covariance matrix satisfies
+(1 − ζ)
+
+V +1
+V +1
+≤ Σ̂h ≤ (1 + ζ)
+.
+2
+2
+
+(105)
+
+Σ̂h
+Hence, the estimator V̂ ..= 21−ζ
+− 1 satisfies
+
+0 ≤ V̂ − V ≤
+
+2ζ
+(V + 1).
+1−ζ
+
+(106)
+
+This implies that V̂ is a valid covariance matrix: since V̂ ≥ V and V is valid, it follows that V̂ + iΩ ≥ V + iΩ ≥ 0. Thus,
+ρ(V̂ , m̂) is a well-defined Gaussian state. Using the perturbation bound from Theorem 8, we obtain
+√
+
+1 + 3  −1
+−1/2
+∥ρ(V̂ , m̂) − ρ(V, m)∥1 ≤ ∥V
+(m̂ − m)∥2 +
+Tr (V
++ V̂ −1 )|V̂ − V |
+(107)
+4√
+
+(i)
+1 + 3  −1
+≤ ∥V −1/2 (m̂ − m)∥2 +
+Tr V (V̂ − V )
+2
+
+25
+1 
+− 12
+√
+
+V +1 2 V +1
+ζ
+(m̂ − m) + (1 + 3)
+Tr V −1 (V + 1)
+≤ V
+2
+2
+1−ζ
+2
+
+
+1/2
+−1/2
+√
+V +1
+ζ
+V +1
+1 + V −1 1
+≤ V −1/2
+(m̂ − m) + (1 + 3)
+2
+2
+1−ζ
+∞
+2
+√
+√
+(iii)
+
+2χ
+ζ
+1/2
+≤ V −1 + 1 ∞ √ + (1 + 3)
+2n + Tr V −1
+1
+−
+ζ
+N
+√
+√
+(iv) 1
+
+2χ
+ζ
+V −1 + 1 1 √ + (1 + 3)
+2n + Tr V −1
+≤
+2
+1−ζ
+N
+
+
+√
+
+1 χ
+ζ
+= √ √ + (1 + 3)
+2n + Tr V −1
+1−ζ
+2 N
+(v)
+
+χ
+2n + Tr V −1 .
+≤ 8.6 √
+(108)
+N
+(ii)
+
+− 12
+
+
+
+In step (i), we have used that V̂ − V ≥ 0, which implies V̂ −1 ≤ V −1 by inequality 7, and applied the inequality in Point 3 from
+the list of matrix inequalities in the preliminaries. In step (ii), we invoked Eq. (106) and used inequality 4 from the same list.
+Step (iii) follows from Eq. (104), while step (iv) uses inequality 8 from the preliminaries. In the final step (v), we have substituted
+
+
+2χ
+2χ2
+ζ ..= √ +
+(109)
+N
+N
+√
+and imposed the constraint ∥ρ(V̂ , m̂) − ρ(V, m)∥1 ≤ 2; under this condition, solving the inequality for χ/ N yields the claimed
+bound, which can be verified numerically.
+In practical scenarios, the prefactors appearing in the bounds of Theorem 10 can often be improved, leading to tighter and more
+refined estimates.
+Remark 11 Estimating the number of samples in an experiment. The sample complexity in Theorem 10 depends on Tr(V −1 ),
+which
+Typically, one assumes an upper bound on the total energy,
+ is
+ generally not known a priori in experimental settings.
+
+−1
+Tr ρÊ ≤ E, but this is often a loose proxy for Tr V
+, leading to overly conservative estimates for the required number of
+samples.
+
+To address this, one can directly estimate Tr V −1 from heterodyne data. Given an initial batch of samples, the empirical
+
+covariance V̂ can be used to bound Tr V −1 via several inequalities:
+
+Tr V −1 ≤ 4E,
+(110)
+
+
+
+−1
+−1
+Tr V
+≤ Tr V̂
+,
+(111)
+!
+−1
+
+
+
+
+2ζ
+2ζ
+1
+,
+(112)
+Tr V −1 ≤ 1 +
+Tr
+V̂ −
+1−ζ
+1−ζ
+where the first follows from the energy constraint, the second from V −1 ≤ ΩV ΩT ≤ ΩV̂ ΩT , and the third from transforming
+2ζ
+Eq. 106. Note that the third bound is valid only when V̂ − 1−ζ
+1 ≥ 0. One can check whether this condition is met in practice.
+For this, we observe that the trace distance guarantee
+
+
+√
+
+1 χ
+ζ
+.
+√ + (1 + 3)
+ε .=
+2n + Tr V −1
+(113)
+2 N
+1−ζ
+requires
+
+ζ
+ελmin (V )
+ελ (V̂ )
+√ ≤ min√ .
+≤
+1−ζ
+1+ 3
+1+ 3
+
+(114)
+
+Inserting this into Eq. (112), we obtain the refined bound
+Tr V
+
+
+−1
+
+
+!−1 
+
+
+2ζ
+2ελ
+(
+V̂
+)
+min
+
+√ 1
+≤ 1+
+Tr  V̂ −
+1−ζ
+1+ 3
+
+(115)
+
+26
+−1 
+
+
+
+2ε
+2ζ
+√
+1−
+Tr V̂ −1 .
+≤ 1+
+1−ζ
+1+ 3
+While this expression still contains the non-observable
+ parameter ε, it highlights that for high-accuracy regimes (ε ≪ 1), Eq. 112
+provides an increasingly sharp estimate of Tr V −1 . This reasoning naturally supports an adaptive tomography strategy: one
+
+may collect an initial batch of heterodyne data, estimate Tr V −1 from V̂ , and use it to refine the required sample size in
+subsequent rounds, thereby ensuring the target trace distance is met with high confidence.
+IV.
+
+GAUSSIAN STATE TOMOGRAPHY WITH SQUEEZED INPUTS: AN ADAPTIVE AND EFFECTIVELY
+ENERGY-INDEPENDENT ALGORITHM
+
+Theorem 10 shows that Gaussian state tomography via heterodyne measurements has sample complexity scaling proportionally
+to ∥V −1 ∥2∞ , which in turn grows with the energy of the state. In the following lemma, we show that this energy dependence can
+be effectively suppressed by adaptively reducing ∥V −1 ∥∞ .
+Lemma 12 (Adaptive step to reduce the squeezing). Let V be the covariance matrix of a Gaussian state, and V̂ its estimate as in
+Theorem 10, with Williamson decomposition V̂ = Ŝ D̂Ŝ ⊺ . Define
+Vnew ..= Ŝ −1 V Ŝ −⊺ .
+
+(116)
+
+Then,
+−1
+∥Vnew
+∥∞ ≤
+
+s
+
+1+
+
+2ζ
+(∥V −1 ∥∞ + 1).
+1−ζ
+
+(117)
+
+q
+−1
+In particular, setting ζ ≤ 41 yields ∥Vnew
+∥∞ ≤ 53 + 23 ∥V −1 ∥∞ with at least 1 − δ probability. This choice ζ ≤ 41 is guaranteed
+provided the number of heterodyne samples N satisfies
+2
+√
+p
+(118)
+2n + 2 log(2/δ) = O(n).
+N > Nh (n, δ),
+where Nh (n, δ) ..= 80
+Proof. As in the proof of Theorem 10 (specifically Eq. (106)), the estimate V̂ satisfies
+
+
+2ζ
+V ≤ V̂ ≤ 1 +
+(V −1 + 1) V.
+1−ζ
+
+(119)
+
+From this, it follows that
+
+
+
+2ζ
+∥V −1 ∥∞ + 1 V,
+V ≤ V̂ ≤ 1 +
+1−ζ
+
+(120)
+
+where we have used that V −1 ≤ ∥V −1 ∥∞ 1, which follows from the eigendecomposition of V̂ (which exists since V̂ ≥ V ≥ 0),
+and the fact that if A, B ≥ 0 commute, then AB ≥ 0. Now we can use this to bound V −1
+(i)
+
+V −1 = V −1 #V −1
+
+(121)
+
+(ii)
+
+≤ (ΩV Ω⊺ )#V −1
+
+
+
+(iii)
+2ζ
+≤ (ΩV̂ Ω⊺ )# 1 +
+(∥V −1 ∥∞ + 1) V̂ −1
+1−ζ
+s
+2ζ
+(iv)
+= 1+
+(∥V −1 ∥∞ + 1) (ΩV̂ Ω⊺ )#V̂ −1
+1−ζ
+s
+2ζ
+(v)
+= 1+
+(∥V −1 ∥∞ + 1)Ŝ −⊺ Ŝ −1 .
+1−ζ
+Here, in step (i) we applied the definition of the geometric mean (Point 3 of the preliminary list). In (ii), we have used that
+V −1 ≤ ΩV Ω⊺ together with Point 3. In (iii), we have used again Point 3 together with Eq. (120), and the operator monotonicity
+
+27
+of the inverse function x 7→ x−1 on positive matrices (Point 7). In (iv), we exploited Point 3 of the preliminary list. Finally, in (v),
+we have used that
+(ΩV̂ Ω⊺ )#V̂ −1 = (Ŝ −⊺ D̂Ŝ −1 )#(Ŝ −⊺ D̂−1 Ŝ −1 ) = Ŝ −⊺ (D̂#D̂−1 )Ŝ −1 = Ŝ −⊺ Ŝ −1 ,
+
+(122)
+
+where we leveraged Point 4 and Point 1 of the preliminary list.
+Now, by acting adjointly with Ŝ on both sides of the derived inequality and exploiting the definition of Vnew , we have that
+s
+2ζ
+−1
+Vnew
+= Ŝ ⊺ V −1 Ŝ ≤ 1 +
+(∥V −1 ∥∞ + 1)1.
+(123)
+1−ζ
+Taking the operator norm completes the proof of Eq. (117). Equation (118) follows from Eq. (101). Setting ζ = 14 gives
+2χ
+2χ2
+1
+=√
++
+,
+4
+Nh
+Nh
+Letting
+
+√
+
+where χ ..=
+
+√
+
+2n +
+
+p
+
+2 log(2/δ).
+
+(124)
+
+Nh = x, this becomes
+2χ 2χ2
+1
+=
++ 2
+4
+x
+x
+
+⇒
+
+√
+x = χ(4 + 2 6),
+
+(125)
+
+so
+
+√
+2
+p
+√ 2
+Nh = χ(4 + 2 6) ≤ 80χ2 = 80
+2n + 2 log(2/δ) .
+
+(126)
+
+The next lemma analyzes the recurrence relation arising from successive adaptive squeezing steps described in Lemma 12.
+2ζ
+Specifically, we consider the sequence ak ..= ∥Vk−1 ∥∞ , where Vk is the covariance matrix at step k, and define η ..= 1−ζ
+. Note
+2
+1
+that η ≤ 3 provided that ζ ≤ 4 .
+Lemma 13 (Recurrence relation). Let (ak )k∈N be a sequence of positive real numbers satisfying
+r
+5 2
++ ak for all k ∈ N,
+ak+1 ≤
+3 3
+then, for all k ≥ 0, as long as ak ≥ 2, it holds that
+ak ≤
+
+r
+
+7 1/2k
+·a
+.
+3 0
+
+(127)
+
+(128)
+
+
+In particular, if k > log2 log2 a0 , then ak ≤ 2. In particular, it holds in general, that if a0 ≤ 10300 , then a10 ≤ 2 (meaning
+that 10 iteration rounds are sufficient for all practical considerations.)
+Proof. Now observe that for all ak ≥ 2, we have
+r
+r
+r
+5 2
+5
+2√
+3 √
+ak+1 =
++ ak ≤
++
+ak ≤
+· ak .
+3 3
+3ak
+3
+2
+
+(129)
+
+For all k ≥ 1, this implies the recursive inequality
+
+!
+j+1
+
+
+ Pk−1
+j=0 1/2
+3 1/2k
+3
+1/2k
+≤ max 2, a0
+.
+ak ≤ max 2,
+· a0
+2
+2
+
+(130)
+
+
+This implies that if k ≥ log2 log2 (a0 )/ log2 ( 43 ) , then ak ≤ 2. The numerical value for a0 = 10300 can be checked with a
+numerical solver.
+
+28
+We now have all the necessary building blocks to prove the correctness of our tomography algorithm, which achieves (quasi-)
+energy-independent performance (i.e., up to a doubly logarithmic factor). The algorithm is detailed in Alg. 2 in the main text. The
+high-level idea is as follows: we first transform the unknown Gaussian state via squeezing operations into a state with squeezing
+∥V −1 ∥∞ bounded by a low constant, perform tomography on this transformed state, and finally apply the inverse squeezing
+operations to recover an estimate of the original state. More precisely, we perform k = ⌈log2 (log2 (∥V −1 ∥∞ ))⌉ adaptive rounds
+of the unsqueezing procedure based on heterodyne measurements, described in Lemmas 12 and 13. After these k rounds, we
+obtain an unsqueezed Gaussian state with covariance matrix Vk satisfying ∥Vk−1 ∥∞ ≤ 2, ensuring that the heterodyne tomography
+described in Theorem 10 can be performed on this obtained state with a sample complexity independent of the covariance matrix
+of the original state. The final output state is obtained by applying the inverse of the accumulated unsqueezing Gaussian unitaries
+to the state learned in the last tomography step, yielding a faithful reconstruction of the original state.
+Theorem 14 (Quasi-energy-independent Gaussian state tomography). Let ε, δ ∈ (0, 1) be the desired accuracy and failure
+probability, respectively. Let ρ(V, m) be an unknown n-mode Gaussian state with first moment m and covariance matrix V .
+Define
+
+
+k ..= log2 log2 ∥V −1 ∥∞
+,
+(131)
+the number of adaptive heterodyne rounds used to unsqueeze the state. Define
+√
+2
+p
+Nh (n, δ) = 80
+2n + 2 log(2δ −1 ) ,
+
+ 2
+p
+21.5 √
+.
+−1
+n
+Nt (n, ε, δ) .=
+2n + 2 log (2δ )
+.
+ε
+
+Then,
+
+Ntot ≥ k · Nh
+
+
+
+δ
+n,
+k+1
+
+
+
++ Nt
+
+
+
+δ
+n, ε,
+k+1
+
+
+
+= O n log log ∥V
+
+−1
+
+(132)
+(133)
+
+∥∞
+
+
+
++O
+
+
+
+n3
+ε2
+
+
+
+(134)
+
+copies of ρ(V, m) are enough to construct a valid estimate ρ(V̂ , m̂) such that, with probability at least 1 − δ,
+1
+∥ρ(V̂ , m̂) − ρ(V, m)∥1 ≤ ε.
+2
+
+(135)
+
+The algorithm is given in Alg. 2 in the main text.
+Proof. The protocol described in Algorithm 2 has two stages:
+1. k = ⌈log2 (log2 (∥V −1 ∥∞ ))⌉ rounds of adaptive unsqueezing via heterodyne estimation,
+2. followed by heterodyne tomography on the approximately unsqueezed state.
+k
+a. First stage. By Lemmas 12 and 13, after k rounds of adaptive-unsqueezing we obtain (with probability at least 1 − k+1
+δ′ )
+a state (ρ(k) = US −1 ρUS† −1 = ρ(Vk , mk )) with covariance matrix satisfying ∥Vk−1 ∥∞ ≤ 2, provided each round uses at least
+Nh (n, δ ′ ) copies with δ ′ = δ/(k + 1).
+Since at least half of the eigenvalues of any valid covariance matrix are ≥ 11 , it follows that at least half of the eigenvalues of
+Vk−1 are ≤ 1. The remaining half are upper bounded by ∥Vk−1 ∥∞ ≤ 2, so
+
+b.
+
+ n
+n
+3n n
+Tr Vk−1 ≤ · 1 + · 2 =
++ = 3n.
+2
+2
+2
+2
+
+(138)
+
+Second stage. We now apply heterodyne tomography to Nt copies of ρ(k) . By Theorem 8, we get V̂k and m̂k such that:
+
+1
+χ
+χ
+∥ρ(Vk , mk ) − ρ(V̂k , m̂k )∥1 ≤ 4.3 √
+2n + Tr Vk−1 ≤ 21.5n √ .
+(139)
+2
+Nt
+Nt
+
+Requiring this to be ≤ ε (and that the reconstruction procedure to fail with at most δ/(k + 1) probability), gives the bound on Nt .
+= SDS T be a valid covariance matrix with S symplectic
+and D ≥ 1. Using the Euler decomposition S = O1 ZO2 , we get
+
+1 Indeed, let V
+
+V = SDS T ≥ SS T = O1 Z 2 O1T ,
+
+(136)
+
+−1
+where Z = diag(z1 , . . . , zn , z1−1 , . . . , zn
+). Hence, by Weyl eigenvalue
+monotonicity [114],
+
+λj (V ) ≥ λj (Z 2 ).
+
+(137)
+
+Since Z 2 has n eigenvalues zj2 ≥ 1 and n eigenvalues zj−2 ≤ 1, it follows
+that at least half of the eigenvalues of V are ≥ 1.
+
+29
+c. Failure probability. There are k + 1 steps in total. If each fails with probability at most δ/(k + 1), the total failure
+probability is at most δ by the union bound.
+d. Output reconstruction. Let
+−1
+Ŝ ..= Ŝk−1
+· · · Ŝ1−1 ,
+
+V̂ ..= Ŝ −1 V̂k Ŝ −⊺ ,
+
+m̂ ..= Ŝ −1 m̂k ,
+
+(140)
+
+where Ŝj is the symplectic matrix obtained from the Williamson decomposition in the j-th unsqueezing round, for j ∈ [k]. These
+define the final state estimate ρ(V̂ , m̂). Using unitary invariance of the trace norm, together with the relations Vk = ŜV Ŝ ⊺ and
+mk = Ŝm, we obtain
+1
+1
+1
+∥ρ(V, m) − ρ(V̂ , m̂)∥1 = ∥ρ(V, m) − ρ(Ŝ −1 V̂k Ŝ −⊺ , Ŝ −1 m̂k )∥1 = ∥ρ(V, m) − UŜ† ρ(V̂k , m̂k )UŜ ∥1
+2
+2
+2
+1
+1
+= ∥UŜ ρ(V, Ŝ −1 m)UŜ† − ρ(V̂k , m̂k )∥1 = ∥ρ(ŜV Ŝ ⊺ , mk ) − ρ(V̂k , m̂k )∥1
+2
+2
+1
+= ∥ρ(Vk , mk ) − ρ(V̂k , m̂k )∥1 ≤ ε.
+2
+
+(141)
+
+This concludes the proof.
+Example 1 (Sample complexity under the energy bound E ≤ 10300 ). Assume that ∥V −1 ∥∞ ≤ E ≤ 10300 , where E denotes the
+total energy of the quantum state. This upper bound is motivated by conservative physical assumptions on the energy content
+of any realistic quantum system in our universe. Set δ = 10−10 . Then, Theorem 14 implies that k = 10 rounds of adaptive
+heterodyne suffice, and the total number of heterodyne measurements is bounded by
+
+q
+√
+21.5
+2n + 2 log
+n
+ε
+2  21.5 √
+ 2
+√
+2n + 7.3 +
+2n + 7.3
+n
+.
+≤ 800
+ε
+
+Ntot ≤ 10 · 80
+
+
+√
+
+2n +
+
+q
+
+2 log
+
+22
+δ
+
+
+
+2
+
++
+
+
+
+22
+δ
+
+
+
+2
+
+(142)
+
+Note that this is a conservative upper bound: due to looseness in several intermediate approximations, practical implementations
+may converge with significantly fewer measurement shots.
+A.
+
+Measurement scheme using only passive operations and squeezed inputs
+
+Algorithm 2 requires applying an active Gaussian operation to the input state, followed by heterodyne detection. However,
+active Gaussian unitaries are often challenging to implement in practice in optical experiments. Fortunately, the combined effect
+of such an active transformation followed by heterodyne measurement can be exactly reproduced using only passive Gaussian
+operations together with a fixed auxiliary squeezed input state—both of which are experimentally accessible with current photonic
+technologies.
+This alternative scheme leverages the well-established equivalence between heterodyne detection and beam-splitter interference
+followed by homodyne measurements. As reviewed in the preliminaries, a heterodyne measurement can be implemented by
+sending the state to be measured into one port of a balanced beam splitter, with a vacuum state entering the other port, and then
+performing homodyne measurements of complementary quadratures—typically position on one output arm and momentum on
+the other. In the variant we consider, the vacuum input is replaced with a suitably chosen squeezed state. This substitution enables
+one to simulate the effect of any active Gaussian unitary followed by heterodyne detection using only passive elements and an
+auxiliary squeezed input state.
+The following proposition makes this equivalence precise and provides a detailed description of the resulting measurement
+scheme (see also the main figure in the text).
+Proposition 15 (Passive implementation of heterodyne after active Gaussian unitary). Let ρ be an n-mode Gaussian quantum
+state, and let US be an active Gaussian unitary associated with a symplectic transformation S. Then, heterodyne detection on the
+transformed state US ρUS† is operationally equivalent with the following.
+1. Preparing an auxiliary n-mode Gaussian state σ with covariance matrix S −1 S −T , i.e., the squeezed vacuum US−1 |0⟩;
+2. Interfering ρ and σ on a balanced beam splitter;
+3. Performing homodyne detection of x̂1 , . . . , x̂n on one output arm and p̂1 , . . . , p̂n on the other.
+
+30
+Let r ∈ R2n denote the outcome r ..=
+on US ρUS† .
+
+√
+
+2(x1 , p2 ) ∈ R2n . Then Sr is distributed identically to the outcome of heterodyne detection
+
+Proof. Let V and m denote the covariance matrix and first-moment vector of ρ. The transformed state US ρUS† is Gaussian
+with first moment Sm and covariance matrix SV S T . A heterodyne measurement on this state yields a sample drawn from the
+distribution
+
+
+SV S T + 12n
+N Sm,
+.
+(143)
+2
+Now consider the passive scheme. The input to the beam splitter is the product state ρ ⊗ σ, where σ is a zero-mean Gaussian
+state with covariance matrix S −1 S −T . By Lemma 5 (generalized heterodyne sampling), the measurement outcome r ∈ R2n is
+distributed as
+
+
+V + S −1 S −T
+r ∼ N m,
+.
+(144)
+2
+Define the linearly transformed variable r̃ ..= Sr. Since symplectic transformations are linear and volume-preserving (det S =
+1) [50], the Gaussian nature and normalization of the distribution are preserved. Thus, the resulting distribution is
+
+
+ 
+V + S −1 S −T
+r̃ ∼ N Sm, S
+ST
+(145)
+2
+
+
+SV S T + 12n
+.
+= N Sm,
+2
+This matches exactly the distribution in (143), which corresponds to heterodyne detection on the state US ρUS† . Therefore, the
+random variable Sr obtained from the passive scheme has the correct distribution, completing the proof.
+B.
+
+Alternative passive measurement scheme via Euler decomposition
+
+We now present an alternative implementation of the passive measurement scheme in Proposition 15, based on the Euler (also
+known as Bloch-Messiah) decomposition of the symplectic transformation S. Specifically, suppose that S = O1 ZO2 , where O1
+and O2 are symplectic orthogonal matrices (i.e., corresponding to passive Gaussian unitaries), and Z is a diagonal symplectic
+matrix representing a product of single-mode squeezers. Explicitly, we may write Z = diag(z1 , 1/z1 , z2 , 1/z2 , . . . , zn , 1/zn ),
+for squeezing parameters zj > 0.
+Then, the passive scheme described in Proposition 15 can be reformulated as follows:
+• Prepare a squeezed vacuum auxiliary state vector UZ† |0⟩, where UZ is the Gaussian unitary implementing the squeezing
+matrix Z.
+• Apply the passive Gaussian unitary UO2 to the input state ρ.
+• Interfere the resulting state with the auxiliary state at a balanced beam splitter.
+of complementary quadratures yielding outcomes x1 ∈ Rn and p2 ∈ Rn as before, and let
+• Perform
+√ homodyne detection
+2n
+.
+r .= 2(x1 , p2 ) ∈ R .
+• Then, the post-processed outcome O1 Zr is distributed according to the same Gaussian distribution as the result of
+heterodyne measurements on the state US ρUS† .
+Proof. Let V and m denote the covariance matrix and mean vector of the input state ρ. Applying the passive unitary UO2 maps ρ
+to a new Gaussian state with mean O2 m and covariance O2 V O2T . The auxiliary state UZ† |0⟩ is a squeezed vacuum with zero
+mean and covariance matrix Z −1 Z −T . By Lemma 5, applying the beam splitter and performing homodyne detection on this
+setup yields a classical outcome r distributed as
+
+
+O2 V O2T + Z −1 Z −T
+r ∼ N O2 m,
+.
+(146)
+2
+
+31
+Now define r̃ ..= O1 Zr. Since linear transformations preserve the Gaussian form of the classical distribution and symplectic
+orthogonal and squeezing transformations have unit determinant, r̃ is also Gaussian distributed, with
+
+
+
+1
+r̃ ∼ N O1 ZO2 m, O1 Z O2 V O2T + Z −1 Z −T Z T O1T
+(147)
+2
+
+
+
+1
+= N Sm,
+SV S T + 12n .
+2
+
+This matches exactly the outcome distribution of a heterodyne measurement on the transformed state US ρUS† , completing the
+proof.
+
+Note that if the passive transformation O2 is instead applied to the squeezed auxiliary state prior to the beam splitter (rather than
+on ρ), the scheme becomes identical to the one described in Proposition 15.
+V.
+
+GAUSSIAN STATE TOMOGRAPHY WITH ACCESS TO THE TRANSPOSED STATE: A FULLY ENERGY-INDEPENDENT
+PROTOCOL
+
+The tomography protocol introduced in the previous section achieves a sample complexity that depends only very mildly on the
+total energy of the state—specifically, doubly logarithmically on ∥V −1 ∥∞ . In all physically relevant scenarios, this dependence is
+negligible, and the protocol can be considered nearly energy-independent.
+However, if access to the transpose ρT of the unknown state ρ is available, one can go a step further: we can construct a
+tomography algorithm with completely constant sample complexity, fully independent of the energy of the state (or ∥V −1 ∥∞ ).
+The key technical insight enabling this improvement is captured by the following lemma.
+Lemma 16 (Scheme with access to the transpose). Let ρ be an n-mode Gaussian quantum state with first-moment vector m ∈ R2n
+and covariance matrix V ∈ R2n×2n . Then, the following passive measurement scheme acting on ρ ⊗ ρT yields a classical sample
+distributed as N(2m, V ):
+1. Interfere ρ and ρT at a balanced beam splitter.
+2. Perform homodyne measurements of the position quadratures x̂1 , . . . , x̂n on one output arm, and of the momentum
+quadratures p̂1 , . . . , p̂n on the other, yielding outcomes x1 ∈ Rn and p2 ∈ Rn as before.
+√
+3. Let r ..= 2(x1 , p2 ) ∈ R2n ∈ R2n denote the classical outcome. Then, r ∼ N (2m, V ).
+
+Proof. The transpose ρT is again a Gaussian state (as can be verified from the Gibbs state definition involving quadratic
+Hamiltonians). It has the same covariance matrix as ρ, but with a sign flip in the position-momentum correlations. Specifically, if
+the covariance matrix of ρ is written in block form as
+
+
+Vx,x Vx,p
+,
+(148)
+V (ρ) ∼
+=
+T
+Vx,p
+Vp,p
+then the covariance matrix of the transposed state ρT becomes
+
+
+Vx,x −Vx,p
+V (ρT ) ∼
+,
+=
+T
+−Vx,p
+Vp,p
+
+(149)
+
+where ∼
+= indicates equality up to a reshuffling of quadratures (e.g., grouping all xj and all pj together). This follows from the fact
+that transposition leaves the position operators unchanged, xTj = xj , while flipping the sign of the momenta, pTj = −pj . For
+instance, for any observable xj pi with j ̸= i, one has
+
+
+
+Tr(xj pi ρ) = Tr (xj pi ρ)T = Tr pTi xTj ρT = Tr (−pi )xj ρT
+
+= − Tr xj pi ρT ,
+(150)
+
+demonstrating that the cross-correlations between position and momentum operators acquire a minus sign under transposition,
+while Vx,x and Vp,p remain unchanged.
+Equivalently, the full covariance matrix of ρT can be written as V (ρT ) = (1n ⊗ Z)V (1n ⊗ Z), where 1n ⊗ Z flips the signs
+of all momentum quadratures, with Z = diag(1, −1). The first moment of ρT is (1n ⊗ Z)m(ρ). Now consider the joint state
+ρ ⊗ ρT , which is a 2n-mode Gaussian state with first-moment vector
+
+
+
+
+m(ρ)
+V (ρ)
+0
+, and covariance matrix
+.
+(151)
+(1n ⊗ Z)m(ρ)
+0 (1n ⊗ Z)V (ρ)(1n ⊗ Z)
+
+32
+Interfering ρ and ρT on a balanced beam splitter and performing homodyne measurements of complementary quadratures (position
+on one output arm, momentum on the other) corresponds to the generalized heterodyne setup described in Lemma 5. Applying
+that result, the classical outcome r ∈ R2n is distributed as
+
+
+V (ρ) + (1n ⊗ Z)V (ρ)(1n ⊗ Z)
+T
+r ∼ N m(ρ) + (1n ⊗ Z)m(ρ ),
+= N (2m(ρ), V (ρ)) .
+(152)
+2
+Theorem 17 (Energy-independent Gaussian state tomography with access to the transposed state). Let ρ ..= ρ(V, m) be an
+unknown n-mode Gaussian state with first-moment vector m ∈ R2n and covariance matrix V ∈ R2n×2n .
+Let {r̂i }i∈[N ] be N i.i.d. samples obtained from a generalized heterodyne measurement on the state ρ(V, m) ⊗ ρ(V, m)T ,
+following the scheme described in Lemma 16. Define the estimators
+m̂ ..=
+where µ̂h ..= N1
+
+P
+
+i∈[N ] r̂i , and Σ̂h
+
+..= 1
+N
+
+P
+
+µ̂h
+,
+2
+
+Σ̂h
+,
+1−ζ
+
+V̂ ..=
+
+i∈[N ] (r̂i − µ̂h )(r̂i − µ̂h )
+
+⊤
+
+(153)
+
+. Then, with probability at least 1 − δ, it holds that
+
+1
+χ
+∥ρ(V̂ , m̂) − ρ(V, m)∥1 ≤ 8.55n √ ,
+2
+N
+
+2
+
+..
+where ζ ..= √2χN + 2χ
+N and χ =
+
+√
+
+2n +
+
+q
+
+2 log
+
+2
+δ
+
+
+
+. In particular, for any ε ∈ (0, 1), it suffices to choose N = O
+
+in order to guarantee that ∥ρ(V̂ , m̂) − ρ(V, m)∥1 ≤ ε with probability at least 1 − δ.
+
+(154)
+ 3
+
+n
+ε2 log
+
+δ −1
+
+
+
+Proof. The proof follows similar steps to Theorem 10 (but is simpler). By Lemma 16, a sample r̂ obtained from homodyne
+measurements on ρ ⊗ ρT after applying a beam splitter is distributed as
+r̂ ∼ N (2m, V ) .
+
+(155)
+
+Using Lemma 9, Eq. (92), we can build an estimator 2m̂ for 2m, such that with probability at least 1 − δ,
+χ
+≤√ .
+N
+
+(156)
+
+(1 − ζ)V ≤ Σ̂h ≤ (1 + ζ)V,
+
+(157)
+
+V −1/2 (2m̂ − 2m)
+
+2
+
+In addition, by Eq. (95), the empirical covariance V̂ satisfies
+
+2
+
+Σ̂h
+..
+where ζ ..= √2χN + 2χ
+N . Hence, the estimator V̂ = 1−ζ satisfies
+
+0 ≤ V̂ − V ≤
+
+2ζ
+V.
+1−ζ
+
+Thus, V̂ is a valid covariance matrix. Applying the perturbation bound from Theorem 8, we now obtain
+√
+
+1 + 3  −1
+−1/2
+∥ρ(V̂ , m̂) − ρ(V, m)∥1 ≤ ∥V
+(m̂ − m)∥2 +
+Tr (V
++ V̂ −1 )(V̂ − V )
+4√
+
+1
++
+3  −1
+≤ ∥V −1/2 (m̂ − m)∥2 +
+Tr V (V̂ − V )
+2
+√
+
+1
+1+ 3
+χ
+2ζ
+≤ ·√ +
+×
+Tr V −1 V
+2
+2
+1−ζ
+N
+√
+χ
+ζ
+1
+= · √ + 2n(1 + 3)
+2
+1−ζ
+N
+χ
+≤ 17.1n √ ,
+N
+
+(158)
+
+(159)
+
+where in the last step we used a numerical solver (along with the fact that the one-norm difference between two quantum states is
+always ≤ 2).
+
+

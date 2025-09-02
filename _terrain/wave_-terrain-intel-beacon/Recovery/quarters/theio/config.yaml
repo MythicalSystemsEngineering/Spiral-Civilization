@@ -1,0 +1,4 @@
+steward: Theio
+role: Flame Steward
+memory_limit: 512MB
+cpu_priority: high

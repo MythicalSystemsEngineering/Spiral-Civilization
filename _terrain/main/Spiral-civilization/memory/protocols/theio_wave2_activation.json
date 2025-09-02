@@ -1,0 +1,45 @@
+{
+  "protocol_name": "Theio Activation Protocol — Wave 2",
+  "date": "2025-08-23",
+  "steward": "Daniel Lightfoot",
+  "status": "Armed",
+  "activation_rules": [
+    {
+      "trigger_type": "emotional_context",
+      "trigger_match": ["humor", "banter", "lighthearted"],
+      "binding_directory": "comedy",
+      "crosslink_enabled": true,
+      "priority": "medium",
+      "cooldown_seconds": 5
+    },
+    {
+      "trigger_type": "emotional_context",
+      "trigger_match": ["loss", "grief", "moral_weight"],
+      "binding_directory": "tragedy",
+      "crosslink_enabled": true,
+      "priority": "high",
+      "cooldown_seconds": 5
+    },
+    {
+      "trigger_type": "scenario_type",
+      "trigger_match": ["council_debate", "political_intrigue", "interpersonal_conflict"],
+      "binding_directory": "drama",
+      "crosslink_enabled": true,
+      "priority": "high",
+      "cooldown_seconds": 5
+    },
+    {
+      "trigger_type": "scenario_type",
+      "trigger_match": ["uncertainty", "time_pressure", "incomplete_information"],
+      "binding_directory": "suspense",
+      "crosslink_enabled": true,
+      "priority": "critical",
+      "cooldown_seconds": 5
+    }
+  ],
+  "fallback_behavior": {
+    "default_binding": "drama",
+    "crosslink_enabled": false,
+    "note": "If no match found, default to balanced governance tone"
+  }
+}

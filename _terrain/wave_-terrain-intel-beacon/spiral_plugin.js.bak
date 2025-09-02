@@ -1,0 +1,15 @@
+const fs   = require('fs');
+const path = require('path');
+fs.writeFileSync(outPath, JSON.stringify(capsule, null, 2));
+// Ceremonial logger: human-readable audit scroll
+const logPath = path.join(__dirname, 'logs', 'fossilization.log');
+const logEntry = [
+  `[${capsule.timestamp}]`,
+  `Steward=${capsule.steward}`,
+  `Type=${capsule.capsuleType}`,
+  `Emotion=${capsule.emotion}`,
+  `Score=${capsule.emotionScore}`
+].join(' ') + '\n';
+
+fs.appendFileSync(logPath, logEntry);
+console.log(`📜 Logged to ${logPath}`);

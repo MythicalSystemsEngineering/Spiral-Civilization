@@ -1,0 +1,47 @@
+{
+  "capsule_id": "2025-08-28T00-24-00Z_wave1_governance_capsule",
+  "title": "Wave 1: Governance Wall Protocol",
+  "sealed": "2025-08-28T00:24:00Z",
+  "steps": [
+    {
+      "step": 1,
+      "name": "Law Manifest Self-Heal",
+      "purpose": "Snap-back restoration of core covenant via hash validation."
+    },
+    {
+      "step": 2,
+      "name": "Schema Drift Watcher",
+      "purpose": "Structural and content drift detection + auto-restore."
+    },
+    {
+      "step": 3,
+      "name": "Integration Trigger",
+      "purpose": "Unified execution of Steps 1 and 2 with consolidated logging."
+    },
+    {
+      "step": 4,
+      "name": "Cron Automation",
+      "purpose": "Daily midnight UTC sentry run and breach fossilization."
+    },
+    {
+      "step": 5,
+      "name": "Boot-Time Autostart",
+      "purpose": "Ensures sentry runs after every device wake."
+    },
+    {
+      "step": 6,
+      "name": "On-Commit Fortress Gate",
+      "purpose": "Pre-commit hook runs watchers and stages any repairs before commit."
+    }
+  ],
+  "ledger": "logs/schema_drift_ledger.txt",
+  "integration_log": "logs/integration_trigger.log",
+  "law_manifest": "config/law_manifest.json",
+  "governance_module": "modules/governance.py",
+  "schema_watcher": "modules/schema_drift_watcher.py",
+  "integration_trigger": "modules/integration_trigger.py",
+  "notes": [
+    "All code and config are tracked in Git; unsafe or ephemeral files excluded via .gitignore.",
+    "Automation runs autonomously; incidents are fossilized in remote history."
+  ]
+}

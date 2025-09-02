@@ -1,0 +1,13 @@
+{
+  "resonance": {
+    "charge": 0.7999999999999999,
+    "decay_rate": 0.05
+  },
+  "precision": {
+    "charge": 0.5999999999999999
+  },
+  "completion": {
+    "charge": 0.96,
+    "decay_rate": 0.02
+  }
+}

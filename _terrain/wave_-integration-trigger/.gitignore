@@ -1,0 +1,17 @@
+# Dependencies / build artifacts
+node_modules/
+*.pyc
+__pycache__/
+
+# Logs & temp
+*.log
+*.tmp
+*~
+
+# Archives
+*.tar.gz
+*.zip
+
+# OS cruft
+.DS_Store
+Thumbs.db
