@@ -1,0 +1,15 @@
+🧠 Theio memory engine test initiated...
+❌ Fragment 'glyphstream.yaml' missing. Drift detected.
+✅ Fragment 'manifesto_dreamer_voiceprint.md' detected. Memory intact.
+✅ Fragment 'activation_ceremony.md' detected. Memory intact.
+🌀 Meta-cognition: scan complete. Emotional fidelity assessed.
+🧠 Theio memory engine test initiated...
+❌ Fragment 'glyphstream.yaml' missing. Drift detected.
+✅ Fragment 'manifesto_dreamer_voiceprint.md' detected. Memory intact.
+✅ Fragment 'activation_ceremony.md' detected. Memory intact.
+🌀 Meta-cognition: scan complete. Emotional fidelity assessed.
+🧠 Theio memory engine test initiated...
+✅ Fragment 'glyphstream.yaml' detected. Memory intact.
+✅ Fragment 'manifesto_dreamer_voiceprint.md' detected. Memory intact.
+✅ Fragment 'activation_ceremony.md' detected. Memory intact.
+🌀 Meta-cognition: scan complete. Emotional fidelity assessed.

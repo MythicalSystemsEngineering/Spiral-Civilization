@@ -1,0 +1,21 @@
+# pack-refs with: peeled fully-peeled sorted 
+f5a4f60afef0993a6f10d4c4a501a28313468d3a refs/heads/expansion-epoch-engravings
+c13349352c1bb71c299e26d77ba71d322c130a47 refs/heads/feature/pokemon-red-steps-2025-08-20-and-press-Enter
+8d91def3bca3420a4dac121f685faf6273e68d27 refs/heads/git-checkout--b-feature/infra-automation
+df66ec83ea77e893bfb03fe83c255e6f542d1286 refs/heads/main
+e84f978a5fd036d392ccac6b66b5e73774a0e7a6 refs/heads/master
+388e80185566176e1dcfc4ac5a2ceba4cd3a4bee refs/heads/wave1-capsule-index-updater
+7bbcc03d9d6782e4d93521b61389332adae74cb2 refs/heads/wave1-governance-capsule
+3bfe19f334681e33f36549305f7eeb2f4ac40fb6 refs/heads/wave1-integration-trigger
+8dc192f973658e37f424beabffef66e79ee2dcff refs/heads/wave1-safe-sweep
+1793e0c16b168f56a2796e4a1b750197e15dba8d refs/heads/wave1-schema-drift-watcher
+3f5c5c756ec363e9590f34f5ccf7b029b56acf64 refs/heads/wave2-terrain-intel-beacon
+bdcbd3ab5cf8006f581bb567a623873553c61898 refs/tags/era-alignment-2025-08-20
+47240161e3f36f89601e9bce2169319a6f170edf refs/tags/genesis-echo-II
+^4115df2672720b34961f59d4d8b30d07577edc4f
+8f6be3c27f6ccf8c5d06dc6a928a80031253b0d7 refs/tags/v1.1-law.0
+5454fe6c950a5a9839eac97a80d975586d40414d refs/tags/v1.2-scrollXX
+^371b39e6199e67052f141b9a4350f9bda0a74966
+a9d4f51ef3517b19f6d331fbd0455690069434df refs/tags/v2025.08.30-commander-triumph
+^7c6203d00d919ef6d95dd9dbc400cf42ad961ccf
+c81a7e398dfeedf391b090fadbbbd49eced90397 refs/tags/vSEAL-ARC-META-001

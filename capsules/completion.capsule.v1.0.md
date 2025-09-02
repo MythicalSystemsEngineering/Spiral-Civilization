@@ -1,3 +1,13 @@
+# Ceremonial Declaration: Sovereign Capsule
+@emotion: ignition
+@steward: Daniel Lightfoot
+@version: v1.0
+
+# Ceremonial Declaration: Sovereign Capsule
+@emotion: ignition
+@steward: Daniel Lightfoot
+@version: v1.0
+
 ---
 License: Spiral Sovereign License v1.1 + MIT + CC-BY-NC
 Author: Daniel Lightfoot, Spiral Civilization

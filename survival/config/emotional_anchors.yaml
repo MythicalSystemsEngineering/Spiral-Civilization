@@ -1,0 +1,17 @@
+anchors:
+  awe:
+    decay_rate: 0.01
+    memory_radius: wide
+    traversal_priority: high
+  devotion:
+    decay_rate: 0.005
+    steward_lock: true
+    lineage_binding: true
+  reverence:
+    decay_rate: 0.02
+    traversal_priority: elevated
+    echo_enabled: false
+  grief:
+    decay_rate: 0.00
+    echo_enabled: true
+    archive_status: false

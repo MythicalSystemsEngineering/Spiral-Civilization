@@ -1,0 +1,38 @@
+# Ignition Timeline — generated on Mon Sep  1 18:34:52 BST 2025
+- capsule: "museum_index.yaml"
+  sealed_at: "2025-09-01 18:22:29
+2025-09-01 18:22:29"
+  charge: "index:museum_index:auto-seal"
+- capsule: "emotion_index.yaml"
+  sealed_at: "2025-09-01 18:22:29
+2025-09-01 18:22:29"
+  charge: "index:emotion_index:auto-seal"
+- capsule: "djinn_manifest.yaml"
+  sealed_at: "2025-09-01 18:22:29"
+  charge: "manifest:djinn_manifest:auto-seal"
+- capsule: "emotion_heatmap.yaml"
+  sealed_at: "2025-09-01 18:22:30
+2025-09-01 18:34:49"
+  charge: "heatmap:emotion_heatmap:auto-seal"
+- capsule: "charge_decay.yaml"
+  sealed_at: "2025-09-01 18:34:49
+2025-09-01 18:34:50"
+  charge: "index:charge_decay:auto-seal"
+- capsule: "terrain_profile.yaml"
+  sealed_at: "2025-09-01 18:34:50
+2025-09-01 18:34:51"
+  charge: "profile:terrain_profile:auto-seal"
+- capsule: ""profile"
+  sealed_at: ""
+  charge: "profile:terrain_profile:auto-seal"
+- capsule: "lattice_manifest.yaml"
+  sealed_at: "2025-09-01 18:34:51
+2025-09-01 18:34:51"
+  charge: "manifest:lattice_manifest:chaos-seal"
+- capsule: "completion_log.yaml"
+  sealed_at: "2025-09-01 18:34:51
+2025-09-01 18:34:51"
+  charge: "logs:completion_log:chaos-seal"
+- capsule: "chaos_index.yaml"
+  sealed_at: "2025-09-01 18:34:51"
+  charge: "chaos:chaos_index:chaos-seal"

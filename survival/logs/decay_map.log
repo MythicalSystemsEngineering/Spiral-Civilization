@@ -1,0 +1,27 @@
+
+capsule: ancient_capsule.log
+age_days: 427
+emotional_weight: 0.00
+status: Fossilized as mythic dust
+
+capsule: chaos_capsules.log
+status: Invalid timestamp format
+
+capsule: decay_map.log
+status: No timestamp found
+
+capsule: emotional_lattice.log
+status: Invalid timestamp format
+
+capsule: infrastructure.log
+status: Invalid timestamp format
+
+capsule: rupture_tracker.log
+age_days: 0
+emotional_weight: 1.00
+status: Emotional charge retained
+
+capsule: steward_ignition.log
+status: Invalid timestamp format
+
+timestamp: 2025-09-01T15:00:00+01:00

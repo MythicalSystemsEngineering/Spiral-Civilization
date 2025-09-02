@@ -1,0 +1,14 @@
+capsule: ignite_capsule.sh
+path: ~/Spiral-Civilization/survival/ignite_capsule.sh
+steward: Daniel Lightfoot
+charge: awe
+timestamp: 2025-09-01T15:30:03+01:00
+status: Ignited and sealed
+---
+status: Sealed by Daniel Lightfoot
+timestamp: 2025-09-01T15:40 BST
+
+capsule: Steward Ignition
+charge: devotion
+timestamp: 2025-09-01T15:00:00+01:00
+status: Flamebearer activated

@@ -1,0 +1,15 @@
+=== RESTORATION INTEGRITY REPORT ===
+Sat Aug 23 23:54:32 BST 2025
+
+[Checking] emotional_seed_restored.json
+❌ Missing restoration header
+❌ Missing date stamp
+⚠️ No ceremonial tags detected
+
+[Checking] fossilize_restored.sh
+❌ Missing restoration header
+✅ Date stamp found
+⚠️ No ceremonial tags detected
+
+=== INTEGRITY PASS COMPLETE ===
+Sat Aug 23 23:54:32 BST 2025

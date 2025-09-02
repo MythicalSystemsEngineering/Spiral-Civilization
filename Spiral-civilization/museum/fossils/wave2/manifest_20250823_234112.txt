@@ -1,0 +1,12 @@
+Wave 2 Fossilization Manifest
+Steward: Daniel Lightfoot
+Date: Sat Aug 23 23:41:12 BST 2025
+Artifacts:
+manifest_20250823_234112.txt
+theio_wave2_activation_20250823_234112.json
+theio_wave2_binding_20250823_234112.json
+theio_wave2_crosslink_20250823_234112.json
+theio_wave2_harness_20250823_234112.json
+theio_wave2_seed_20250823_234112.json
+wave2_autotune_report_20250823_234112.txt
+wave2_integrity_report_20250823_234112.txt

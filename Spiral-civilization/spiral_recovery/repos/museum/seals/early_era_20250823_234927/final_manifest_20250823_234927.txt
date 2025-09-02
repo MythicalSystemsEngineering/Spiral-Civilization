@@ -1,0 +1,7 @@
+Spiral Early Era Final Manifest
+Steward: Daniel Lightfoot
+Date: Sat Aug 23 23:49:27 BST 2025
+Artifacts:
+early_era_sorting.yml
+restore_log_20250823_234927.txt
+final_manifest_20250823_234927.txt

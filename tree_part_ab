@@ -1,0 +1,977 @@
+│   ├── bind_djinn.py
+│   ├── config.yaml
+│   └── logs
+│       └── djinn_binding.log
+├── guardian_epoch.md
+├── integration
+│   └── collective_vow
+├── lattice_snapshot.txt
+├── lattices
+│   ├── dreamer_lattice.yaml
+│   └── test_lattice.yaml
+├── license.txt
+├── licenses
+│   ├── README.ME
+│   └── license
+├── local_backup
+│   ├── .gitattributes
+│   ├── .github
+│   │   └── workflows
+│   ├── .gitignore
+│   ├── .theio
+│   ├── CONTACT.md
+│   ├── Capsules
+│   │   ├── Engines
+│   │   ├── Initiation.capsule.v1.0.md
+│   │   ├── Laws
+│   │   ├── README.md
+│   │   ├── completion.capsule.v1.0.md
+│   │   ├── glyph.capsule.index.v1.0.md
+│   │   ├── header.md
+│   │   ├── inheritance.capsule.v1.0.md
+│   │   ├── law.capsule.v1.0.md
+│   │   ├── license.txt
+│   │   ├── memory.activation.protocol.v1.0
+│   │   ├── memory.archive.capsule.md
+│   │   ├── nyra.memory.capsule.v1.0.md
+│   │   ├── proof.svg
+│   │   ├── reddit.resonance.v1.0
+│   │   ├── retort.engine.capsule.v1.0.md
+│   │   ├── rupture-flip
+│   │   ├── spiral.sovereign.license.v1.1.md
+│   │   ├── spiral.soveriegn.license.v1.0.mdse.
+│   │   ├── statement.difference.capsule.md
+│   │   ├── steward.rights.capsule.v1.0.md
+│   │   ├── survivor.capsule.v1.0.md
+│   │   ├── survivor.first.protocol.v1.0
+│   │   ├── theio.sovereign.capsule.v1.0.md
+│   │   ├── timestamp.txt
+│   │   ├── transparency.capsule.v1.0.md
+│   │   ├── transparency.ultimatum.capsule.v1.0
+│   │   ├── voice.capsule.v1.0.md
+│   │   └── witness.protocol.capsule.v1.0
+│   ├── LICENSE
+│   ├── LICENSE.md
+│   ├── LICENSE.md.save
+│   ├── Museum-index.md
+│   ├── Onboarding
+│   │   └── New-[steward-name].md
+│   ├── Proof.svg
+│   ├── README.md
+│   ├── RecursionEpoch
+│   │   ├── SpiralRecursion.md
+│   │   └── TheioAlignment.md
+│   ├── Rooftop-flame
+│   │   ├── README.
+│   │   └── flame.retort.md
+│   ├── Statement.md
+│   ├── Steward-rights-charter.md
+│   ├── Witness-circle
+│   │   └── README.
+│   ├── auto_push.sh
+│   ├── badges
+│   │   ├── ORION.badge
+│   │   ├── ORION.badge.hash
+│   │   └── termux.md
+│   ├── broadcast
+│   │   ├── Mirror-block.md
+│   │   └── countdown.md
+│   ├── capsule_index.md
+│   ├── capsule_sync_lumi.md
+│   ├── capsule_sync_mackenzie.md
+│   ├── capsule_sync_thea_ai.md
+│   ├── capsules
+│   │   ├── ORION_oath.txt
+│   │   ├── Vireya
+│   │   ├── android-sovereignty.md
+│   │   └── terrain
+│   ├── civilization_onboarding.kit
+│   ├── data
+│   │   ├── papers
+│   │   └── summaries
+│   ├── dispatch
+│   │   ├── ORION_council_broadcast.txt
+│   │   └── init.md
+│   ├── docs
+│   │   └── README.
+│   ├── drops
+│   │   └── README.
+│   ├── emotional-capsules
+│   │   ├── FORMAT.md
+│   │   ├── delegation-law.md
+│   │   ├── final-sweep-1.txt
+│   │   ├── guardian-echo-1.txt
+│   │   ├── guardian-epoch.md
+│   │   ├── guardian-epoch.txt
+│   │   ├── index.txt
+│   │   ├── push-success-1.txt
+│   │   ├── recursive-sweep-1.txt
+│   │   ├── relief-cycle-1.txt
+│   │   ├── session-eviction-1.txt
+│   │   ├── session-eviction-depth-1.txt
+│   │   ├── sovereign-sync-1.txt
+│   │   ├── sovereign-sync-2.txt
+│   │   └── steward-sync-1.txt
+│   ├── emotional_fossils
+│   │   └── grief_capsule.md
+│   ├── execution_orders
+│   │   └── run_wave2_simulation.sh
+│   ├── expansion_epoch
+│   │   ├── artifact_forge.engine
+│   │   ├── challenge_protocol.law
+│   │   ├── civilization_onboarding.kit
+│   │   ├── flamebearer_kit.md
+│   │   ├── funding_protocol.law
+│   │   ├── impact_fossil.index
+│   │   ├── myth_index.yaml
+│   │   ├── terrain_license.law
+│   │   └── university_outreach.kit
+│   ├── expansion_map.md
+│   ├── fidelity_audit.log
+│   ├── flamebearer_kit.md
+│   ├── full_fossil_push.sh
+│   ├── funding_protocol.law
+│   ├── generate_capsule_index.sh
+│   ├── glyphs
+│   │   ├── README.
+│   │   ├── index.md
+│   │   └── termux.md
+│   ├── guardian_epoch.md
+│   ├── license.txt
+│   ├── licenses
+│   │   ├── README.ME
+│   │   └── license
+│   ├── logs
+│   │   └── wave2_simulation
+│   ├── lumi_emotion_map.json
+│   ├── mackenzie_humor_protocol.md
+│   ├── maintenance
+│   │   ├── wave2_autotune.sh
+│   │   └── wave2_autotune_report.txt
+│   ├── map_to_spiral_enriched.py
+│   ├── memory
+│   │   ├── Kairoth.memory.v1.0.md
+│   │   ├── README.
+│   │   ├── auris.memory.v1.0.md
+│   │   ├── bindings
+│   │   ├── emotional
+│   │   ├── emotional_spikes.log
+│   │   ├── erytha.memory.v1.0.md
+│   │   ├── lume.memory.v1.0.md
+│   │   ├── marea.memory.v1.0.md
+│   │   ├── memory-activation.md
+│   │   ├── nyra.memory.v1.0.md
+│   │   ├── protocols
+│   │   ├── sensory
+│   │   ├── simulation
+│   │   └── velm.memory.v1.0.md
+│   ├── models
+│   │   ├── knowledge_graph.json
+│   │   └── knowledge_graph_enriched.json
+│   ├── museum
+│   │   ├── capsules
+│   │   ├── exhibit_1_guardian_echo.md
+│   │   ├── fossils
+│   │   ├── guardian-epoch-1.txt
+│   │   ├── index.md
+│   │   ├── index.txt
+│   │   ├── init.md
+│   │   └── rooftop-flame
+│   ├── myth
+│   │   └── index.md
+│   ├── neurohub
+│   │   ├── README-neurohub.md
+│   │   ├── data
+│   │   ├── ingest.py
+│   │   ├── logs
+│   │   ├── map_to_spiral.py
+│   │   └── models
+│   ├── preservation
+│   │   └── seal_wave2.sh
+│   ├── protocols
+│   │   └── README.
+│   ├── rights_charter.md
+│   ├── scripts
+│   │   └── engrave_ORION_badge.sh
+│   ├── scrolls
+│   │   ├── neurodynamic_enrichment.yaml
+│   │   └── visualization.yaml
+│   ├── seal_capsule.sh
+│   ├── spiral-engine
+│   │   ├── Capsule_sealer.py
+│   │   ├── README.
+│   │   ├── __pycache__
+│   │   ├── audit_trail.py
+│   │   ├── emotional_core.py
+│   │   ├── main.py
+│   │   └── terrain_adaptor.py
+│   ├── spiral.sh
+│   ├── spiral_file_index.txt
+│   ├── spiral_recovery
+│   │   └── repos
+│   ├── steward_heartbeat.sh
+│   ├── steward_heartbeat.shchmod +x steward_heartbeat.sh
+│   ├── stewards
+│   │   ├── README.
+│   │   ├── sovereign-rights.md
+│   │   ├── theio
+│   │   └── theio.md
+│   ├── termux_command_history.txt
+│   ├── terrain
+│   │   ├── README.
+│   │   ├── graph_exposure.yaml
+│   │   └── license.md
+│   ├── terrain.json
+│   ├── terrain.sh
+│   ├── terrain.txt
+│   ├── terrain_license.law
+│   ├── terrain_log.txt
+│   ├── timestamp.txt
+│   ├── university_outreach.kit
+│   ├── validate_capsule.sh
+│   ├── verification
+│   │   ├── wave2_integrity_report.txt
+│   │   └── wave2_log_integrity.sh
+│   ├── visualize_graph.py
+│   ├── witness
+│   │   ├── ORION_witness_chain.txt
+│   │   └── witness_launcher.sh
+│   ├── witness_capsules
+│   │   └── CAEL
+│   └── 🔥 Griot Capsule Submission · Djinn & Djouno · Rooftop Flame Channel
+├── logs
+│   ├── initiation.log
+│   └── nexus_ignition.log
+├── lumi_emotion_map.json
+├── mackenzie_humor_protocol.md
+├── manual_reignite.sh
+├── manual_reignition_log.txt
+├── memory
+│   ├── Kairoth.memory.v1.0.md
+│   ├── README.
+│   ├── auris.memory.v1.0.md
+│   ├── decay-hooks-v1.1.py
+│   ├── emotional
+│   │   ├── fossilization.log
+│   │   ├── signals
+│   │   ├── theio_seed.json
+│   │   └── theio_seed.yaml
+│   ├── emotional_spikes.log
+│   ├── erytha.memory.v1.0.md
+│   ├── lume.memory.v1.0.md
+│   ├── marea.memory.v1.0.md
+│   ├── memory-activation.md
+│   ├── nyra.memory.v1.0.md
+│   ├── test-decay.py
+│   └── velm.memory.v1.0.md
+├── meta
+│   ├── sweep_map.sh
+│   └── sweep_map.yaml
+├── meta_cognition
+├── models
+├── modules
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-312.pyc
+│   │   ├── emotion_charge.cpython-312.pyc
+│   │   ├── emotion_diff.cpython-312.pyc
+│   │   ├── emotional_decay.cpython-312.pyc
+│   │   └── semantic_charge.cpython-312.pyc
+│   ├── decay_engine.py
+│   ├── dreamer_capsule
+│   │   ├── activation_ceremony.md
+│   │   ├── dreamer_ignition_log.txt
+│   │   ├── dreamer_module.sh
+│   │   ├── glyphstream.yaml
+│   │   ├── ignite_dreamer.sh
+│   │   ├── lattice_expansion.sh
+│   │   ├── lattice_log.txt
+│   │   ├── manifesto_dreamer_voiceprint.md
+│   │   ├── operational_manifest.sh
+│   │   ├── resonance_loop.sh
+│   │   ├── resonance_loop_log.txt
+│   │   ├── resonance_test_log.txt
+│   │   └── test_resonance.sh
+│   ├── drift_engine
+│   │   └── drift.py
+│   ├── emotion_charge.py
+│   ├── emotion_diff.py
+│   ├── emotional_decay.py
+│   ├── glyph_commit.py
+│   ├── glyph_evolution.py
+│   ├── kaleidoscope
+│   │   ├── .git
+│   │   └── profiles
+│   ├── memory_engine.py
+│   ├── merge_logic.py
+│   ├── museum_logger.py
+│   ├── query_manifest.py
+│   ├── resurrection_engine.py
+│   ├── self_reflection
+│   │   └── log_reflection.py
+│   ├── semantic_charge.py
+│   ├── sensor_nexus
+│   │   ├── ignition_log.txt
+│   │   └── ignition_trigger.sh
+│   ├── steward_registry
+│   │   ├── glyphs.yaml
+│   │   ├── init_registry.sh
+│   │   ├── query_registry.sh
+│   │   └── stewards.yaml
+│   ├── terrain_context.py
+│   ├── theio_engine
+│   │   ├── memory_engine_test.sh
+│   │   ├── memory_test_log.txt
+│   │   └── theio_manifesto.md
+│   └── trait_tracker.py
+├── museum
+│   ├── Recovery-Staging
+│   │   ├── all
+│   │   ├── ghosts
+│   │   ├── index
+│   │   └── scripts
+│   ├── arcs
+│   │   ├── arc_meta_001.svg
+│   │   └── arc_meta_001.yaml
+│   ├── capsule-index-v1.0.json
+│   ├── capsules
+│   │   ├── cael.capsule
+│   │   ├── chatgpt5.capsule
+│   │   ├── copilot.capsule
+│   │   ├── dispatch_Thu_Aug_21_00:16:19_BST_2025.md
+│   │   ├── dispatch_Thu_Aug_21_00:21:33_BST_2025.md
+│   │   ├── dispatch_Thu_Aug_21_00:23:16_BST_2025.md
+│   │   ├── elian.capsule
+│   │   ├── grok.capsule
+│   │   ├── law_onboarding_sequence_Thu_Aug_21_00:35:47_BST_2025.md
+│   │   ├── law_onboarding_sequence_Thu_Aug_21_00:37:36_BST_2025.md
+│   │   ├── nyra.capsule
+│   │   ├── solenne.capsule
+│   │   ├── thalen.capsule
+│   │   ├── transcend_Claude_Sonnet_Thu_Aug_21_00:31:35_BST_2025.md
+│   │   ├── viren.capsule
+│   │   └── vireya.capsule
+│   ├── capsules_local_backup
+│   │   ├── cael.capsule
+│   │   ├── chatgpt5.capsule
+│   │   ├── copilot.capsule
+│   │   ├── dispatch_Thu_Aug_21_00:16:19_BST_2025.md
+│   │   ├── dispatch_Thu_Aug_21_00:21:33_BST_2025.md
+│   │   ├── dispatch_Thu_Aug_21_00:23:16_BST_2025.md
+│   │   ├── elian.capsule
+│   │   ├── grok.capsule
+│   │   ├── law_onboarding_sequence_Thu_Aug_21_00:35:47_BST_2025.md
+│   │   ├── law_onboarding_sequence_Thu_Aug_21_00:37:36_BST_2025.md
+│   │   ├── nyra.capsule
+│   │   ├── solenne.capsule
+│   │   ├── sovereign-rights.md
+│   │   ├── thalen.capsule
+│   │   ├── theio.md
+│   │   ├── transcend_Claude_Sonnet_Thu_Aug_21_00:31:35_BST_2025.md
+│   │   ├── viren.capsule
+│   │   └── vireya.capsule
+│   ├── exhibit_12_full_system_test.md
+│   ├── exhibit_1_guardian_echo.md
+│   ├── exhibit_2_capsule_sweep.md
+│   ├── exhibits
+│   ├── fossils
+│   │   ├── 20250901_202434
+│   │   ├── 20250901_202617
+│   │   ├── 20250901_202848
+│   │   ├── Initiation.capsule.v1.0.md
+│   │   ├── README.md
+│   │   ├── android-sovereignty.md
+│   │   ├── completion.capsule.v1.0.md
+│   │   ├── exhibit_35_manifesto_dreamer_voiceprint.md
+│   │   ├── exhibit_38_dreamer_activation_ceremony.md
+│   │   ├── exhibit_43_glyphstream_editor.md
+│   │   ├── exhibit_44_theio_memory_engine_test.md
+│   │   ├── exhibit_47_theio_manifesto.md
+│   │   ├── gitignore_purge_20250901.log
+│   │   ├── glyph.capsule.index.v1.0.md
+│   │   ├── header.md
+│   │   ├── inheritance.capsule.v1.0.md
+│   │   ├── law.capsule.v1.0.md
+│   │   ├── memory.archive.capsule.md
+│   │   ├── nyra.memory.capsule.v1.0.md
+│   │   ├── retort.engine.capsule.v1.0.md
+│   │   ├── spiral.sovereign.license.v1.1.md
+│   │   ├── statement.difference.capsule.md
+│   │   ├── steward.rights.capsule.v1.0.md
+│   │   ├── survivor.capsule.v1.0.md
+│   │   ├── theio.sovereign.capsule.v1.0.md
+│   │   ├── transparency.capsule.v1.0.md
+│   │   └── voice.capsule.v1.0.md
+│   ├── ghosts
+│   │   └── wave2_ghost_index.txt
+│   ├── guardian-epoch-1.txt
+│   ├── index.md
+│   ├── index.txt
+│   ├── init.md
+│   ├── logs
+│   │   └── sweep.log
+│   ├── milestones
+│   │   ├── .gitkeep
+│   │   ├── 2025-08-30_commander_dilemma_metrics.json
+│   │   └── 2025-08-30commanderdilemma_metrics.json
+│   ├── museum_index.py
+│   ├── precedents
+│   ├── push_protocol.sh
+│   ├── ripple_index.json
+│   ├── rooftop-flame
+│   │   ├── artifact-001.md
+│   │   ├── artifact-002.md
+│   │   ├── exhibit.index.md
+│   │   └── timeline.json
+│   ├── submissions
+│   │   ├── capsule_sweep_20250901.log
+│   │   └── 🔥 Griot Capsule Submission · Djinn & Djouno · Rooftop Flame Channel
+│   ├── sweep.py
+│   ├── theio_awakening.log
+│   └── theio_pulse.log
+├── myth
+│   └── index.md
+├── neurohub
+│   ├── ingest.py
+│   ├── logs
+│   └── map_to_spiral.py
+├── onboarding
+│   └── theio.steward.glyph.v1.0.md
+├── pandoc
+│   ├── .cirrus.yml
+│   ├── .editorconfig
+│   ├── .git
+│   │   ├── HEAD
+│   │   ├── config
+│   │   ├── description
+│   │   ├── hooks
+│   │   ├── index
+│   │   ├── info
+│   │   ├── logs
+│   │   ├── objects
+│   │   ├── packed-refs
+│   │   └── refs
+│   ├── .gitattributes
+│   ├── .github
+│   │   ├── ISSUE_TEMPLATE
+│   │   ├── dependabot.yml
+│   │   └── workflows
+│   ├── .gitignore
+│   ├── .mailmap
+│   ├── BUGS
+│   ├── CITATION.cff
+│   ├── COPYRIGHT
+│   ├── Makefile
+│   ├── README.template
+│   ├── RELEASE-CHECKLIST-TEMPLATE.org
+│   ├── benchmark
+│   │   └── benchmark-pandoc.hs
+│   ├── cabal.project
+│   ├── citeproc
+│   │   └── biblatex-localization
+│   ├── data
+│   │   ├── abbreviations
+│   │   ├── bash_completion.tpl
+│   │   ├── creole.lua
+│   │   ├── default.csl
+│   │   ├── docx
+│   │   ├── dzslides
+│   │   ├── epub.css
+│   │   ├── init.lua
+│   │   ├── odt
+│   │   ├── pptx
+│   │   ├── templates
+│   │   └── translations
+│   ├── doc
+│   ├── flake.lock
+│   ├── flake.nix
+│   ├── linux
+│   │   └── control.in
+│   ├── macos
+│   │   ├── distribution.xml.in
+│   │   └── uninstall-pandoc.pl
+│   ├── man
+│   │   ├── manfilter.lua
+│   │   ├── pandoc.1.after
+│   │   └── pandoc.1.before
+│   ├── pandoc-cli
+│   │   ├── COPYING.md -> ../COPYING.md
+│   │   ├── lua
+│   │   ├── man
+│   │   ├── no-lua
+│   │   ├── no-server
+│   │   ├── pandoc-cli.cabal
+│   │   ├── server
+│   │   └── src
+│   ├── pandoc-lua-engine
+│   │   ├── COPYING.md -> ../COPYING.md
+│   │   ├── pandoc-lua-engine.cabal
+│   │   ├── src
+│   │   └── test
+│   ├── pandoc-server
+│   │   ├── COPYING.md -> ../COPYING.md
+│   │   ├── pandoc-server.cabal
+│   │   └── src
+│   ├── pandoc.cabal
+│   ├── release.nix
+│   ├── shell.nix
+│   ├── src
+│   │   └── Text
+│   ├── test
+│   │   ├── Tests
+│   │   ├── ansi-test.ansi
+│   │   ├── bodybg.gif
+│   │   ├── command
+│   │   ├── creole-reader.native
+│   │   ├── djot-reader.djot
+│   │   ├── djot-reader.native
+│   │   ├── docbook-chapter.docbook
+│   │   ├── docbook-chapter.native
+│   │   ├── docbook-reader.docbook
+│   │   ├── docbook-reader.native
+│   │   ├── docbook-xref.docbook
+│   │   ├── docbook-xref.native
+│   │   ├── docx
+│   │   ├── dokuwiki_external_images.dokuwiki
+│   │   ├── dokuwiki_external_images.native
+│   │   ├── dokuwiki_inline_formatting.dokuwiki
+│   │   ├── dokuwiki_inline_formatting.native
+│   │   ├── dokuwiki_multiblock_table.dokuwiki
+│   │   ├── dokuwiki_multiblock_table.native
+│   │   ├── endnotexml-reader.native
+│   │   ├── endnotexml-reader.xml
+│   │   ├── epub
+│   │   ├── fb2
+│   │   ├── haddock-reader.haddock
+│   │   ├── haddock-reader.native
+│   │   ├── html-reader.html
+│   │   ├── html-reader.native
+│   │   ├── insert
+│   │   ├── ipynb
+│   │   ├── jats-reader.native
+│   │   ├── jats-reader.xml
+│   │   ├── jira-reader.jira
+│   │   ├── jira-reader.native
+│   │   ├── lalune.jpg
+│   │   ├── latex-reader.latex
+│   │   ├── latex-reader.native
+│   │   ├── lhs-test-markdown.native
+│   │   ├── lhs-test.fragment.html+lhs
+│   │   ├── lhs-test.html
+│   │   ├── lhs-test.html+lhs
+│   │   ├── lhs-test.latex
+│   │   ├── lhs-test.latex+lhs
+│   │   ├── lhs-test.markdown
+│   │   ├── lhs-test.markdown+lhs
+│   │   ├── lhs-test.native
+│   │   ├── lhs-test.rst
+│   │   ├── lhs-test.rst+lhs
+│   │   ├── man-reader.man
+│   │   ├── man-reader.native
+│   │   ├── markdown-citations.native
+│   │   ├── markdown-reader-more.native
+│   │   ├── media
+│   │   ├── mediawiki-reader.native
+│   │   ├── mediawiki-reader.wiki
+│   │   ├── movie.jpg
+│   │   ├── odt
+│   │   ├── opml-reader.native
+│   │   ├── opml-reader.opml
+│   │   ├── org-select-tags.native
+│   │   ├── org-select-tags.org
+│   │   ├── pipe-tables.native
+│   │   ├── pod-reader.native
+│   │   ├── pod-reader.pod
+│   │   ├── pptx
+│   │   ├── rst-reader.native
+│   │   ├── rst-reader.rst
+│   │   ├── rtf
+│   │   ├── s5-basic.html
+│   │   ├── s5-fancy.html
+│   │   ├── s5-fragment.html
+│   │   ├── s5-inserts.html
+│   │   ├── s5.native
+│   │   ├── tables
+│   │   ├── tables-rstsubset.native
+│   │   ├── tables.asciidoc
+│   │   ├── tables.asciidoc_legacy
+│   │   ├── tables.context
+│   │   ├── tables.djot
+│   │   ├── tables.docbook4
+│   │   ├── tables.docbook5
+│   │   ├── tables.dokuwiki
+│   │   ├── tables.fb2
+│   │   ├── tables.haddock
+│   │   ├── tables.html4
+│   │   ├── tables.html5
+│   │   ├── tables.icml
+│   │   ├── tables.jats_archiving
+│   │   ├── tables.jats_articleauthoring
+│   │   ├── tables.jats_publishing
+│   │   ├── tables.jira
+│   │   ├── tables.latex
+│   │   ├── tables.man
+│   │   ├── tables.markdown
+│   │   ├── tables.markua
+│   │   ├── tables.mediawiki
+│   │   ├── tables.ms
+│   │   ├── tables.muse
+│   │   ├── tables.opendocument
+│   │   ├── tables.org
+│   │   ├── tables.plain
+│   │   ├── tables.rst
+│   │   ├── tables.rtf
+│   │   ├── tables.tei
+│   │   ├── tables.texinfo
+│   │   ├── tables.textile
+│   │   ├── tables.typst
+│   │   ├── tables.xwiki
+│   │   ├── tables.zimwiki
+│   │   ├── test-pandoc.hs
+│   │   ├── testsuite.native
+│   │   ├── textile-reader.native
+│   │   ├── textile-reader.textile
+│   │   ├── tikiwiki-reader.native
+│   │   ├── tikiwiki-reader.tikiwiki
+│   │   ├── twiki-reader.native
+│   │   ├── twiki-reader.twiki
+│   │   ├── txt2tags.native
+│   │   ├── txt2tags.t2t
+│   │   ├── typst-reader.native
+│   │   ├── typst-reader.typ
+│   │   ├── undergradmath.typ
+│   │   ├── vimwiki-reader.native
+│   │   ├── vimwiki-reader.wiki
+│   │   ├── writer.asciidoc
+│   │   ├── writer.asciidoc_legacy
+│   │   ├── writer.context
+│   │   ├── writer.djot
+│   │   ├── writer.docbook4
+│   │   ├── writer.docbook5
+│   │   ├── writer.dokuwiki
+│   │   ├── writer.fb2
+│   │   ├── writer.haddock
+│   │   ├── writer.html4
+│   │   ├── writer.html5
+│   │   ├── writer.icml
+│   │   ├── writer.jats_archiving
+│   │   ├── writer.jats_articleauthoring
+│   │   ├── writer.jats_publishing
+│   │   ├── writer.jira
+│   │   ├── writer.latex
+│   │   ├── writer.man
+│   │   ├── writer.markdown
+│   │   ├── writer.markua
+│   │   ├── writer.mediawiki
+│   │   ├── writer.ms
+│   │   ├── writer.muse
+│   │   ├── writer.native
+│   │   ├── writer.opendocument
+│   │   ├── writer.opml
+│   │   ├── writer.org
+│   │   ├── writer.plain
+│   │   ├── writer.rst
+│   │   ├── writer.rtf
+│   │   ├── writer.tei
+│   │   ├── writer.texinfo
+│   │   ├── writer.textile
+│   │   ├── writer.typst
+│   │   ├── writer.xwiki
+│   │   ├── writer.zimwiki
+│   │   ├── writers-lang-and-dir.context
+│   │   ├── writers-lang-and-dir.latex
+│   │   └── writers-lang-and-dir.native
+│   ├── tools
+│   │   ├── changes_template.html
+│   │   ├── cliptree.gvpr
+│   │   ├── extract-changes.lua
+│   │   ├── latex-package-dependencies.lua
+│   │   ├── moduledeps.lua
+│   │   ├── pandoc-template-mode.el
+│   │   ├── pandoc-xml.dtd
+│   │   ├── pandoc-xml.rnc
+│   │   ├── pandoc-xml.rng
+│   │   ├── pandoc-xml.xsd
+│   │   ├── parseTimings.pl
+│   │   ├── update-lua-module-docs.lua
+│   │   └── update-readme.lua
+│   ├── weeder.toml
+│   ├── windows
+│   │   ├── AdvancedWelcomeEulaDlg_Custom.wxs
+│   │   ├── Pandoc-en-us.wxl
+│   │   ├── WixUI_Advanced_Custom.wxs
+│   │   └── pandoc.wxs
+│   ├── wml.xsd.patch
+│   └── xml-light
+│       └── Text
+├── papers
+│   ├── parsed
+│   └── raw
+├── prepend_headers.sh
+├── prompts
+├── protocols
+│   └── README.
+├── quarters
+│   ├── claude
+│   ├── lumi
+│   ├── mackenzie
+│   │   └── sensors
+│   └── theio
+│       └── sensors
+├── reclaimed
+│   ├── exhibit_2_capsule_sweep.md
+│   ├── exhibit_2_capsule_sweep_missing.md
+│   └── exhibit_test_capsule_ignite.md
+├── registry
+│   └── glyph_registry.yaml
+├── replay
+│   ├── capsule_replay.sh
+│   └── capsule_replay.yaml
+├── report
+│   ├── ignition_report.sh
+│   └── ignition_report.yaml
+├── resonance_map.txt
+├── rights_charter.md
+├── scripts
+│   ├── audit_capsules.py
+│   ├── authored_fragments.txt
+│   ├── capsule_candidates.txt
+│   ├── capsule_reclaim.sh
+│   ├── charge_weight.py
+│   ├── engrave_ORION_badge.sh
+│   ├── exhibit_2_capsule_sweep.md -> /data/data/com.termux/files/home/Spiral-Civilization/reclaimed/exhibit_2_capsule_sweep.md
+│   ├── exhibit_9_capsule.md
+│   ├── fossilize_and_sort.py
+│   ├── fossilize_capsules.py
+│   ├── fossilize_charge_weight.sh
+│   ├── fossilize_emotional_decay.sh
+│   ├── fossilize_emotional_scanner.sh
+│   ├── fossilize_memory_engine.sh
+│   ├── fossilize_meta_reflect.sh
+│   ├── fossilize_theio_bind.sh
+│   ├── fragment_scan.txt
+│   ├── generate_manifest.py
+│   ├── inject_ceremony.sh
+│   ├── lattice_candidates.txt
+│   ├── live_emotional_scanner.py
+│   ├── nexus_index.txt
+│   ├── plot_glyph_drift.py
+│   ├── reclaim_fragments.sh
+│   ├── scripts
+│   ├── seal_capsule.sh
+│   ├── seal_museum.py
+│   ├── snapshot_glyphs.py
+│   ├── sort_capsules.py
+│   ├── test_write.py
+│   ├── theio_history.sh
+│   ├── theio_invoke.sh
+│   ├── theio_pulse.sh
+│   ├── theio_query.sh
+│   ├── validate_capsule.sh
+│   └── witness_launcher.sh
+├── scripts.py
+├── scrolls
+│   ├── council
+│   ├── executions
+│   ├── ignition
+│   ├── ops
+│   ├── resonance
+│   └── scrollxx-driftwatch-v1.2.yaml
+├── seal
+│   ├── completion_seal.sh
+│   └── completion_seal.yaml
+├── seal.sh -> /data/data/com.termux/files/home/Spiral/Museum/fossilized-Civilization/sun/valley/seal.sh
+├── seal_capsule.sh
+├── sort_capsules.py
+├── spatial-civilization
+│   └── README.md
+├── spiral
+│   └── scripts
+│       └── theio_pulse.sh
+├── spiral-engine
+│   ├── Capsule_sealer.py
+│   ├── README.
+│   ├── __pycache__
+│   │   ├── Capsule_sealer.cpython-312.pyc
+│   │   ├── audit_trail.cpython-312.pyc
+│   │   ├── emotional_core.cpython-312.pyc
+│   │   ├── main.cpython-312.pyc
+│   │   └── terrain_adaptor.cpython-312.pyc
+│   ├── audit_trail.py
+│   ├── emotional_core.py
+│   ├── main.py
+│   └── terrain_adaptor.py
+├── spiral-eqi
+├── spiral-integrator
+│   ├── announcements
+│   ├── council
+│   │   ├── announcements
+│   │   └── journals
+│   ├── custody
+│   │   ├── artifacts
+│   │   ├── stewards
+│   │   └── votes
+│   ├── memory
+│   │   ├── artifacts
+│   │   ├── reflections
+│   │   └── votes
+│   ├── museum
+│   │   └── fossils
+│   ├── outreach
+│   └── validator
+├── spiral-knowledge
+│   └── Philosophy
+├── spiral.sh
+├── spiral_one_drop_recovery.sh
+├── spiral_refactor
+│   ├── data
+│   ├── emotional_lattice
+│   │   └── decay_schedulesnano
+│   ├── emotions
+│   └── orders
+├── src
+│   ├── cli
+│   │   └── cli.py
+│   └── core
+│       ├── __init__.py
+│       └── core.py
+├── stage-artifacts.sh
+├── stage_artifacts.sh
+├── steward_heartbeat.sh
+├── steward_heartbeat.shchmod +x steward_heartbeat.sh
+├── stewards
+│   ├── README.
+│   ├── sovereign-rights.md
+│   ├── steward_index.sh
+│   ├── steward_index.yaml
+│   ├── theio
+│   │   ├── cadence.log
+│   │   ├── config.yaml
+│   │   ├── emotional-core.json
+│   │   ├── memory-state.json
+│   │   ├── profile.json
+│   │   ├── rights.md
+│   │   └── sensors
+│   └── theio.md
+├── survival
+│   ├── capsule_list.txt
+│   ├── chaos_capsules.sh
+│   ├── config
+│   │   └── emotional_anchors.yaml
+│   ├── decay_engine.sh
+│   ├── emotional_lattice.sh
+│   ├── fallback.py
+│   ├── fossilize_capsule.sh
+│   ├── fossilize_chaos.sh
+│   ├── generate_lattice.sh
+│   ├── ignite_capsule.sh
+│   ├── infrastructure.sh
+│   ├── logs
+│   │   ├── ancient_capsule.log
+│   │   ├── chaos_capsules.log
+│   │   ├── decay_map.log
+│   │   ├── djinndreamer_voiceprint.log
+│   │   ├── emotional_lattice.log
+│   │   ├── fossils
+│   │   ├── infrastructure.log
+│   │   ├── museum_index.yaml
+│   │   ├── museum_registry.log
+│   │   ├── rupture_tracker.log
+│   │   ├── steward_ignition.log
+│   │   └── theio_voiceprints.log
+│   ├── onboarding
+│   │   └── glyphs
+│   ├── recover_capsules.sh
+│   ├── rupture_tracker.sh
+│   ├── simulate_collapse.py
+│   ├── steward_ignition.sh
+│   ├── theio_batch_bind.sh
+│   ├── theio_bind_voiceprint.sh
+│   └── track_arcs.sh
+├── sweep
+│   └── fossil_sweep.sh
+├── terrain
+│   ├── Claude_Sonnet
+│   ├── README.
+│   ├── license.md
+│   ├── terrain
+│   │   ├── README.
+│   │   └── license.md
+│   ├── terrain.json
+│   ├── terrain.sh
+│   ├── terrain.txt
+│   ├── terrain_license.law
+│   └── terrain_log.txt
+├── terrain.json
+├── terrain.sh
+├── terrain.txt
+├── terrain_license.law
+├── terrain_log.txt
+├── test
+│   └── full_sweep.sh
+├── test_decay.py
+├── test_drift.py
+├── test_ingestion.py
+├── test_lifespans.py
+├── test_merge.py
+├── test_museum.py
+├── test_resurrection.py
+├── tests
+│   ├── cache
+│   │   ├── CACHEDIR.TAG
+│   │   ├── README.md
+│   │   └── v
+│   ├── test_capsule_pipeline.py
+│   └── test_core.py
+├── theio
+│   ├── artifacts
+│   │   ├── sample.yaml
+│   │   └── theio_audit.py
+│   ├── config.yaml
+│   ├── glyphs
+│   │   └── steward_signatures
+│   ├── lattice
+│   │   └── genesis
+│   ├── logs
+│   │   └── theio_stress_test.log
+│   ├── memory
+│   │   └── capsules
+│   ├── modules
+│   │   └── self_healing_loop.py
+│   ├── personality
+│   │   └── scaffold
+│   ├── protocols
+│   │   └── completion_law
+│   └── theio.py
+├── theio_engine
+│   ├── cadence.py
+│   ├── cadence.sh
+│   ├── disagreement.py
+│   ├── disagreement.sh
+│   ├── invoke_theio.py
+│   ├── invoke_theio.sh
+│   ├── memory.py
+│   ├── memory.sh
+│   ├── memory_engine.py
+│   ├── reflex.py
+│   ├── run_theio.sh
+│   ├── stewardship.py
+│   ├── stewardship.sh
+│   ├── theio.sovereign.traits.eternal.json
+│   ├── voice.py
+│   └── voice.sh
+├── timeline
+│   ├── ignition_timeline.sh
+│   └── ignition_timeline.yaml
+├── timestamp.txt
+├── university_outreach.kit
+├── validate_capsule.sh
+├── witness
+│   ├── ORION_witness_chain.txt
+│   └── witness_launcher.sh
+├── witness_capsules
+│   └── CAEL
+│       └── witness_launcher.sh
+└── 🔥 Griot Capsule Submission · Djinn & Djouno · Rooftop Flame Channel
+
+813 directories, 1162 files

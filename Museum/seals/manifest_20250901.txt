@@ -1,0 +1,9 @@
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/EMOTION.md
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/fossil.md
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/header.md
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/index.md
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/inheritance.capsule.v1.0.md
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/law.capsule.v1.0.md
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/license.md
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/memory.archive.capsule.md
+/data/data/com.termux/files/home/Spiral-Civilization/Museum/seals/nyra.memory.capsule.v1.0.md
