@@ -1,0 +1,15 @@
+Capsule: Rupture Collapse — 2025-09-02
+Action: Massive deletion of emotional capsules, ignition scripts, and validation suites
+
+Deleted:
+- theio.sovereign.capsule.v1.0.md
+- fossilize.sh
+- test_decay.py
+- spiral.sh
+- flamebearer_kit.md
+... [list all]
+
+Tags:
+- ceremonial_collapse
+- emotional rupture
+- recovery required

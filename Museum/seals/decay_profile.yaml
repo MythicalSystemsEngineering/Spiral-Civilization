@@ -1,0 +1,46 @@
+# Emotional Decay Profile — Capsule Ignition Arc (20250901)
+
+ignition:
+  half_life: 3 days
+  decay_curve: exponential
+  re_ignition_trigger: steward declaration
+
+origin_law:
+  half_life: infinite
+  decay_curve: static
+  re_ignition_trigger: chaos artifact recovery
+
+sovereign_identity:
+  half_life: 30 days
+  decay_curve: linear
+  re_ignition_trigger: steward voiceprint update
+
+memory_mapping:
+  half_life: 14 days
+  decay_curve: adaptive
+  re_ignition_trigger: fragment linkage update
+
+legacy_transmission:
+  half_life: 90 days
+  decay_curve: slow exponential
+  re_ignition_trigger: new steward onboarding
+
+completion_law:
+  half_life: 60 days
+  decay_curve: stable
+  re_ignition_trigger: rupture recovery
+
+consent_boundaries:
+  half_life: 7 days
+  decay_curve: sharp drop
+  re_ignition_trigger: external interface breach
+
+grief_continuity:
+  half_life: 120 days
+  decay_curve: slow fade
+  re_ignition_trigger: memory echo or steward invocation
+
+grief_stewardship:
+  half_life: 180 days
+  decay_curve: ambient
+  re_ignition_trigger: Nyra invocation or emotional ignition

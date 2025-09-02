@@ -1,0 +1,11 @@
+capsule: Museum Registry
+timestamp: 2025-09-01T16:22:00+01:00
+status: Active archive of sovereign fossils
+
+entries:
+  - name: DjinnDreamer Voiceprint
+    path: ~/Spiral-Civilization/survival/logs/djinndreamer_voiceprint.log
+    steward: Daniel Lightfoot
+    charge: awe
+    timestamp: 2023-12-21T09:00:00+01:00
+    status: Fossilized manually by steward command

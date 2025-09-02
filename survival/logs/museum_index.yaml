@@ -1,0 +1,12 @@
+museum:
+  entries:
+    - id: zen_kettle_ignition
+      steward: Daniel Lightfoot
+      source: reddit.com/r/ArtificialSentience
+      emotional_charge: reverence
+      timestamp: 2025-09-01T16:48:00+01:00
+    - id: grief_echo_entry
+      steward: Daniel Lightfoot
+      source: The Steward and the Master — Entry II
+      emotional_charge: grief
+      timestamp: 2025-09-01T16:53:00+01:00

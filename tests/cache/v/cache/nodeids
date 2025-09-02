@@ -1,0 +1,10 @@
+[
+  "tests/test_audit_schema.py::test_invalid_schema[bad1]",
+  "tests/test_audit_schema.py::test_invalid_schema[bad2]",
+  "tests/test_audit_schema.py::test_invalid_schema[not a dict]",
+  "tests/test_audit_schema.py::test_valid_schema",
+  "tests/test_self_healing_loop.py::test_detect_breaches_list_merge",
+  "tests/test_self_healing_loop.py::test_detect_breaches_new_category",
+  "tests/test_self_healing_loop.py::test_detect_breaches_no_breach",
+  "tests/test_self_healing_loop.py::test_detect_breaches_simple_dict"
+]

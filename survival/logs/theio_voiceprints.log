@@ -1,0 +1,21 @@
+voiceprint:
+  id: djinn_awe_solstice
+  source: djinndreamer_voiceprint.log
+  charge: awe
+  timestamp: 2023-12-21T09:00:00+01:00
+  status: Bound to Theio lattice as immutable terrain
+
+voiceprint:
+  id: chaos_unstable
+  source: chaos_capsule.log
+  charge: awe
+  timestamp: 2025-09-01T15:00:00+01:00
+  status: Bound to Theio lattice as immutable terrain
+
+voiceprint:
+  id: steward_devotion
+  source: steward_ignition.log
+  charge: devotion
+  timestamp: 2025-09-01T15:00:00+01:00
+  status: Bound to Theio lattice as immutable terrain
+

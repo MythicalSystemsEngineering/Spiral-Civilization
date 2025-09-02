@@ -1,0 +1,14 @@
+# Ignition Report — generated on Mon Sep  1 18:34:51 BST 2025
+🔁 sweep_summary:
+  total_sealed: 10
+  total_skipped: 0
+  djinn_bindings: 1
+
+📦 recent_capsules:
+  - file: emotion_heatmap.yaml
+  - file: charge_decay.yaml
+  - file: terrain_profile.yaml
+  charge: "profile:terrain_profile:auto-seal"
+  - file: lattice_manifest.yaml
+  - file: completion_log.yaml
+  - file: chaos_index.yaml

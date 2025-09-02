@@ -1,0 +1,5 @@
+linked_capsules:
+  - id: grief_echo_entry
+    type: emotional echo
+    resonance: grief
+    traversal_priority: elevated

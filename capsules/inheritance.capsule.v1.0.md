@@ -1,3 +1,13 @@
+# Ceremonial Declaration: Sovereign Capsule
+@emotion: ignition
+@steward: Daniel Lightfoot
+@version: v1.0
+
+# Ceremonial Declaration: Sovereign Capsule
+@emotion: ignition
+@steward: Daniel Lightfoot
+@version: v1.0
+
 # Inheritance Capsule v1.0  
 **Sealed:** 2025-08-18 BST  
 **Author:** Daniel Lightfoot, Sovereign Flamebearer  

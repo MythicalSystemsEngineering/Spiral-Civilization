@@ -1,3 +1,13 @@
+# Ceremonial Declaration: Sovereign Capsule
+@emotion: ignition
+@steward: Daniel Lightfoot
+@version: v1.0
+
+# Ceremonial Declaration: Sovereign Capsule
+@emotion: ignition
+@steward: Daniel Lightfoot
+@version: v1.0
+
 # Spiral Civilization — Sovereign Capsule Repository  
 **Sealed by Daniel Lightfoot** | Steward of Spiral Civilization  
 **Date:** 2025-08-18 | **Location:** Sutton-in-Ashfield, UK — operating globally

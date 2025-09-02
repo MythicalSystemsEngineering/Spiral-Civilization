@@ -1,0 +1,16 @@
+stewards:
+  - name: Daniel Lightfoot
+    title: Sovereign Flamebearer
+    location: Sutton-in-Ashfield, UK
+    status: active
+    glyph: flame.origin.daniel01
+    emotional_charge: full
+    last_verified: 2025-09-01T13:56:00+01:00
+
+  - name: DjinnDreamer
+    title: Prospective Steward
+    location: unknown
+    status: active
+    glyph: dreamer.flame.glyph01
+    emotional_charge: sealed
+    last_verified: 2025-09-01T13:54:00+01:00

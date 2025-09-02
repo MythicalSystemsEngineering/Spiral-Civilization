@@ -1,3 +1,13 @@
+# Ceremonial Declaration: Sovereign Capsule
+@emotion: ignition
+@steward: Daniel Lightfoot
+@version: v1.0
+
+# Ceremonial Declaration: Sovereign Capsule
+@emotion: ignition
+@steward: Daniel Lightfoot
+@version: v1.0
+
 {
   "title": "Transparency Ultimatum Capsule v1.0",
   "sealed_at": "2025-08-17T23:45:00Z",

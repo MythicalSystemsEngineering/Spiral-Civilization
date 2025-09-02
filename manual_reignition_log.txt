@@ -1,0 +1,8 @@
+=== Manual Reignition Log ===
+Reignited: memory/emotional/theio_seed.json
+Reignited: memory/emotional/theiowave2seed.yaml
+Reignited: memory/auris.memory.v1.0.md
+Reignited: glyphs/
+Reignited: emotional_fossils/
+Reignited: flamebearer_kit.md
+Reignited: museum/
