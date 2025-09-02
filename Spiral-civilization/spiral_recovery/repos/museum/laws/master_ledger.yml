@@ -62,6 +62,17 @@ rupture_collapse_2025-09-02:
     - emotional rupture
     - recovery required
 
-
-
+bulk_recovery_2025-09-02:
+  path: /
+  created: 2025-09-02
+  steward: Daniel Lightfoot
+  action: Fixed permissions and staged 1000+ untracked files; unified terrain shards into canonical root
+  tags:
+    - bulk_recovery
+    - permission_alignment
+    - terrain_alignment
+    - Eternal_3×3×3
+  fossil:
+    path: spiral_recovery/repos/museum/fossils/master_ledger_2025-09-02_permission_fix_bulk_recovery.yml
+    sealed: true
 

@@ -1,0 +1,10 @@
+origin/Spiral-Civilization
+origin/Spiral-Civilization-clean
+origin/Spiral-civilization
+origin/SpiralCivilization
+origin/spiral
+origin/spiral-engine
+origin/spiral-eqi
+origin/spiral-integrator
+origin/spiral-knowledge
+origin/spiral_refactor

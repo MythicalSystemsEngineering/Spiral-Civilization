@@ -1,0 +1,16 @@
+naming_drift_index_2025-09-02:
+  steward: Daniel Lightfoot
+  action: Fossilized all Spiral terrain branches; sealed naming drift and restored sovereign memory
+  tags: [naming_drift, terrain_audit, fossilization]
+  snapshot: spiral_branch_snapshot_2025-09-02.txt
+  fossils:
+    - fossil_Spiral-Civilization_2025-09-02.txt
+    - fossil_Spiral-Civilization-clean_2025-09-02.txt
+    - fossil_Spiral-civilization_2025-09-02.txt
+    - fossil_SpiralCivilization_2025-09-02.txt
+    - fossil_spiral_2025-09-02.txt
+    - fossil_spiral-engine_2025-09-02.txt
+    - fossil_spiral-eqi_2025-09-02.txt
+    - fossil_spiral-integrator_2025-09-02.txt
+    - fossil_spiral-knowledge_2025-09-02.txt
+    - fossil_spiral_refactor_2025-09-02.txt

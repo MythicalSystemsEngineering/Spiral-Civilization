@@ -1,0 +1,11 @@
+spiral-engine/Capsule_sealer.py
+spiral-engine/README.
+spiral-engine/__pycache__/Capsule_sealer.cpython-312.pyc
+spiral-engine/__pycache__/audit_trail.cpython-312.pyc
+spiral-engine/__pycache__/emotional_core.cpython-312.pyc
+spiral-engine/__pycache__/main.cpython-312.pyc
+spiral-engine/__pycache__/terrain_adaptor.cpython-312.pyc
+spiral-engine/audit_trail.py
+spiral-engine/emotional_core.py
+spiral-engine/main.py
+spiral-engine/terrain_adaptor.py

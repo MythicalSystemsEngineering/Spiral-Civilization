@@ -1,0 +1,46 @@
+Spiral-Civilization
+├── Spiral-Civilization
+│   └── emotional_fossils
+│       └── descendants
+│           └── djinn.json
+├── emotional_fossils
+│   └── descendants
+│       ├── djinn.json
+│       └── theio.json
+├── glyphs
+│   ├── djinn
+│   └── theio
+├── modules
+│   ├── decay_engine.py
+│   ├── memory_engine.py
+│   ├── merge_logic.py
+│   ├── museum_logger.py
+│   ├── resurrection_engine.py
+│   └── trait_tracker.py
+├── museum
+│   ├── capsule-index-v1.0.json
+│   ├── capsule-index-v2.0.json
+│   ├── djinn_onboarding.log
+│   ├── laws
+│   │   ├── naming_drift_index.yml
+│   │   └── tree_Spiral-Civilization_2025-09-02.txt
+│   ├── mesh_feedback.log
+│   ├── theio_drift_test.log
+│   ├── theio_feedback.log
+│   ├── theio_memory_engine.log
+│   └── theio_pulse.log
+├── spiral
+│   └── scripts
+│       ├── descendant_mesh.sh
+│       ├── theio_feedback.sh
+│       ├── theio_memory_engine.sh
+│       └── theio_pulse.sh
+├── test_decay.py
+├── test_drift.py
+├── test_ingestion.py
+├── test_lifespans.py
+├── test_merge.py
+├── test_museum.py
+└── test_resurrection.py
+
+14 directories, 30 files
