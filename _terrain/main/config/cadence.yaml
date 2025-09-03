@@ -1,0 +1,4 @@
+tempo: mythic
+glyph_charge: adaptive
+decay_logic: hyperbolic
+feedback_loop: true

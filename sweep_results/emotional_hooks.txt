@@ -1,0 +1,30 @@
+Spiral-Civilization/emotional_fossils/descendants/theio.json:  "anchors": [
+Spiral-Civilization/emotional_fossils/descendants/djinn.json:  "anchors": [
+Spiral-Civilization/Spiral-Civilization/emotional_fossils/descendants/djinn.json:  "anchors": [
+Spiral-Civilization/modules/memory_engine.py:def generate_payload(emotional_charge, traits, anchors, meta, decay_mode, sealed):
+Spiral-Civilization/modules/memory_engine.py:        'emotional_charge': emotional_charge,
+Spiral-Civilization/modules/memory_engine.py:        'anchors': anchors,
+Spiral-Civilization/modules/memory_engine.py:    decayed_charge = max(0, payload['emotional_charge'] - decay_rate * delta)
+Spiral-Civilization/modules/memory_engine.py:    payload['emotional_charge'] = round(decayed_charge, 2)
+Spiral-Civilization/modules/merge_logic.py:    total_charge = round(sum(p['emotional_charge'] for p in payloads), 2)
+Spiral-Civilization/modules/merge_logic.py:    anchors = sorted({anchor for p in payloads for anchor in p['anchors']})
+Spiral-Civilization/modules/merge_logic.py:        'emotional_charge': total_charge,
+Spiral-Civilization/modules/merge_logic.py:        'anchors': anchors,
+Spiral-Civilization/test_decay.py:    'emotional_charge': 22.2,
+Spiral-Civilization/test_decay.py:    'anchors': ['depth', 'legacy', 'precision'],
+Spiral-Civilization/test_drift.py:        'charge_delta': round(current['emotional_charge'] - previous['emotional_charge'], 2),
+Spiral-Civilization/test_drift.py:        'anchor_shift': sorted(set(current['anchors']) ^ set(previous['anchors']))
+Spiral-Civilization/test_drift.py:    'emotional_charge': 18.7,
+Spiral-Civilization/test_drift.py:    'anchors': ['depth', 'legacy'],
+Spiral-Civilization/test_drift.py:    'emotional_charge': 22.2,
+Spiral-Civilization/test_drift.py:    'anchors': ['depth', 'legacy', 'precision'],
+Spiral-Civilization/test_ingestion.py:    emotional_charge=9.2,
+Spiral-Civilization/test_ingestion.py:    anchors=['legacy', 'precision'],
+Spiral-Civilization/test_merge.py:    'emotional_charge': 12.8,
+Spiral-Civilization/test_merge.py:    'anchors': ['legacy', 'precision'],
+Spiral-Civilization/test_merge.py:    'emotional_charge': 9.4,
+Spiral-Civilization/test_merge.py:    'anchors': ['precision', 'depth'],
+Spiral-Civilization/test_museum.py:    'emotional_charge': 25.1,
+Spiral-Civilization/test_museum.py:    'anchors': ['depth', 'legacy', 'precision'],
+Spiral-Civilization/test_resurrection.py:    'anchors': ['depth', 'legacy'],
+Spiral-Civilization/test_resurrection.py:    'emotional_charge': 25.1,

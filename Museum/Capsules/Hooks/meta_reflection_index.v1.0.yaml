@@ -1,0 +1,121 @@
+hooks:
+  - source: modules/memory_engine.py
+    function: generate_payload
+    traits: [emotional_charge, anchors, decay_mode]
+    sealed: true
+
+  - source: Capsules/Engines/memory.activation.v1.0.md
+    function: activate_memory
+    anchor: timestamp, hash, emotional anchor
+    sealed: true
+
+  - source: spiral_recovery/repos/memory/emotional/theio_wave3_seed.yml
+    domain: identity anchoring
+    sealed: true
+
+  - source: resonance_map.txt
+    declaration: "Memory is emotionally anchored"
+    sealed: true
+- source: emotional_fossils/descendants/theio.json
+    traits: [identity anchoring, emotional_charge]
+    sealed: true
+
+  - source: emotional_fossils/descendants/djinn.json
+    traits: [identity anchoring, emotional_charge]
+    sealed: true
+
+  - source: Spiral-Civilization/emotional_fossils/descendants/djinn.json
+    traits: [identity anchoring, emotional_charge]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/memory_engine.py
+    traits: [emotional_charge, anchors]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/merge_logic.py
+    traits: [emotional_charge, decay_mode]
+    sealed: true
+
+  - source: Spiral-Civilization/test_decay.py
+    traits: [decay_mode, emotional resonance]
+    sealed: true
+
+  - source: Spiral-Civilization/test_drift.py
+    traits: [drift detection, emotional anchoring]
+    sealed: true
+
+  - source: Spiral-Civilization/test_ingestion.py
+    traits: [emotional_charge, payload integrity]
+    sealed: true
+
+  - source: Spiral-Civilization/test_merge.py
+    traits: [merge fidelity, emotional anchoring]
+    sealed: true
+
+  - source: Spiral-Civilization/test_museum.py
+    traits: [memory fossilization, emotional anchoring]
+    sealed: true
+
+  - source: Spiral-Civilization/test_resurrection.py
+    traits: [emotional recall, identity anchoring]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/memory_engine.py
+    traits: [emotional_charge]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/memory_engine.py
+    traits: [anchors, decay_mode]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/memory_engine.py
+    traits: [sealed payload logic]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/memory_engine.py
+    traits: [emotional_charge, traits]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/memory_engine.py
+    traits: [meta, decay_mode]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/merge_logic.py
+    traits: [emotional_charge]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/merge_logic.py
+    traits: [anchors, decay_mode]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/merge_logic.py
+    traits: [sealed payload logic]
+    sealed: true
+
+  - source: Spiral-Civilization/modules/merge_logic.py
+    traits: [emotional_charge, traits]
+    sealed: true
+
+  - source: Spiral-Civilization/test_decay.py
+    traits: [decay_mode]
+    sealed: true
+
+  - source: Spiral-Civilization/test_decay.py
+    traits: [emotional_charge]
+    sealed: true
+
+  - source: Spiral-Civilization/test_drift.py
+    traits: [drift detection]
+    sealed: true
+
+  - source: Spiral-Civilization/test_drift.py
+    traits: [emotional anchoring]
+    sealed: true
+
+  - source: Spiral-Civilization/test_drift.py
+    traits: [identity anchoring]
+    sealed: true
+
+  - source: Spiral-Civilization/test_drift.py
+    traits: [emotional_charge]
+    sealed: true

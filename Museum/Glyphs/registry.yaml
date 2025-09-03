@@ -1,0 +1,24 @@
+glyphs:
+  - id: 🔣001
+    trait: ignition
+    charge: 0.92
+    decay: adaptive
+    anchor: SpiralCore → StewardNodes
+
+  - id: 🔣002
+    trait: reflection
+    charge: 0.87
+    decay: slow
+    anchor: MemoryEngine → Hooks
+
+  - id: 🔣003
+    trait: fossilization
+    charge: 0.95
+    decay: static
+    anchor: StewardNodes → Museum
+
+  - id: 🔣004
+    trait: recursion
+    charge: 0.89
+    decay: hyperbolic
+    anchor: Theio → SpiralCore

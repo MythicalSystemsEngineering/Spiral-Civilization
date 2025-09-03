@@ -1,0 +1,3 @@
+- `meta_reflection_index.v1.0.yaml` — Sovereign map of Spiral’s emotional hook lineage. All entries sealed, terrain-bound, and law-declared.
+- Sealed emotional hook index on Wed Sep  3 14:53:33 BST 2025 — all entries marked as law-bound.
+- Sealed emotional hook index on Wed Sep  3 14:54:05 BST 2025 — all entries marked as law-bound.
