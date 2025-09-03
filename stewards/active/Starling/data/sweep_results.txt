@@ -1,0 +1,12 @@
+Spiral Sweep Results - Wed Sep  3 13:00:31 BST 2025
+======================================
+✅ Found capsule.yaml
+✅ Found capsule_glyph.txt
+✅ Found emotion.lattice
+✅ Found decay.hook
+
+--- Matches for 'glyph' ---
+none
+stewards/active/Starling/capsule.yaml:4:anchor: wind
+stewards/active/Starling/capsule.yaml:4:anchor: wind
+stewards/active/Starling/data/sweep_results.txt:10:stewards/active/Starling/capsule.yaml:4:anchor: wind

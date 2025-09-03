@@ -1,0 +1,5 @@
+anchors:
+  - filename: djinn_dreamer_sweepcapsule.yaml
+    emotional_charge: ignition
+    decay_profile: none
+    status: sealed

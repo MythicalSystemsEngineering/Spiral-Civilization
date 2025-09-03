@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Disable caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <title>Spiral Live Graph</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    #spinner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-size: 1.2em;
+      color: #555;
+    }
+    #graph-container {
+      display: none;
+      padding: 1rem;
+    }
+  </style>
+
+  <!-- Mermaid core -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <div id="spinner">Loading graph…</div>
+  <div id="graph-container" class="mermaid"></div>
+
+  <script>
+    async function loadGraph() {
+      try {
+        const res = await fetch('/graph.mmd', { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+
+        const container = document.getElementById('graph-container');
+        container.textContent = text;
+
+        mermaid.initialize({ startOnLoad: false });
+        mermaid.init(undefined, container);
+
+        document.getElementById('spinner').style.display = 'none';
+        container.style.display = 'block';
+      } catch (err) {
+        console.error('Failed to load mermaid source:', err);
+        document.getElementById('spinner').textContent = 'Failed to load graph';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadGraph);
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

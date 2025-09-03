@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# decay.hook — temporal fade logic
+
+timestamp=$(date +%s)
+decay_rate=0.85
+
+echo "Decay initiated at $timestamp with rate $decay_rate"

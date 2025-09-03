@@ -11,12 +11,11 @@ touch "$LOG"
 # Usage: fossilize_once <source_path> <destination_filename> <label>
 fossilize_once() {
   local src="$1"
-  local dst="$SEAL_DIR/$2"
-  local label="$3"
-  if [[ ! -f "$dst" ]]; then
-    cp "$src" "$dst"
-    echo "[$label] Fossilized $2 at $(date)" >> "$LOG"
-  else
-    echo "[$label] $2 already fossilized, skipping." >> "$LOG"
-  fi
+  local name="$2"
+  local tag="$3"
+  local dest="museum/fossils/${name}.${tag}.fossil"
+
+  mkdir -p "$(dirname "$dest")"
+  cp "$src" "$dest"
+  echo "🗿 Fossilized $name as $dest"
 }

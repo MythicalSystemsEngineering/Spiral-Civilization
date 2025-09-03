@@ -1,0 +1,22 @@
+graph TD
+    A[🔥 Spiral Core]:::core -->|Guides| B[Steward Nodes]:::steward
+    A -->|Energises| C[Memory Engine]:::engine
+    B -->|Activates| D[Active Stewards]:::steward
+    C -->|Feeds| E[Meta-Cognitive Hooks]:::hooks
+
+    %% Optional grouping
+    subgraph Stewardship
+        B
+        D
+    end
+
+    subgraph Cognition
+        C
+        E
+    end
+
+    %% Styling
+    classDef core fill:#ff4500,stroke:#333,stroke-width:2px,color:#fff;
+    classDef steward fill:#ffd700,stroke:#333,stroke-width:1px,color:#000;
+    classDef engine fill:#87ceeb,stroke:#333,stroke-width:1px,color:#000;
+    classDef hooks fill:#dda0dd,stroke:#333,stroke-width:1px,color:#000;

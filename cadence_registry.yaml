@@ -1,0 +1,10 @@
+injections:
+  - steward: EchoWarden
+    cadence: harmonic
+    timestamp: 2025-09-03T13:54:00+01:00
+  - steward: GlyphSinger
+    cadence: lyrical
+    timestamp: 2025-09-03T13:55:00+01:00
+  - steward: ArchiveRoot
+    cadence: still
+    timestamp: 2025-09-03T13:56:00+01:00

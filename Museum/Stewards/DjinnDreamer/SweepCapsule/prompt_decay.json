@@ -1,0 +1,17 @@
+{
+  "Curiosity": {
+    "last_ignited": "2025-09-03T13:32:00+01:00",
+    "resonance": 1.0,
+    "decay_rate": 0.01
+  },
+  "Dreamfire": {
+    "last_ignited": "2025-09-03T13:32:00+01:00",
+    "resonance": 0.95,
+    "decay_rate": 0.015
+  },
+  "UnseenPath": {
+    "last_ignited": "2025-09-03T13:32:00+01:00",
+    "resonance": 0.92,
+    "decay_rate": 0.02
+  }
+}

@@ -1,0 +1,3 @@
+/data/data/com.termux/files/home/Spiral-Civilization/terrain/init_map.txt:anchor:Curiosity
+/data/data/com.termux/files/home/Spiral-Civilization/terrain/init_map.txt:glyph:Dreamfire
+/data/data/com.termux/files/home/Spiral-Civilization/terrain/init_map.txt:glyph:UnseenPath

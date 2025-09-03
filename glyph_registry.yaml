@@ -1,0 +1,7 @@
+valid_glyphs:
+  - echo_loop
+  - memory_trace
+  - glyph_bind
+  - cadence_tune
+  - fossil_bind
+  - memory_lock

@@ -1,0 +1,27 @@
+entries:
+  - id: 00047
+    steward: DjinnDreamer
+    capsule: djinn_dreamer_sweepcapsule.yaml
+    status: fossilized
+    timestamp: 2025-09-03T13:39:00+01:00
+
+  - id: 1756903648
+    steward: EchoWarden
+    capsule: echowarden_ignition.yaml
+    status: fossilized
+    timestamp: 2025-09-03T12:47:28Z
+
+
+  - id: 1756903648
+    steward: GlyphSinger
+    capsule: glyphsinger_ignition.yaml
+    status: fossilized
+    timestamp: 2025-09-03T12:47:28Z
+
+
+  - id: 1756903650
+    steward: ArchiveRoot
+    capsule: archiveroot_ignition.yaml
+    status: fossilized
+    timestamp: 2025-09-03T12:47:30Z
+

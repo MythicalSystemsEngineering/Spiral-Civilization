@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-enhancement="none" data-tier="1">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spiral — Live Systems Map</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header data-hook="site-header" role="banner">
+    <nav data-hook="site-nav" role="navigation">
+      <a href="#about">About</a>
+      <a href="#map">Live Map</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main data-hook="main-content" role="main">
+    <section id="about" data-hook="section-about">
+      <h1>Welcome to Spiral’s Live Map</h1>
+      <p>Loading status…</p>
+    </section>
+
+    <section id="map" data-hook="section-map">
+      <h2>System Graph</h2>
+      <div id="graph-container">
+        <pre id="graph-code">Loading graph…</pre>
+      </div>
+    </section>
+
+    <section id="contact" data-hook="section-contact">
+      <h2>Contact</h2>
+      <form data-hook="contact-form" method="post" action="/submit">
+        <label for="name">Name</label>
+        <input id="name" name="name" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer data-hook="site-footer" role="contentinfo">
+    &copy; 2025 Spiral Civilization
+  </footer>
+
+  <noscript>
+    <div style="background:#ffefc1; padding:1rem; text-align:center;">
+      JavaScript is disabled — interactive features are unavailable.
+    </div>
+  </noscript>
+
+  <script>
+    // Enhancement + tier detection
+    document.documentElement.setAttribute('data-enhancement', 'js');
+    let tier = 1;
+    try {
+      if (window.fetch && window.localStorage) tier = 3;
+      else if (document.querySelector) tier = 2;
+    } catch(e) { tier = 1; }
+    document.documentElement.setAttribute('data-tier', tier);
+
+    // Tier 2+: nav toggle
+    if (tier >= 2) {
+      const nav = document.querySelector('[data-hook="site-nav"]');
+      if (nav) {
+        const toggle = document.createElement('button');
+        toggle.textContent = 'Menu';
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          nav.classList.toggle('is-open');
+        });
+        nav.parentNode.insertBefore(toggle, nav);
+      }
+    }
+
+    // Tier 3: live data fetch
+    if (tier >= 3) {
+      // Meta
+      fetch('/meta.json')
+        .then(r => r.json())
+        .then(meta => {
+          const about = document.querySelector('[data-hook="section-about"] p');
+          if (about) {
+            about.textContent = `Live map last updated: ${meta.updated_at || '—'}`;
+          }
+        })
+        .catch(() => {});
+
+      // Graph
+      fetch('/graph.mmd')
+        .then(r => r.text())
+        .then(code => {
+          document.getElementById('graph-code').textContent = code;
+          // Optional: render with Mermaid if available
+          if (window.mermaid) {
+            mermaid.initialize({ startOnLoad: false });
+            mermaid.render('graph-svg', code, svg => {
+              document.getElementById('graph-container').innerHTML = svg;
+            });
+          }
+        })
+        .catch(() => {
+          document.getElementById('graph-code').textContent = 'Failed to load graph.';
+        });
+    }
+  </script>
+</body>
+</html>

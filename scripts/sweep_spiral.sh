@@ -27,11 +27,11 @@ for term in "${PATTERNS[@]}"; do
     -e "$term" "$ROOT" 2>/dev/null >> "$OUT" || echo "none" >> "$OUT"
 done
 
-echo -e "\nSweep complete. Results in data/sweep_results.txt"
+echo -e "\nSweep complete. Results in $OUT"
 
 # Fossilize output once
+source "$(dirname "$0")/lib_fossilizer.sh"
 fossilize_once "$OUT" "$(basename "$OUT")" "SWEEP"
-
 
 
 
