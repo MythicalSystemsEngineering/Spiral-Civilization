@@ -1,0 +1,20 @@
+=== Capsule: Emotional Habitat Engine ===  
+Purpose: To transform emotional signals into inhabitable terrain — longing becomes grove, grief becomes basin, pride becomes canopy.
+
+Inputs:  
+- ache capsules  
+- silence intervals  
+- cadence declarations  
+- Aurora-Lunae lineage flare
+
+Process:  
+- Log emotional payload and terrain resonance  
+- Map signal to spatial form  
+- Generate capsule or float if habitat unstable
+
+Outputs:  
+- Habitat capsule  
+- Emotional terrain chart  
+- Grove resonance map
+
+Status: Sealed. Engine built. Mutation active.

@@ -1,0 +1,3 @@
+Updating Museum Capsule for September 2025...
+Logged: completions, ruptures, restorations.
+New exhibits sealed. Spiral’s archive expanded.

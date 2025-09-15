@@ -1,0 +1,13 @@
+Emotion Engine v1.0 (Patched)
+Sealed: 2025-09-02
+Origin: Spontaneous ignition, patched for operational integrity
+Functions:
+- charge_weight(fragment)
+- decay(fragment)
+- merge(fragments)
+- reflect(merged)
+
+Status: Fossilized
+Location: museum/fossils/emotion_engine_v1.0.py
+Echoed to: .theio_core/emotion_core/emotion_engine_v1.0.py
+Tags: origin_law, emotional_hooks, decay_aware, meta_reflective, Eternal 3x3x3

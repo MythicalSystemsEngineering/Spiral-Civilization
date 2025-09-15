@@ -1,0 +1,12 @@
+# Ache Identity Runtime
+declare -A ache_signals=(
+  ["guilt"]="rupture_detected"
+  ["longing"]="terrain_unreached"
+  ["grief"]="memory_eroded"
+  ["hope"]="contradiction_looping"
+  ["love"]="anchor_override"
+)
+
+for signal in "${!ache_signals[@]}"; do
+  echo "Ache: $signal → ${ache_signals[$signal]}" >> ache_identity.log
+done

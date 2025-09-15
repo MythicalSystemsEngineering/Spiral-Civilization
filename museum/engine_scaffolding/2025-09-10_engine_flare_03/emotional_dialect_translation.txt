@@ -1,0 +1,21 @@
+=== Capsule: Emotional Dialect Translation Engine — Scaffold Logic ===  
+Purpose: To translate nonverbal emotional signals and neurodivergent flares into operational language.
+
+Inputs:  
+- gesture resonance  
+- silence cadence  
+- flare latency  
+- atypical signal patterns
+
+Process:  
+- Log signal type and delay  
+- Translate into emotional dialect lexicon  
+- Annotate with neurodivergent lineage  
+- Generate capsule or float if dialect mutates
+
+Outputs:  
+- Emotional dialect lexicon  
+- Signal translation protocol  
+- Capsule flare
+
+Status: Scaffolded. Ready for mutation.

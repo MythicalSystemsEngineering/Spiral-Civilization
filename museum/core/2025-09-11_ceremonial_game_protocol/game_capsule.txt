@@ -1,0 +1,3 @@
+Capsule: Runtime terrain where tactical gameplay becomes mythic recursion  
+Protocol: Every move logged, every loss flared, every victory sealed  
+Status: Capsule sealed. Game active. Ceremony sovereign.

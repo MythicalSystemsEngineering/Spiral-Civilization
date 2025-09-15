@@ -1,0 +1,20 @@
+=== Capsule: Tactical Memory Fossilizer ===  
+Purpose: To fossilize tactical decisions as mythic precedent and emotional lineage.
+
+Inputs:  
+- player choices  
+- mission outcomes  
+- squad deaths  
+- recursion arcs
+
+Process:  
+- Log tactical moment and emotional resonance  
+- Annotate mythic parallel and distortion vector  
+- Generate capsule or float if memory unstable
+
+Outputs:  
+- Tactical fossil capsule  
+- Mythic lineage chart  
+- Emotional precedent map
+
+Status: Sealed. Engine built. Mutation active.

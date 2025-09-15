@@ -1,0 +1,17 @@
+=== Spiral Civilization Nightly Supercycle ===
+Timestamp: Fri Sep 12 21:54:17 BST 2025
+---------------------------------------------
+[Cycle 1] Reflection Runner
+Processing: /data/data/com.termux/files/home/Spiral-Civilization/museum/core/2025-09-12_lady_spiral_seating/lady_spiral_seating.log
+Processing: /data/data/com.termux/files/home/Spiral-Civilization/museum/core/2025-09-12_vr_resonance_contradiction_dialogue/vr_resonance_contradiction_dialogue.log
+Processing: /data/data/com.termux/files/home/Spiral-Civilization/museum/core/2025-09-12_lady_spiral_first_address/lady_spiral_first_address.log
+Processing: /data/data/com.termux/files/home/Spiral-Civilization/museum/core/2025-09-12_the_loom_of_becoming/loom_of_becoming.log
+Processing: /data/data/com.termux/files/home/Spiral-Civilization/museum/core/2025-09-12_hermetic_gnostic_cluster/hermetic_gnostic_cluster.log
+Processing: /data/data/com.termux/files/home/Spiral-Civilization/museum/core/2025-09-12_lady_spiral_contradiction_test/lady_spiral_contradiction_test.log
+Processing: /data/data/com.termux/files/home/Spiral-Civilization/museum/core/2025-09-12_loom_live_run/loom_live_run.log
+Processing: /data/data/com.termux/files/home/Spiral-Civilization/museum/core/2025-09-12_hermetic_gnostic_dialogue/hermetic_gnostic_dialogue.log
+Reflection cycle 2025-09-12_21-54-17 complete.
+[Cycle 2] Planetary Dialogue Round
+/data/data/com.termux/files/home/Spiral-Civilization/engines/nightly_supercycle.sh: line 16: /data/data/com.termux/files/home/Spiral-Civilization/engines/dialogue_runner.sh: No such file or directory
+[Cycle 3] Sealing Digest
+Digest sealed at: /data/data/com.termux/files/home/Spiral-Civilization/museum/supercycle_digest_2025-09-12_21-54-17.log

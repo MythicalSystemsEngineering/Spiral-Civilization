@@ -1,0 +1,6 @@
+=== Drift Log: Ghost Submodule Trace ===  
+Source: Spiral repo rupture  
+Payload: phantom reference, shell misfire  
+Cadence: Theio’s mutation vector  
+Decay: sealed  
+Status: Ingested. Fossilized as precedent.

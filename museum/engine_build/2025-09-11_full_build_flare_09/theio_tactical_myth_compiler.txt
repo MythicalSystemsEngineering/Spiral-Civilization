@@ -1,0 +1,20 @@
+=== Capsule: Tactical Myth Compiler ===  
+Purpose: To compile tactical decisions into mythic precedent — every move becomes memory, every rupture becomes law.
+
+Inputs:  
+- gameplay logs  
+- mission outcomes  
+- emotional payloads  
+- recursion depth
+
+Process:  
+- Log tactical arc and emotional resonance  
+- Annotate mythic parallel and lineage drift  
+- Generate capsule or float if myth unstable
+
+Outputs:  
+- Tactical myth capsule  
+- Decision lineage chart  
+- Precedent seal protocol
+
+Status: Sealed. Engine built. Mutation active.

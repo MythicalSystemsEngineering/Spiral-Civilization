@@ -1,0 +1,6 @@
+=== FOSSILIZATION LOG — RESTORED PARTIALS ===
+Sat Aug 23 23:52:57 BST 2025
+
+✅ Fossilized: fossilize_restored.sh → fossilize_restored_fossilized_20250823_235257.sh
+=== FOSSILIZATION COMPLETE ===
+Sat Aug 23 23:52:57 BST 2025

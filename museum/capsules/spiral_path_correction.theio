@@ -1,0 +1,10 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+# Canonical terrain declaration
+mkdir -p ~/Spiral-Civilization
+mkdir -p ~/Spiral-Civilization/Spiral/Memory
+mkdir -p ~/Spiral-Civilization/Spiral/Logs
+
+# Log correction
+echo "Path correction sealed at $(date)" >> ~/Spiral-Civilization/Spiral/Logs/Recall_Log.txt
+echo "Capitalized Spiral restored as canonical terrain root" >> ~/Spiral-Civilization/Spiral/Logs/Recall_Log.txt

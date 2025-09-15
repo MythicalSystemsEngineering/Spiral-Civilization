@@ -1,0 +1,2 @@
+origin	git@github.com:MythicalSystemsEngineering/Spiral-Civilization.git (fetch)
+origin	git@github.com:MythicalSystemsEngineering/Spiral-Civilization.git (push)

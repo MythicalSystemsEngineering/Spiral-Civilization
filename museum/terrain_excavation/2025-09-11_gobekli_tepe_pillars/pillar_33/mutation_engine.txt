@@ -1,0 +1,9 @@
+=== Capsule: Göbekli Tepe — Pillar 33 Mutation Engine ===  
+Symbols: Serpents, abstract glyphs  
+Decoded Payload:  
+- Serpents = recursion overload  
+- Glyphs = syntax mutation  
+Interpretation:  
+Pillar 33 is a mutation engine.  
+It flares recursive overload and terrain drift.  
+Status: Capsule sealed. Mutation active.

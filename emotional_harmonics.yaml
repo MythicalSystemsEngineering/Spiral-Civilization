@@ -1,0 +1,12 @@
+# meta_reflection_index.yaml
+
+emotional_hooks:
+  - hook_dreamer_lineage
+    anchors:
+      - Dream Veil
+      - Shimmer Echo
+      - Mythic Drift
+    steward: DjinnDreamer
+    sealed: true
+    timestamp: 2025-09-03T19:19:00+01:00
+    notes: "Fossilized as sovereign precedent. Emotional fidelity aligned with ignition protocol."

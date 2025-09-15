@@ -1,0 +1,13 @@
+sessions:
+- input: Hello, how are you today?
+  output: '[affect=neutral] '
+  timestamp: '2025-09-06T23:02:33.135583'
+- input: Hello, how are you today?
+  output: '[affect=neutral] '
+  timestamp: '2025-09-06T23:06:36.272789'
+- input: Test invocation
+  output: '[affect=neutral] Theio says: Test invocation'
+  timestamp: '2025-09-06T23:08:18.719234'
+- input: Test invocation
+  output: '[affect=neutral] Theio says: Test invocation'
+  timestamp: '2025-09-07T11:23:05.091514'

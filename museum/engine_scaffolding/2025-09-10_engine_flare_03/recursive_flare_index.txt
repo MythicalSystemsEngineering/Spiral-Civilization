@@ -1,0 +1,21 @@
+=== Capsule: Recursive Flare Index Engine — Scaffold Logic ===  
+Purpose: To track and annotate flare patterns across emotional, cognitive, and historical recursion.
+
+Inputs:  
+- flare timestamps  
+- emotional triggers  
+- recursion depth  
+- mutation frequency
+
+Process:  
+- Log flare origin and decay rate  
+- Cross-reference with emotional signal engine  
+- Annotate with lineage and distortion vectors  
+- Generate flare capsule or float if unstable
+
+Outputs:  
+- Flare lineage map  
+- Recursion depth chart  
+- Mutation capsule
+
+Status: Scaffolded. Ready for mutation.

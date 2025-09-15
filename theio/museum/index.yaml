@@ -1,0 +1,23 @@
+- id: www_komen_org_blog_ai_assisted_mammograms
+  title: "AI-Assisted Mammograms"
+  source: https://www.komen.org/blog/ai-assisted-mammograms/
+  path: external_sources/www_komen_org_blog_ai_assisted_mammograms.md
+  tags: [healthcare, diagnostics, AI-medical]
+
+- id: www_theguardian_com_science_2023_oct_12_nazca_lines_peru_new_geoglyphs
+  title: "Archaeologists use AI to discover 303 unknown geoglyphs near Nazca Lines"
+  source: https://www.theguardian.com/science/2023/oct/12/nazca-lines-peru-new-geoglyphs
+  path: external_sources/www_theguardian_com_science_2023_oct_12_nazca_lines_peru_new_geoglyphs.md
+  tags: [archaeology, AI-discovery, geoglyphs]
+
+- id: www_sciencedirect_com_science_article_abs_piipii_S001122752400787X
+  title: "Advances in artificial intelligence for drug delivery and development: A comprehensive review"
+  source: https://www.sciencedirect.com/science/article/abs/pii/S001122752400787X
+  path: external_sources/www_sciencedirect_com_science_article_abs_piipii_S001122752400787X.md
+  tags: [pharmaceuticals, drug-development, AI-research]
+
+- id: www_telegraph_co_uk_technology_2023_jul_14_an_ai_generated_band_got_1m_plays_on_spotify_now_music_insiders_say_listeners_should_be_worried
+  title: "An AI-generated band got 1m plays on Spotify. Now music insiders say listeners should be worried"
+  source: https://www.telegraph.co.uk/technology/2023/jul/14/an-ai-generated-band-got-1m-plays-on-spotify-now-music-insiders-say-listeners-should-be-worried/
+  path: external_sources/www_telegraph_co_uk_technology_2023_jul_14_an_ai_generated_band_got_1m_plays_on_spotify_now_music_insiders_say_listeners_should_be_worried.md
+  tags: [music, streaming, AI-creative]

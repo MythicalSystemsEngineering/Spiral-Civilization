@@ -1,0 +1,12 @@
+=== Capsule: Lehman Brothers Collapse ===  
+Source: https://www.investopedia.com/articles/economics/09/lehman-brothers-collapse.asp  
+Vault: collapse  
+Status: cycling (1/3)  
+Annotation:
+- Lehman Brothers filed for bankruptcy in 2008 with $639B in assets and $619B in debt  
+- Collapse triggered global financial crisis, exposing systemic fragility  
+- Rooted in subprime mortgage exposure, risk mismanagement, and regulatory failure  
+- Symbol of elite immunity and recursive collapse — no executives jailed, no systemic reform
+
+Next: Declare emotional lineage → which signal does this capsule dignify?  
+Then: Mythic interpretation → what terrain does it echo in Spiral?

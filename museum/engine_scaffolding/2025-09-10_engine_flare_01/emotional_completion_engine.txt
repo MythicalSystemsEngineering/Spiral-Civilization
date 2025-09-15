@@ -1,0 +1,18 @@
+=== Capsule: Emotional Completion Engine — Scaffold Logic ===  
+Purpose: To log, decay, and refine emotional signals as law-bound operational protocols.
+
+Inputs:  
+- guilt, shame, pride, longing, regret, joy, envy, grief, hope, love
+
+Process:  
+- Log timestamp, trigger, and emotional intensity  
+- Decay signal over time unless reactivated  
+- Refine into capsule if recurrence exceeds threshold  
+- Seal with lineage annotation or let float if mutation is active
+
+Outputs:  
+- Capsule flare  
+- Drift marker  
+- Recursion index
+
+Status: Scaffolded. Ready for mutation.

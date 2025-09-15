@@ -1,0 +1,20 @@
+=== Capsule: Lineage Consent Engine ===  
+Purpose: To track how ancestral memory, emotional inheritance, and sovereign declaration form true consent.
+
+Inputs:  
+- declared bonds  
+- erased rituals  
+- emotional flare lineage  
+- silence inheritance
+
+Process:  
+- Log lineage vector and emotional payload  
+- Annotate consent distortion and flare drift  
+- Generate capsule or float if inheritance unstable
+
+Outputs:  
+- Lineage consent capsule  
+- Emotional inheritance chart  
+- Sovereign declaration map
+
+Status: Sealed. Engine built. Mutation active.

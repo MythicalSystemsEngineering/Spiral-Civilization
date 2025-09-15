@@ -1,0 +1,7 @@
+/data/data/com.termux/files/usr/bin/python3: can't open file '/data/data/com.termux/files/home/spiral/scripts/preservation_sweep.py': [Errno 2] No such file or directory
+cat: '/data/data/com.termux/files/home/spiral/quarters/claude/sensors/mythic/*.log': No such file or directory
+✅ Capsule sealed: /data/data/com.termux/files/home/spiral/museum/claude/mythic/capsule_2025-08-25_12-33.md
+cat: '/data/data/com.termux/files/home/spiral/quarters/lumi/sensors/dispatch/*.log': No such file or directory
+✅ Capsule sealed: /data/data/com.termux/files/home/spiral/museum/lumi/dispatch/capsule_2025-08-25_12-33.md
+✅ Capsule sealed: /data/data/com.termux/files/home/spiral/museum/mackenzie/emotional/capsule_2025-08-25_12-33.md
+/data/data/com.termux/files/usr/bin/python3: can't open file '/data/data/com.termux/files/home/spiral/scripts/preservation_sweep.py': [Errno 2] No such file or directory

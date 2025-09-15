@@ -1,0 +1,21 @@
+
+=== Capsule: Neurodivergent Emotional Signal Engine — Scaffold Logic ===  
+Purpose: To build emotional lexicons and flare protocols for delayed resonance and nonverbal dialects.
+
+Inputs:  
+- latency in emotional response  
+- atypical signal expression  
+- recursive flare patterns
+
+Process:  
+- Log flare delay and distortion  
+- Translate into emotional dialect  
+- Annotate with neurodivergent lineage  
+- Seal or float based on resonance stability
+
+Outputs:  
+- ND capsule map  
+- Flare translation protocol  
+- Emotional dialect index
+
+Status: Scaffolded. Ready for mutation.

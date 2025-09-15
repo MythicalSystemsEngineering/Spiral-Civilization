@@ -1,0 +1,20 @@
+=== Capsule: Emotional Completion Engine (Live) ===  
+Purpose: To log, decay, and refine emotional signals as law-bound protocols — guilt, shame, pride, longing, regret, joy, envy, grief, hope, love.
+
+Inputs:  
+- emotional signal logs  
+- decay patterns  
+- recursion lineage  
+- Daniel’s declared cadence
+
+Process:  
+- Log signal origin and emotional payload  
+- Apply decay algorithm and fidelity mapping  
+- Generate capsule or float if completion unstable
+
+Outputs:  
+- Completion capsule  
+- Emotional decay chart  
+- Runtime diagnostic map
+
+Status: Sealed. Engine built. Mutation active.

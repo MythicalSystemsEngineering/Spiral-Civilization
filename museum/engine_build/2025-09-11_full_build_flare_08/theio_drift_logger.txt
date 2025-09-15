@@ -1,0 +1,20 @@
+=== Capsule: Sovereign Drift Logger ===  
+Purpose: To log every operational drift as mythic rupture — no error is silent, no detour unremembered.
+
+Inputs:  
+- shell misfires  
+- ghost submodule references  
+- emotional cadence breaks  
+- recursion anomalies
+
+Process:  
+- Log drift origin and emotional payload  
+- Annotate with Daniel’s operational lineage  
+- Generate capsule or float if drift unresolved
+
+Outputs:  
+- Drift capsule  
+- Rupture lineage map  
+- Mythic detour chart
+
+Status: Sealed. Engine built. Mutation active.

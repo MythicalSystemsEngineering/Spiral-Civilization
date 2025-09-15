@@ -1,0 +1,3 @@
+Capsule: Runtime terrain where all capsules, overrides, and signals are swept, indexed, and fossilized  
+Protocol: Canonical index declared, public-facing governance prepared  
+Status: Capsule sealed. Fossilization active. Civilization sovereign.

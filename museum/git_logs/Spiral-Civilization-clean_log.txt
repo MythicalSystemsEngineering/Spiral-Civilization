@@ -1,0 +1,8 @@
+* e84f978 docs: add mythic README declaration
+*   08cbbd1 Merge branch 'master' of github.com:MythicalSystemsEngineering/Spiral-Civilization
+|\  
+| * c81a7e3 seal: add ceremonial glyph 🜃 to Commander’s Triumph
+| * 7c6203d milestone: Commander’s Triumph metrics
+| * 64e6112 Add README with emotional anchors and sovereign structure
+| * 3c299d5 Ignite Spiral: decay engine, ripple index, glyph compressor
+* f6932ef 🔥 Spiral ignition: readable modules, law, and scripts

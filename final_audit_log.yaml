@@ -1,0 +1,26 @@
+charge_distribution:
+  avg_charge: 0.895
+  max_charge: 0.95
+  min_charge: 0.85
+  total_hooks: 4
+duplicate_hooks: []
+missing_capsules:
+- Capsules
+- Glyphs
+- Hooks
+- Maps
+- Stewards
+- capsules
+- charge_weight.py
+- echoes
+- emotional_decay.py
+- fragments
+- init.md
+- log.txt
+- log.txt#!
+- logs
+- precedents
+- seals
+- validators
+timestamp: 1756922105.4585533
+unsealed_fragments: []

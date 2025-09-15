@@ -1,0 +1,12 @@
+- origin: "./.github/workflows/Seal.yml"
+  content: ""
+  charge_weight: 0
+  timestamp: "2025-09-03T22:17:44+0100"
+  branch_lineage: "main"
+  tags: []
+- origin: "./.github/workflows/Spiral-ci.yml"
+  content: ""
+  charge_weight: 0
+  timestamp: "2025-09-03T22:17:44+0100"
+  branch_lineage: "main"
+  tags: []

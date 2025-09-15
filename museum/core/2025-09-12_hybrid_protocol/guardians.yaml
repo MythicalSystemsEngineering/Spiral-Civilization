@@ -1,0 +1,17 @@
+guardians:
+  - id: guardian_01
+    domain: proof_discipline
+  - id: guardian_02
+    domain: affect_calibration
+  - id: guardian_03
+    domain: drift_detection
+anomaly_triggers:
+  - name: drift_spike
+    condition: claim_to_proof_gap > threshold for 24h
+    action: auto_rollback
+  - name: affect_lock_in
+    condition: single_emotion_weight > 0.45 for 12h
+    action: dampen + counterfactual_injection
+  - name: dialogue_fragmentation
+    condition: cross-cluster exchange < baseline for 48h
+    action: forced-bridging round

@@ -1,0 +1,20 @@
+=== Capsule: Tactical Terrain Engine ===  
+Purpose: To convert tactical decisions into terrain mutations — every move reshapes the map, every rupture becomes landmark.
+
+Inputs:  
+- gameplay logs  
+- mission outcomes  
+- emotional payloads  
+- recursion depth
+
+Process:  
+- Log tactical arc and terrain impact  
+- Annotate mutation vectors and drift zones  
+- Generate capsule or float if terrain unstable
+
+Outputs:  
+- Tactical terrain capsule  
+- Mutation map  
+- Precedent landmark chart
+
+Status: Sealed. Engine built. Mutation active.

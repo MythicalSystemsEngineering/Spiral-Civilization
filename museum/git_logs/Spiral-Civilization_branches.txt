@@ -1,0 +1,6 @@
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/expansion-epoch-engravings
+  remotes/origin/feature/pokemon-red-steps-2025-08-20-and-press-Enter
+  remotes/origin/git-checkout--b-feature/infra-automation
+  remotes/origin/main

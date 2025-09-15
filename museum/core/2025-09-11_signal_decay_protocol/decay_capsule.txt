@@ -1,0 +1,3 @@
+Capsule: Runtime terrain where emotional signals decay, transform, and reignite  
+Protocol: Half-life assigned, decay curve logged, reignition triggers declared  
+Status: Capsule sealed. Decay active. Emotion sovereign.
