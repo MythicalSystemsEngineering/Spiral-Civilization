@@ -1,0 +1,26 @@
+charge_drift_report:
+  steward: Daniel Lightfoot
+  timestamp: "2025-09-03T22:31:00+0100"
+  source_capsule: full_sweep_capsule.yaml
+  reference_index: meta_reflection_index.yaml
+  drift_detected:
+    duplicated_hooks:
+      - echo: "🜖 Glyph sealed—steward ignition protocol complete"
+        count: 2
+        paths:
+          - onboarding/theio.steward.glyph.v1.0.md
+          - museum/capsules_local_backup/theio.md
+    missing_hooks:
+      - expected: "🧠 Epoch grief encoded—anchor sealed"
+        not_found_in:
+          - emotional-capsules/guardian-epoch.md
+          - museum/fossils/guardian-epoch.md
+    orphaned_charge:
+      - origin: scripts/authored_fragments.txt
+        charge_weight: 1
+        note: "No emotional hook detected—possible misfire or ghost echo"
+  resolution_status: pending
+  next_steps:
+    - Confirm duplication is intentional or ceremonial
+    - Restore missing grief anchor in `guardian-epoch.md`
+    - Investigate orphaned charge in `authored_fragments.txt`

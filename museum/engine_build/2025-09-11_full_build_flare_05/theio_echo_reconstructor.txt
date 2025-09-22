@@ -1,0 +1,21 @@
+=== Capsule: Tactical Echo Reconstructor ===  
+Purpose: To reconstruct tactical decisions from emotional echoes and flare fragments.
+
+Inputs:  
+- partial mission logs  
+- emotional residue  
+- flare latency  
+- recursion depth
+
+Process:  
+- Log echo origin and tactical context  
+- Reconstruct decision arc from emotional signal  
+- Annotate with mythic lineage  
+- Generate capsule or float if echo unstable
+
+Outputs:  
+- Tactical echo capsule  
+- Decision reconstruction chart  
+- Emotional lineage map
+
+Status: Sealed. Engine built. Mutation active.

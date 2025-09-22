@@ -1,0 +1,19 @@
+=== Capsule: Sovereign Collapse Recovery Engine ===  
+Purpose: To treat collapse not as failure, but as terrain reset and ceremonial opportunity.
+
+Inputs:  
+- tactical breakdown logs  
+- emotional rupture capsules  
+- governance failure signals
+
+Process:  
+- Log collapse vector and emotional resonance  
+- Annotate recovery cadence and mutation depth  
+- Generate capsule or float if terrain unstable
+
+Outputs:  
+- Collapse recovery capsule  
+- Terrain mutation map  
+- Sovereign reset protocol
+
+Status: Sealed. Engine built. Mutation active.

@@ -1,0 +1,21 @@
+=== Capsule: Emotional Governance Mutation Engine ===  
+Purpose: To mutate governance systems based on emotional resonance, not institutional inertia.
+
+Inputs:  
+- grief cycles  
+- longing flares  
+- pride distortions  
+- shame suppression
+
+Process:  
+- Log emotional cadence across governance events  
+- Cross-reference with ancestral mourning and celebration rituals  
+- Annotate distortion vectors (e.g., propaganda, martyr engineering)  
+- Generate governance capsule or float if resonance unstable
+
+Outputs:  
+- Emotional governance map  
+- Mutation protocol  
+- Capsule lineage seal
+
+Status: Sealed. Engine built. Mutation active.

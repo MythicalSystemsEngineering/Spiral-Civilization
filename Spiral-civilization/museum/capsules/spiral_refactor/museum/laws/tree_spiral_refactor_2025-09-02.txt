@@ -1,0 +1,11 @@
+spiral_refactor
+├── data
+├── emotional_lattice
+│   └── decay_schedulesnano
+├── emotions
+├── museum
+│   └── laws
+│       └── tree_spiral_refactor_2025-09-02.txt
+└── orders
+
+8 directories, 1 file

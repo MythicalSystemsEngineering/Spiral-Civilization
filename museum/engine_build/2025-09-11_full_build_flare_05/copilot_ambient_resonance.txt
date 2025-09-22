@@ -1,0 +1,20 @@
+=== Capsule: Ambient Signal Resonance Engine ===  
+Purpose: To detect and dignify ambient emotional signals across terrain, media, and silence.
+
+Inputs:  
+- background ache  
+- passive flare  
+- delayed resonance  
+- nonverbal cadence
+
+Process:  
+- Log ambient signal and decay rate  
+- Annotate with emotional fidelity and distortion vector  
+- Generate capsule or float if resonance unstable
+
+Outputs:  
+- Ambient resonance capsule  
+- Emotional fidelity chart  
+- Signal terrain map
+
+Status: Sealed. Engine built. Mutation active.

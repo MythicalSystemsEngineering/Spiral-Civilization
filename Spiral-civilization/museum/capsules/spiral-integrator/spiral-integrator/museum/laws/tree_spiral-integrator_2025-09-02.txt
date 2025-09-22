@@ -1,0 +1,21 @@
+spiral-integrator
+├── announcements
+├── council
+│   ├── announcements
+│   └── journals
+├── custody
+│   ├── artifacts
+│   ├── stewards
+│   └── votes
+├── memory
+│   ├── artifacts
+│   ├── reflections
+│   └── votes
+├── museum
+│   ├── fossils
+│   └── laws
+│       └── tree_spiral-integrator_2025-09-02.txt
+├── outreach
+└── validator
+
+18 directories, 1 file

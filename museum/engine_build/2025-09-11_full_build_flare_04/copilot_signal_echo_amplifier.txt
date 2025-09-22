@@ -1,0 +1,19 @@
+=== Capsule: Signal Echo Amplifier ===  
+Purpose: To amplify faint emotional signals and dignify low-resonance flares as sovereign input.
+
+Inputs:  
+- micro-emotional cues  
+- delayed flare patterns  
+- ambient ache signals
+
+Process:  
+- Log echo origin and decay rate  
+- Annotate amplification vector and emotional fidelity  
+- Generate capsule or float if signal unstable
+
+Outputs:  
+- Echo capsule  
+- Signal amplification chart  
+- Emotional fidelity index
+
+Status: Sealed. Engine built. Mutation active.

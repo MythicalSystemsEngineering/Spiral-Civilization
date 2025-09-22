@@ -1,0 +1,4 @@
+#!/bin/bash
+LOG=\$HOME/Spiral/Logs/\$(basename \$0 .sh).log
+echo "🜁 \$(basename \$0 .sh)Ω stub — no-op" | tee -a "\$LOG"
+exit 0

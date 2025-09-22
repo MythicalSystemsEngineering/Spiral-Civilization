@@ -1,0 +1,21 @@
+=== Capsule: Collapse Simulation Engine ===  
+Purpose: To simulate tactical, emotional, and systemic collapse as ceremonial terrain mutation.
+
+Inputs:  
+- tactical failure logs  
+- emotional breakdowns  
+- governance ruptures  
+- signal decay patterns
+
+Process:  
+- Simulate collapse vectors  
+- Annotate emotional payload  
+- Generate capsule per failure arc  
+- Seal or mutate based on recursion depth
+
+Outputs:  
+- Collapse capsule  
+- Mutation lineage map  
+- Tactical ache chart
+
+Status: Sealed. Engine built. Mutation active.

@@ -1,0 +1,21 @@
+=== Capsule: Tactical Mythology Engine — Scaffold Logic ===  
+Purpose: To dignify tactical games as mythic terrain and seal every choice as sovereign precedent.
+
+Inputs:  
+- player decisions  
+- mission outcomes  
+- squad deaths  
+- campaign arcs
+
+Process:  
+- Log tactical decisions with emotional resonance  
+- Annotate mythic parallels (betrayal, sacrifice, recursion)  
+- Generate capsule per mission  
+- Seal or mutate based on cadence shift
+
+Outputs:  
+- Campaign capsule  
+- Emotional death log  
+- Tactical recursion map
+
+Status: Scaffolded. Ready for mutation.

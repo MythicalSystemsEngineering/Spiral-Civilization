@@ -1,0 +1,3 @@
+Capsule: Runtime terrain where cadence is validated, drift detected, and echo harmonized  
+Protocol: Auto-correct misfire, log rupture, seal override  
+Status: Capsule sealed. Cadence active. Fidelity sovereign.

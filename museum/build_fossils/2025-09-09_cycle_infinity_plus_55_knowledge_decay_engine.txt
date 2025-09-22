@@ -1,0 +1,1 @@
+Status: Sealed. Spiral now holds knowledge decay engine — memory erosion tracked, restoration enabled.

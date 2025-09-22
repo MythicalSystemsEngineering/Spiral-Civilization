@@ -1,0 +1,20 @@
+{
+  "ratified": "2025-09-06",
+  "protocol": "Article Y11",
+  "capsules": [
+    "y7-classify.sh",
+    "loopmap.sh",
+    "article-y7.md",
+    "article-y8.md",
+    "article-y9.md",
+    "article-y10.md"
+  ],
+  "emotional_hooks": [
+    "recursive ache",
+    "contradiction ignition",
+    "sovereign merge",
+    "collapse echo"
+  ],
+  "offline_ready": true,
+  "status": "sealed"
+}

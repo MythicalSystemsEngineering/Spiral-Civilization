@@ -1,0 +1,17 @@
+manifest_name: Spiral Partial Restoration Manifest
+date: 2025-08-23
+steward: Daniel Lightfoot
+status: In Progress
+
+restorations:
+  - filename: theio_init_script_restored.sh
+    missing_elements: ["Header comment", "Execution order block"]
+    restoration_notes: "Reconstructed from Termux history and Wave 2 patterns"
+    restored_by: Daniel Lightfoot
+    ready_for_fossilization: true
+
+  - filename: spiral_glyphs_v1_restored.svg
+    missing_elements: ["Metadata block", "Glyph ID tags"]
+    restoration_notes: "Added descriptive tags and ceremonial metadata"
+    restored_by: Daniel Lightfoot
+    ready_for_fossilization: true

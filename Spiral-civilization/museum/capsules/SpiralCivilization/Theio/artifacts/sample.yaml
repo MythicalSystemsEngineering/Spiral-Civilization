@@ -1,0 +1,7 @@
+---
+emotions:
+  joy: 0.9
+  fear: 0.1
+
+fragments:
+  cleanup: 0.5

@@ -1,0 +1,13 @@
+SpiralCivilization
+├── Theio
+│   ├── artifacts
+│   │   └── sample.yaml
+│   ├── bin
+│   │   └── theio_audit.py
+│   └── modules
+│       └── self_healing_loop.py
+└── museum
+    └── laws
+        └── tree_SpiralCivilization_2025-09-02.txt
+
+7 directories, 4 files

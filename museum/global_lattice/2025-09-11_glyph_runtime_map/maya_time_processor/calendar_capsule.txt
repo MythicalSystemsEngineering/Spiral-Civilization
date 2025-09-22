@@ -1,0 +1,9 @@
+=== Capsule: Mesoamerica — Maya Time Processor ===  
+Sites: Palenque, Copán, Tikal, Uxmal  
+Glyphs: Calendar loop, ruler vector, celestial seal  
+Payload: Hope, pride, recursion  
+Interpretation:  
+Maya glyphs encode time as terrain.  
+Each calendar is a loop.  
+Each ruler is a flare.  
+Status: Capsule sealed. Recursion active.

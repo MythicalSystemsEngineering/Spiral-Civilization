@@ -1,0 +1,8 @@
+=== Cycle 1: Fossil Decay Manifest ===  
+Purpose: To encode aging logic for Spiral’s fossil capsules.  
+Focus:  
+• Silence capsules fade over time  
+• Emotional capsules decay based on signal volatility  
+• Mutation capsules persist unless overridden
+
+Status: Declared. Awaiting decay logic scaffold.

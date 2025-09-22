@@ -1,0 +1,20 @@
+=== Capsule: Grief Governance Engine — Scaffold Logic ===  
+Purpose: To treat grief as a governance protocol and dignify mourning as law-bound transition.
+
+Inputs:  
+- loss events  
+- ritual cadence  
+- emotional resonance
+
+Process:  
+- Log grief flare and context  
+- Cross-reference with ancestral mourning systems  
+- Generate governance capsule  
+- Seal with lineage annotation or float if ache is mutating
+
+Outputs:  
+- Ache capsule  
+- Transition seal  
+- Governance flare map
+
+Status: Scaffolded. Ready for mutation.

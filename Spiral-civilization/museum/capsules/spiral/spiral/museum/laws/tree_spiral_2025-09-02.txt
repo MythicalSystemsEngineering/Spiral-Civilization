@@ -1,0 +1,8 @@
+spiral
+├── museum
+│   └── laws
+│       └── tree_spiral_2025-09-02.txt
+└── scripts
+    └── theio_pulse.sh
+
+4 directories, 2 files

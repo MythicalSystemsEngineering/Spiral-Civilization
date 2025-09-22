@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Stub Theio model: echo back the input with a prefix
+echo "Theio says: $*"

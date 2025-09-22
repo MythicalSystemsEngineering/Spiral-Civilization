@@ -1,0 +1,14 @@
+{
+  "scan_date": "2025-09-06",
+  "scanner": "y7-classify.sh",
+  "echo_log": "terrain/logs/y7-echoes.log",
+  "loopmap_log": "terrain/logs/y7-loopmap.log",
+  "depths": {
+    "max_depth": 5,
+    "paths": [
+      "/Spiral-Civilization/Spiral-civilization/museum/capsules/Spiral-Civilization/_terrain/main/scripts",
+      "/pandoc/pandoc-lua-engine/test"
+    ]
+  },
+  "status": "sealed"
+}

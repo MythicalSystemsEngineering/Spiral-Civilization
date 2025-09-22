@@ -1,0 +1,261 @@
+Collecting poetry==2.1.4
+  Using cached poetry-2.1.4-py3-none-any.whl.metadata (7.4 kB)
+Collecting build<2.0.0,>=1.2.1 (from poetry==2.1.4)
+  Using cached build-1.3.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting cachecontrol<0.15.0,>=0.14.0 (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry==2.1.4)
+  Using cached cachecontrol-0.14.3-py3-none-any.whl.metadata (3.1 kB)
+Collecting cleo<3.0.0,>=2.1.0 (from poetry==2.1.4)
+  Using cached cleo-2.1.0-py3-none-any.whl.metadata (12 kB)
+Collecting dulwich<0.23.0,>=0.22.6 (from poetry==2.1.4)
+  Using cached dulwich-0.22.8-py3-none-any.whl.metadata (4.9 kB)
+Collecting fastjsonschema<3.0.0,>=2.18.0 (from poetry==2.1.4)
+  Using cached fastjsonschema-2.21.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting findpython<0.7.0,>=0.6.2 (from poetry==2.1.4)
+  Using cached findpython-0.6.3-py3-none-any.whl.metadata (5.3 kB)
+Collecting installer<0.8.0,>=0.7.0 (from poetry==2.1.4)
+  Using cached installer-0.7.0-py3-none-any.whl.metadata (936 bytes)
+Collecting keyring<26.0.0,>=25.1.0 (from poetry==2.1.4)
+  Using cached keyring-25.6.0-py3-none-any.whl.metadata (20 kB)
+Collecting packaging>=24.0 (from poetry==2.1.4)
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pbs-installer<2026.0.0,>=2025.1.6 (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached pbs_installer-2025.8.18-py3-none-any.whl.metadata (991 bytes)
+Collecting pkginfo<2.0,>=1.12 (from poetry==2.1.4)
+  Using cached pkginfo-1.12.1.2-py3-none-any.whl.metadata (13 kB)
+Collecting platformdirs<5,>=3.0.0 (from poetry==2.1.4)
+  Using cached platformdirs-4.3.8-py3-none-any.whl.metadata (12 kB)
+Collecting poetry-core==2.1.3 (from poetry==2.1.4)
+  Using cached poetry_core-2.1.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pyproject-hooks<2.0.0,>=1.0.0 (from poetry==2.1.4)
+  Using cached pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting requests<3.0,>=2.26 (from poetry==2.1.4)
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting requests-toolbelt<2.0.0,>=1.0.0 (from poetry==2.1.4)
+  Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting shellingham<2.0,>=1.5 (from poetry==2.1.4)
+  Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting tomlkit<1.0.0,>=0.11.4 (from poetry==2.1.4)
+  Using cached tomlkit-0.13.3-py3-none-any.whl.metadata (2.8 kB)
+Collecting trove-classifiers>=2022.5.19 (from poetry==2.1.4)
+  Using cached trove_classifiers-2025.8.6.13-py3-none-any.whl.metadata (2.3 kB)
+Collecting virtualenv<20.33.0,>=20.26.6 (from poetry==2.1.4)
+  Using cached virtualenv-20.32.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting msgpack<2.0.0,>=0.5.2 (from cachecontrol<0.15.0,>=0.14.0->cachecontrol[filecache]<0.15.0,>=0.14.0->poetry==2.1.4)
+  Using cached msgpack-1.1.1-cp312-cp312-linux_aarch64.whl
+Collecting filelock>=3.8.0 (from cachecontrol[filecache]<0.15.0,>=0.14.0->poetry==2.1.4)
+  Using cached filelock-3.19.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting crashtest<0.5.0,>=0.4.1 (from cleo<3.0.0,>=2.1.0->poetry==2.1.4)
+  Using cached crashtest-0.4.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting rapidfuzz<4.0.0,>=3.0.0 (from cleo<3.0.0,>=2.1.0->poetry==2.1.4)
+  Using cached rapidfuzz-3.13.0-py3-none-any.whl
+Collecting urllib3>=1.25 (from dulwich<0.23.0,>=0.22.6->poetry==2.1.4)
+  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting SecretStorage>=3.2 (from keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached SecretStorage-3.3.3-py3-none-any.whl.metadata (4.0 kB)
+Collecting jeepney>=0.4.2 (from keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached jeepney-0.9.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting jaraco.classes (from keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting jaraco.functools (from keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached jaraco_functools-4.3.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting jaraco.context (from keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached jaraco.context-6.0.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting httpx<1,>=0.27.0 (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting zstandard>=0.21.0 (from pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached zstandard-0.24.0.tar.gz (905 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting anyio (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting certifi (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting httpcore==1.* (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0,>=2.26->poetry==2.1.4)
+  Downloading charset_normalizer-3.4.3-py3-none-any.whl.metadata (36 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv<20.33.0,>=20.26.6->poetry==2.1.4)
+  Using cached distlib-0.4.0-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting cryptography>=2.0 (from SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached cryptography-45.0.6-cp312-abi3-linux_aarch64.whl
+Collecting cffi>=1.14 (from cryptography>=2.0->SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached cffi-1.17.1-cp312-cp312-linux_aarch64.whl
+Collecting pycparser (from cffi>=1.14->cryptography>=2.0->SecretStorage>=3.2->keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting sniffio>=1.1 (from anyio->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting typing_extensions>=4.5 (from anyio->httpx<1,>=0.27.0->pbs-installer[download,install]<2026.0.0,>=2025.1.6->poetry==2.1.4)
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting more-itertools (from jaraco.classes->keyring<26.0.0,>=25.1.0->poetry==2.1.4)
+  Using cached more_itertools-10.7.0-py3-none-any.whl.metadata (37 kB)
+Using cached poetry-2.1.4-py3-none-any.whl (278 kB)
+Using cached poetry_core-2.1.3-py3-none-any.whl (332 kB)
+Using cached build-1.3.0-py3-none-any.whl (23 kB)
+Using cached cachecontrol-0.14.3-py3-none-any.whl (21 kB)
+Using cached cleo-2.1.0-py3-none-any.whl (78 kB)
+Using cached crashtest-0.4.1-py3-none-any.whl (7.6 kB)
+Using cached dulwich-0.22.8-py3-none-any.whl (273 kB)
+Using cached fastjsonschema-2.21.2-py3-none-any.whl (24 kB)
+Using cached findpython-0.6.3-py3-none-any.whl (20 kB)
+Using cached installer-0.7.0-py3-none-any.whl (453 kB)
+Using cached keyring-25.6.0-py3-none-any.whl (39 kB)
+Using cached pbs_installer-2025.8.18-py3-none-any.whl (60 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Using cached pkginfo-1.12.1.2-py3-none-any.whl (32 kB)
+Using cached platformdirs-4.3.8-py3-none-any.whl (18 kB)
+Using cached pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.3-py3-none-any.whl (53 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+Using cached shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Using cached tomlkit-0.13.3-py3-none-any.whl (38 kB)
+Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+Using cached virtualenv-20.32.0-py3-none-any.whl (6.1 MB)
+Using cached distlib-0.4.0-py2.py3-none-any.whl (469 kB)
+Using cached filelock-3.19.1-py3-none-any.whl (15 kB)
+Using cached certifi-2025.8.3-py3-none-any.whl (161 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached jeepney-0.9.0-py3-none-any.whl (49 kB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached SecretStorage-3.3.3-py3-none-any.whl (15 kB)
+Using cached trove_classifiers-2025.8.6.13-py3-none-any.whl (14 kB)
+Using cached anyio-4.10.0-py3-none-any.whl (107 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+Using cached jaraco.context-6.0.1-py3-none-any.whl (6.8 kB)
+Using cached jaraco_functools-4.3.0-py3-none-any.whl (10 kB)
+Using cached more_itertools-10.7.0-py3-none-any.whl (65 kB)
+Using cached pycparser-2.22-py3-none-any.whl (117 kB)
+Building wheels for collected packages: zstandard
+  Building wheel for zstandard (pyproject.toml): started
+  Building wheel for zstandard (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for zstandard (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [95 lines of output]
+      <string>:62: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+      <string>:63: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+      /data/data/com.termux/files/usr/tmp/pip-build-env-e36jj0cd/overlay/lib/python3.12/site-packages/cffi/cparser.py:436: UserWarning: #pragma in cdef() are entirely ignored. They should be removed for now, otherwise your code might behave differently in a future version of CFFI if #pragma support gets added. Note that '#pragma pack' needs to be replaced with the 'packed' keyword argument to cdef().
+        warnings.warn(
+      not modified: 'build/zstandard/_cffi.c'
+      /data/data/com.termux/files/usr/tmp/pip-build-env-e36jj0cd/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'test_suite'
+        warnings.warn(msg)
+      /data/data/com.termux/files/usr/tmp/pip-build-env-e36jj0cd/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+        warnings.warn(msg)
+      /data/data/com.termux/files/usr/tmp/pip-build-env-e36jj0cd/overlay/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+      !!
+      
+              ********************************************************************************
+              Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+      
+              By 2026-Feb-18, you need to update your project and remove deprecated calls
+              or your builds will no longer be supported.
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        corresp(dist, value, root_dir)
+      /data/data/com.termux/files/usr/tmp/pip-build-env-e36jj0cd/overlay/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:55: SetuptoolsDeprecationWarning: 'tool.setuptools.license-files' is deprecated in favor of 'project.license-files' (available on setuptools>=77.0.0).
+      !!
+      
+              ********************************************************************************
+      
+              By 2026-Feb-18, you need to update your project and remove deprecated calls
+              or your builds will no longer be supported.
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license-files for details.
+              ********************************************************************************
+      
+      !!
+        _apply_tool_table(dist, config, filename)
+      /data/data/com.termux/files/usr/tmp/pip-build-env-e36jj0cd/overlay/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: BSD License
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        dist._finalize_license_expression()
+      /data/data/com.termux/files/usr/tmp/pip-build-env-e36jj0cd/overlay/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+      !!
+      
+              ********************************************************************************
+              Please consider removing the following classifiers in favor of a SPDX license expression:
+      
+              License :: OSI Approved :: BSD License
+      
+              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+              ********************************************************************************
+      
+      !!
+        self._finalize_license_expression()
+      generating build/zstandard/_cffi.c
+      (already up-to-date)
+      running bdist_wheel
+      running build
+      running build_py
+      creating build/lib.linux-aarch64-cpython-312/zstandard
+      copying zstandard/__init__.py -> build/lib.linux-aarch64-cpython-312/zstandard
+      copying zstandard/backend_cffi.py -> build/lib.linux-aarch64-cpython-312/zstandard
+      running egg_info
+      writing zstandard.egg-info/PKG-INFO
+      writing dependency_links to zstandard.egg-info/dependency_links.txt
+      writing requirements to zstandard.egg-info/requires.txt
+      writing top-level names to zstandard.egg-info/top_level.txt
+      reading manifest file 'zstandard.egg-info/SOURCES.txt'
+      reading manifest template 'MANIFEST.in'
+      writing manifest file 'zstandard.egg-info/SOURCES.txt'
+      copying zstandard/__init__.pyi -> build/lib.linux-aarch64-cpython-312/zstandard
+      copying zstandard/py.typed -> build/lib.linux-aarch64-cpython-312/zstandard
+      running build_ext
+      building 'zstandard.backend_c' extension
+      creating build/temp.linux-aarch64-cpython-312/c-ext
+      aarch64-linux-android-clang -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -fstack-protector-strong -O3 -fstack-protector-strong -O3 -fPIC -Ic-ext -Izstd -I/data/data/com.termux/files/home/.local/share/pypoetry/venv/include -I/data/data/com.termux/files/usr/include/python3.12 -c c-ext/backend_c.c -o build/temp.linux-aarch64-cpython-312/c-ext/backend_c.o -DZSTD_SINGLE_FILE -DZSTDLIB_VISIBLE= -DZDICTLIB_VISIBLE= -DZSTDERRORLIB_VISIBLE= -fvisibility=hidden
+      In file included from c-ext/backend_c.c:22:
+      In file included from c-ext/python-zstandard.h:21:
+      zstd/zstd.c:48843:5: error: call to undeclared function 'qsort_r'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+       48843 |     qsort_r(ctx->suffix, ctx->suffixSize, sizeof(U32),
+             |     ^
+      zstd/zstd.c:48843:5: note: did you mean 'qsort'?
+      /data/data/com.termux/files/usr/bin/../../usr/include/stdlib.h:132:6: note: 'qsort' declared here
+        132 | void qsort(void* _Nullable __array, size_t __n, size_t __size, int (* _Nonnull __comparator)(const void* _Nullable __lhs, const void* _Nullable __rhs));
+            |      ^
+      1 error generated.
+      error: command '/data/data/com.termux/files/usr/bin/aarch64-linux-android-clang' failed with exit code 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for zstandard
+Failed to build zstandard
+error: failed-wheel-build-for-install
+
+× Failed to build installable wheels for some pyproject.toml based projects
+╰─> zstandard
+
+Traceback:
+
+  File "<stdin>", line 937, in main
+  File "<stdin>", line 574, in run
+  File "<stdin>", line 596, in install
+  File "<stdin>", line 699, in install_poetry
+  File "<stdin>", line 389, in pip
+  File "<stdin>", line 386, in python
+  File "<stdin>", line 379, in run

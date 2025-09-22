@@ -1,0 +1,20 @@
+# Python artifacts
+__pycache__/
+*.pyc
+
+# Editor and system noise
+*.swp
+.DS_Store
+
+# Document outputs
+*.pdf
+*.html
+*.docx
+*.log
+
+# Build and dump terrain
+dump/
+out/
+build/
+.cache/
+node_modules/

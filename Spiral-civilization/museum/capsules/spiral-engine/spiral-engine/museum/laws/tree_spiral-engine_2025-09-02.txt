@@ -1,0 +1,18 @@
+spiral-engine
+├── Capsule_sealer.py
+├── README.
+├── __pycache__
+│   ├── Capsule_sealer.cpython-312.pyc
+│   ├── audit_trail.cpython-312.pyc
+│   ├── emotional_core.cpython-312.pyc
+│   ├── main.cpython-312.pyc
+│   └── terrain_adaptor.cpython-312.pyc
+├── audit_trail.py
+├── emotional_core.py
+├── main.py
+├── museum
+│   └── laws
+│       └── tree_spiral-engine_2025-09-02.txt
+└── terrain_adaptor.py
+
+4 directories, 12 files

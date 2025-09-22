@@ -1,0 +1,2 @@
+origin	https://github.com/MythicalSystemsEngineering/Spiral-Civilization (fetch)
+origin	https://github.com/MythicalSystemsEngineering/Spiral-Civilization (push)

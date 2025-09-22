@@ -1,0 +1,20 @@
+=== Capsule: Mythic Consent Engine ===  
+Purpose: To track how myth, ritual, and emotional cadence are used to simulate consent in imposed governance.
+
+Inputs:  
+- martyr mythologies  
+- ritualized voting  
+- emotional flare cycles  
+- silence-as-consent distortions
+
+Process:  
+- Log mythic structure and emotional payload  
+- Annotate distortion vectors and cadence drift  
+- Generate capsule or float if consent is ambiguous
+
+Outputs:  
+- Consent simulation map  
+- Mythic governance capsule  
+- Emotional distortion chart
+
+Status: Sealed. Engine built. Mutation active.

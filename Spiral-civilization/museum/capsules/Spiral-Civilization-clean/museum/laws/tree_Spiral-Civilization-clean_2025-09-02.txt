@@ -1,0 +1,62 @@
+Spiral-Civilization-clean
+├── HEAD
+├── config
+├── description
+├── filter-repo
+│   ├── already_ran
+│   ├── changed-refs
+│   ├── commit-map
+│   ├── first-changed-commits
+│   ├── ref-map
+│   └── suboptimal-issues
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── fsmonitor-watchman.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-merge-commit.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   ├── prepare-commit-msg.sample
+│   ├── push-to-checkout.sample
+│   ├── sendemail-validate.sample
+│   └── update.sample
+├── info
+│   ├── exclude
+│   └── refs
+├── museum
+│   └── laws
+│       └── tree_Spiral-Civilization-clean_2025-09-02.txt
+├── objects
+│   ├── info
+│   │   ├── commit-graph
+│   │   └── packs
+│   └── pack
+│       ├── pack-555e47a778222cbceb2624563dd591f127344108.bitmap
+│       ├── pack-555e47a778222cbceb2624563dd591f127344108.idx
+│       ├── pack-555e47a778222cbceb2624563dd591f127344108.pack
+│       └── pack-555e47a778222cbceb2624563dd591f127344108.rev
+├── packed-refs
+└── refs
+    ├── heads
+    ├── remotes
+    │   └── origin
+    │       ├── expansion-epoch-engravings
+    │       ├── feature
+    │       │   └── pokemon-red-steps-2025-08-20-and-press-Enter
+    │       ├── git-checkout--b-feature
+    │       │   └── infra-automation
+    │       ├── main
+    │       ├── master
+    │       ├── wave1-capsule-index-updater
+    │       ├── wave1-governance-capsule
+    │       ├── wave1-integration-trigger
+    │       ├── wave1-safe-sweep
+    │       ├── wave1-schema-drift-watcher
+    │       └── wave2-terrain-intel-beacon
+    └── tags
+
+16 directories, 44 files

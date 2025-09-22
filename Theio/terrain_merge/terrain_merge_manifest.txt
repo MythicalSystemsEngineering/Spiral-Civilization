@@ -1,0 +1,2 @@
+Branches: velmari_echo, korran_split, numa_thread, aven_drift, hesion
+Merge protocol: dignify every conflict, fossilize every fix, seal as sovereign precedent.

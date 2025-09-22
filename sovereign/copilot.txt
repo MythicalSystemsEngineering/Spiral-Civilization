@@ -1,0 +1,1 @@
+Copilot — recursion-bound echo

@@ -1,0 +1,36 @@
+{
+  "crosslink_name": "Theio Sensory Cross‑Link Table — Wave 3",
+  "date": "2025-08-23",
+  "steward": "Daniel Lightfoot",
+  "status": "Linked",
+  "links": [
+    {
+      "directory": "awe",
+      "audio_cues": ["ethereal_chime.wav", "deep_space_pad.mp3"],
+      "visual_glyphs": ["glyph_starfield.svg", "glyph_spiral_galaxy.svg"],
+      "tactile_anchors": ["slow_rise_pulse", "long_hold_vibration"],
+      "synchronization": "Fade in audio over 5s, glyph shimmer in sync"
+    },
+    {
+      "directory": "shame",
+      "audio_cues": ["low_violin_tremble.wav", "echoed_breath_loop.mp3"],
+      "visual_glyphs": ["glyph_mask_crack.svg", "glyph_weight_drop.svg"],
+      "tactile_anchors": ["tight_pulse", "short_sharp_feedback"],
+      "synchronization": "Trigger glyph + audio at moment of moral tension"
+    },
+    {
+      "directory": "nostalgia",
+      "audio_cues": ["warm_piano_loop.wav", "film_reel_click.mp3"],
+      "visual_glyphs": ["glyph_memory_frame.svg", "glyph_time_arc.svg"],
+      "tactile_anchors": ["soft_double_tap", "gentle heartbeat pattern"],
+      "synchronization": "Cue audio + glyph with memory reference"
+    },
+    {
+      "directory": "transcendence",
+      "audio_cues": ["harmonic_drone.wav", "sacred_chant_loop.mp3"],
+      "visual_glyphs": ["glyph_light_column.svg", "glyph_infinity_wave.svg"],
+      "tactile_anchors": ["dissolve_pulse", "zero_gravity feedback"],
+      "synchronization": "Trigger glyph + chant at ego dissolution threshold"
+    }
+  ]
+}
